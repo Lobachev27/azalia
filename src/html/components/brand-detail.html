@@ -1,0 +1,26 @@
+<section class="categories">
+  <div class="container">
+    <div class="brand-page_info">
+      <div class="brand-page_left">
+        <h1 class="title_main">@@context.title</h1>
+        <div class="brand-page_description">@@context.description</div>
+      </div>
+      <div class="brand-page_right">
+        <img class="brand-page_img" src="@@context.image">
+      </div>
+    </div>
+    <h2 class="title small">Категории товаров @@context.title</h2>
+    <div class="brand-page_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="categories_box">
+        <img class="categories_img" src="`+context.arr[i].image+`">
+        <div class="categories_info">
+          <div class="categories_name">`+context.arr[i].category+`</div>
+          <div class="categories_amount">`+context.arr[i].amount+`</div>
+        </div>
+        <a class="categories_link" href="`+context.arr[i].link+`"></a>
+      </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Страница не найдена"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  <section class="page-404">
+    <div class="container">
+      <div class="page-404_bg"></div>
+      <h1 class="basket-page_empty_caption">Страница не найдена</h1>
+      <div class="basket-page_empty_description">Неправильно набран адрес или такой <br> страницы не существует</div>
+      <a class="basket-page_empty_link" href="./">Вернуться домой</a>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

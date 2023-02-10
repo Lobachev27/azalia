@@ -1,0 +1,88 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Страница 404*/
+
+.page-404{
+  position: relative;
+  margin: 120px 0 150px;
+  @media screen and ($desktop1) {
+    margin: 100px 0 130px;
+  }
+  @media screen and ($tablet2) {
+    margin: 80px 0 110px;
+  }
+  @media screen and ($tablet1) {
+    margin: 60px 0 90px;
+  }
+  @media screen and ($mobile5) {
+    margin: 40px 0 60px;
+  }
+
+  &_bg{
+    position: absolute;
+    background: url("../img/page-404.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 55%;
+    right: 200px;
+    width: 860px;
+    height: 690px;
+    transform: translate(0, -50%);
+    z-index: -1;
+    @media screen and ($desktop1) {
+      right: 100px;
+      width: 700px;
+      height: 560px;
+    }
+    @media screen and ($tablet2) {
+      right: 50px;
+      width: 570px;
+      height: 450px;
+    }
+    @media screen and ($tablet1) {
+      right: 0;
+      width: 450px;
+      height: 350px;
+    }
+    @media screen and ($mobile5) {
+      top: 150px;
+      right: 50%;
+      max-width: 550px;
+      width: 100%;
+      height: 250px;
+      transform: translate(50%, -50%);
+    }
+    @media screen and ($mobile2) {
+      top: 140px;
+      height: 200px;
+    }
+    @media screen and ($mobile1) {
+      top: 120px;
+      height: 150px;
+    }
+  }
+
+  & .basket-page_empty_caption{
+    @media screen and ($mobile5) {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  & .basket-page_empty_description{
+    @media screen and ($mobile5) {
+      display: none;
+    }
+  }
+  & .basket-page_empty_link{
+    @media screen and ($mobile5) {
+      margin: 250px auto 0;
+    }
+    @media screen and ($mobile2) {
+      margin: 220px auto 0;
+    }
+    @media screen and ($mobile1) {
+      margin: 180px auto 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<section class="popular">
+  <div class="container">
+    <div class="popular_wrapper">
+      <h2 class="title">Популярные категории</h2>
+      <div class="popular_slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            @@for (var i = 0; i < context.arr.length; i++) {
+            <div class="swiper-slide">
+              <div class="popular_box">
+                <div class="popular_box_marker `+context.arr[i].markerClass+`">`+context.arr[i].marker+`</div>
+                <img class="popular_box_img" src="`+context.arr[i].image+`">
+                <div class="popular_box_name">`+context.arr[i].title+`</div>
+                <a class="popular_box_link" href="`+context.arr[i].link+`"></a>
+              </div>
+            </div>
+            }
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

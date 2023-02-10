@@ -1,0 +1,249 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Регистрация*/
+
+.registration{
+  position: relative;
+  background-color: #F6F6F6;
+  padding: 30px 0 130px;
+  @media screen and ($desktop1) {
+    padding: 20px 0 80px;
+  }
+
+  &_wrapper{
+    position: relative;
+    display: grid;
+    justify-items: center;
+    width: 100%;
+  }
+
+  &_container{
+    position: relative;
+    width: 560px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 50px 100px;
+    margin-top: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media screen and ($desktop1) {
+      width: 460px;
+      padding: 30px 50px;
+      margin-top: 20px;
+    }
+    @media screen and ($tablet2) {
+      width: 420px;
+      padding: 20px 30px;
+      margin-top: 20px;
+    }
+    @media screen and ($mobile5) {
+      width: 400px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    @media screen and ($mobile2) {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    &.password{
+      padding: 40px;
+      @media screen and ($tablet2) {
+        padding: 30px;
+      }
+    }
+  }
+
+  &_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_link{
+    display: block;
+    font-size: $text-size-s;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 10px 20px;
+    transition: color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      padding: 10px 24px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      padding: 7px 29px;
+    }
+    @media screen and ($mobile2) {
+      font-size: 13px;
+      text-align: center;
+      width: 50%;
+      padding: 7px 0;
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s, border 0.3s;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    &.active{
+      font-family: 'ProximaNova-Bold';
+      border-bottom: 2px solid $red-color;
+      padding-bottom: 9px;
+      @media screen and ($tablet2) {
+        padding-bottom: 6px;
+      }
+
+      &:hover{
+        color: initial;
+      }
+    }
+  }
+
+  &_form{
+    margin-top: 30px;
+    @media screen and ($desktop1) {
+      margin-top: 20px;
+    }
+  }
+
+  &_caption{
+    font-family: 'ProximaNova-Semibold';
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    @media screen and ($desktop1) {
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 18px;
+      margin-top: 20px;
+    }
+    @media screen and ($mobile5) {
+      margin-bottom: 16px;
+      margin-top: 20px;
+    }
+    @media screen and ($mobile2) {
+      font-size: 15px;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+  }
+
+  &_row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    @media screen and ($desktop1) {
+      grid-column-gap: 15px;
+    }
+    @media screen and ($mobile2) {
+      display: block;
+    }
+  }
+
+  &_item{
+    margin-top: 20px;
+    @media screen and ($desktop1) {
+      margin-top: 15px;
+    }
+    @media screen and ($mobile2) {
+      margin-top: 12px;
+    }
+  }
+
+  &_text{
+    font-size: 15px;
+    color: $text-color-main;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    & span{
+      color: $red-color;
+    }
+  }
+
+  &_input{
+    font-size: 14px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 15px;
+    /*margin-bottom: 20px;*/
+    transition: border 0.3s;
+    @media screen and ($desktop1) {
+      height: 40px;
+    }
+
+    &:focus{
+      border: 1px solid $red-color-hover;
+      transition: border 0.3s;
+    }
+
+    &::placeholder{
+      color: #BCBCBC;
+    }
+  }
+
+  &_submit{
+    font-family: 'ProximaNova-Semibold';
+    color: $text-color-white;
+    background-color: $red-color;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    height: 55px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      height: 45px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    &:disabled{
+      background-color: #EBEBEB;
+      color: $text-color-main;
+      box-shadow: none;
+
+      &:hover{
+        background-color: #EBEBEB;
+      }
+    }
+
+    &:hover{
+      background-color: $red-color-hover;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    &.mgb-0{
+      margin-bottom: 0;
+    }
+  }
+}

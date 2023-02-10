@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Адреса доставки"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': 'grey',
+      'way': false,
+      'title': 'Личный кабинет',
+      'lastBreadcrumb': '',
+      arr: [
+        {'text': '', 'link': ''},
+      ],
+    }
+  })
+
+  <section class="cabinet">
+    <div class="container">
+      <div class="cabinet_wrapper cab-other">
+        <nav class="cabinet_sidebar">
+          <a class="cabinet_link" href="./cabinet.html">Главная</a>
+          <a class="cabinet_link" href="./purchase.html">История заказов</a>
+          <a class="cabinet_link" href="./waiting.html">Лист ожидания</a>
+          <a class="cabinet_link" href="./personal.html">Личные данные</a>
+          <a class="cabinet_link active" href="./address.html">Адреса доставки</a>
+          <a class="cabinet_exit"  href="javascript:void(0);">Выйти из профиля</a>
+        </nav>
+        <a class="cabinet_back" href="./cabinet.html">Назад</a>
+        <div class="cabinet_title_mobile">Адрес доставки</div>
+        <div class="cabinet_content">
+          <div class="address_wrapper">
+            <div class="address_box">
+              <div class="address_caption">Дом</div>
+              <div class="address_description">Доставка с помощью СДЭК</div>
+              <div class="address_location">Москва, Угрешская, д.2. стр. 146</div>
+              <div class="address_row">
+                <a class="address_change" href="./address-change.html">Изменить</a>
+                <div class="address_reset">Удалить</div>
+              </div>
+            </div>
+            <div class="address_box">
+              <div class="address_caption">Офис</div>
+              <div class="address_description">Доставка с помощью СДЭК</div>
+              <div class="address_location">Москва, Угрешская, д.2. стр. 146</div>
+              <div class="address_row">
+                <a class="address_change" href="./address-change.html">Изменить</a>
+                <div class="address_reset">Удалить</div>
+              </div>
+            </div>
+          </div>
+          <a class="address_add" href="./address-change.html">Добавить адрес</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

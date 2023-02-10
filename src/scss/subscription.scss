@@ -1,0 +1,542 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блок с подпиской*/
+
+.subscription{
+  position: relative;
+  background-color: #EBEBEB;
+  margin: 100px 0 0;
+  @media screen and ($desktop1) {
+    margin: 60px 0 0;
+  }
+  @media screen and ($tablet2) {
+    margin: 40px 0 0;
+  }
+  @media screen and ($tablet1) {
+    margin: 50px 0 0;
+  }
+  @media screen and ($mobile5) {
+    margin: 50px 0 0;
+  }
+  @media screen and ($mobile3) {
+    order: 2;
+    margin: 20px 0 0;
+  }
+
+  &_wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 95px;
+    justify-items: center;
+    align-items: center;
+    min-height: 125px;
+    @media screen and ($desktop1) {
+      grid-column-gap: 60px;
+      min-height: 120px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 7fr 8fr 7fr;
+      grid-column-gap: 50px;
+      min-height: 100px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 50px;
+      grid-row-gap: 20px;
+      min-height: initial;
+      padding: 25px 0;
+    }
+    @media screen and ($mobile3) {
+      display: block;
+      padding: 25px 5px;
+    }
+  }
+
+  &_text{
+    position: relative;
+    justify-self: end;
+    font-family: 'ProximaNova-Bold';
+    font-size: $text-size-m;
+    line-height: 1.5em;
+    margin-left: 90px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-s;
+      line-height: 1.4em;
+      margin-left: 70px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      margin-left: 0;
+    }
+    @media screen and ($tablet1) {
+      grid-column: 1/3;
+      justify-self: start;
+    }
+    @media screen and ($mobile3) {
+      margin-bottom: 20px;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: url("../img/subscription.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 56px;
+      height: 56px;
+      left: -90px;
+      top: -1px;
+      @media screen and ($desktop1) {
+        width: 48px;
+        height: 48px;
+        left: -70px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @media screen and ($tablet2) {
+        display: none;
+      }
+    }
+  }
+
+  &_box{
+    position: relative;
+    width: 100%;
+  }
+
+  &_input{
+    width: 100%;
+    font-size: 13px;
+    height: 45px;
+    outline: none;
+    border-radius: 4px;
+    border: 3px solid $yellow-color;
+    padding: 0 160px 0 15px;
+    transition: all 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 12px;
+      height: 40px;
+      border: 2px solid $yellow-color;
+      padding: 0 160px 0 15px;
+    }
+    @media screen and ($tablet2) {
+      padding: 0 130px 0 15px;
+    }
+    @media screen and ($tablet1) {
+      padding: 0 130px 0 15px;
+    }
+    @media screen and ($mobile5) {
+      padding: 0 60px 0 15px;
+    }
+    @media screen and ($mobile3) {
+      margin-bottom: 15px;
+    }
+
+    &::placeholder{
+      color: #BCBCBC;
+    }
+
+    &:focus{
+      border: 3px solid $yellow-color-hover;
+      transition: all 0.3s;
+      @media screen and ($desktop1) {
+        border: 2px solid $yellow-color-hover;
+      }
+    }
+  }
+
+  &_request{
+    position: absolute;
+    font-size: 13px;
+    color: $text-color-white;
+    width: 152px;
+    height: 45px;
+    top: 0;
+    right: 0;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: $yellow-color;
+    transition: all 0.3s;
+    padding-left: 38px;
+    @media screen and ($desktop1) {
+      font-size: 12px;
+      width: 135px;
+      height: 40px;
+      padding-left: 30px;
+    }
+    @media screen and ($tablet2) {
+      width: 125px;
+      height: 40px;
+      padding-left: 30px;
+    }
+    @media screen and ($tablet1) {
+      width: 125px;
+      height: 40px;
+      padding-left: 30px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 0;
+      width: 50px;
+      height: 40px;
+      padding-left: 0px;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: url("../img/envelope.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 24px;
+      height: 18px;
+      right: 110px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media screen and ($desktop1) {
+        width: 21px;
+        height: 14px;
+        right: 98px;
+      }
+      @media screen and ($tablet2) {
+        width: 18px;
+        height: 12px;
+        right: 95px;
+      }
+      @media screen and ($tablet1) {
+        width: 18px;
+        height: 12px;
+        right: 95px;
+      }
+      @media screen and ($mobile5) {
+        width: 22px;
+        height: 17px;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    &:hover{
+      background-color: $yellow-color-hover;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+
+  &_checkbox{
+    position: relative;
+    justify-self: start;
+    display: block;
+
+    &.red{
+      & input {
+        &:checked + .subscription_checkbox_text:before {
+          background-color: $red-color;
+          border: 3px solid $red-color;
+        }
+      }
+
+      & .subscription_checkbox_text{
+        &:before {
+          border: 3px solid #BCBCBC;
+        }
+      }
+    }
+
+    & input {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: -1;
+      opacity: 0;
+
+      &:checked + .subscription_checkbox_text:before {
+        background-color: $yellow-color;
+      }
+
+      &:checked + .subscription_checkbox_text:after {
+        display: block;
+      }
+    }
+
+    &_text{
+      position: relative;
+      font-family: 'ProximaNova-Light';
+      display: flex;
+      font-size: $text-size-xs;
+      padding-left: 32px;
+      width: 360px;
+      cursor: pointer;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        line-height: 1.3em;
+        padding-left: 30px;
+        width: 346px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 12px;
+        width: fit-content;
+      }
+      @media screen and ($tablet1) {
+        font-size: 12px;
+        width: fit-content;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        border: 3px solid $yellow-color;
+        border-radius: 3px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        transition: all 0.2s;
+      }
+
+      &:after {
+        display: none;
+        content: '';
+        position: absolute;
+        background: url("../img/accept.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+        top: 50%;
+        left: 2px;
+        transform: translateY(-50%);
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+
+/*Панорама*/
+
+.panorama{
+  position: relative;
+  margin: 100px 0 0;
+  @media screen and ($desktop1) {
+    margin: 70px 0 0;
+  }
+
+  &_caption{
+    font-family: 'ProximaNova-Semibold';
+    font-weight: 400;
+    font-size: 20px;
+    color: #303030;
+    text-align: left;
+    margin-bottom: 7px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @media screen and ($tablet2) {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &_description{
+    font-family: 'ProximaNova-Regular';
+    font-size: 13px;
+    color: #5B5B5B;
+    line-height: 1.5em;
+    text-align: left;
+    overflow: hidden;
+    max-height: 58px;
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      max-height: 55px;
+    }
+  }
+}
+
+#panorama {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  margin-top: 70px;
+  @media screen and ($desktop1) {
+    height: 600px;
+    margin-top: 50px;
+  }
+  @media screen and ($tablet2) {
+    height: 500px;
+    margin-top: 40px;
+  }
+  @media screen and ($tablet1) {
+    height: 400px;
+  }
+
+  & .pnlm-hotspot{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    @media screen and ($tablet2) {
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and ($mobile3) {
+      width: 35px;
+      height: 35px;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      background: url("../img/closed-black.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s;
+      @media screen and ($tablet2) {
+        width: 11px;
+        height: 11px;
+      }
+      @media screen and ($mobile3) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &:hover{
+      cursor: pointer;
+
+      &:after{
+        width: 11px;
+        height: 11px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: 0.3s;
+        @media screen and ($tablet2) {
+          width: 10px;
+          height: 10px;
+        }
+        @media screen and ($mobile3) {
+          width: 9px;
+          height: 9px;
+        }
+      }
+    }
+
+    & span{
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      width: 230px;
+      @media screen and ($tablet2) {
+        padding: 15px;
+        width: 200px;
+      }
+      @media screen and ($mobile3) {
+        padding: 12px;
+        width: 170px;
+      }
+    }
+  }
+
+  & .pnlm-sprite{
+    background-color: #fff;
+
+    &:hover{
+      background-color: $yellow-color;
+      transition: 0.3s;
+    }
+  }
+
+  & .pnlm-tooltip:hover span:after{
+    border-color: rgba(255, 255, 255, 1) transparent transparent transparent;
+  }
+
+  & .custom-hotspot{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    @media screen and ($tablet2) {
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and ($mobile3) {
+      width: 35px;
+      height: 35px;
+    }
+
+    &:after{
+      content: '\f176';
+      font-family: 'FontAwesome';
+      color: #303030;
+      font-size: 20px;
+      font-weight: 900;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      @media screen and ($tablet2) {
+        font-size: 16px;
+      }
+      @media screen and ($mobile3) {
+        font-size: 14px;
+      }
+    }
+
+    &:hover{
+      background-color: $yellow-color;
+      cursor: pointer;
+    }
+
+    & span{
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      font-family: 'ProximaNova-Semibold';
+      font-weight: 400;
+      line-height: 1em;
+      font-size: 20px;
+      color: #303030;
+      width: max-content;
+      @media screen and ($tablet2) {
+        padding: 15px;
+        font-size: 16px;
+      }
+      @media screen and ($mobile3) {
+        padding: 12px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  & .pnlm-panorama-info{
+    background-color: #F6F6F6;
+    border-radius: 0;
+    padding: 5px 10px;
+    bottom: 0;
+  }
+
+  & .pnlm-title-box{
+    font-family: 'ProximaNova-Semibold';
+    font-size: 25px;
+    color: $text-color-main;
+    padding: 0;
+    margin: 0;
+    @media screen and ($tablet2) {
+      font-size: 20px;
+    }
+    @media screen and ($mobile3) {
+      font-size: 18px;
+    }
+  }
+}

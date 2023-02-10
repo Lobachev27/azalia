@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Акции"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Акции',
+      'lastBreadcrumb': 'Акции',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="stock">
+    <div class="container">
+      <div class="article-catalog_row">
+        <nav class="article-catalog_nav">
+          <a class="article-catalog_link active" href="javascript:void(0);">Активные</a>
+          <a class="article-catalog_link" href="javascript:void(0);">Завершенные</a>
+        </nav>
+        <nav class="page_nav">
+          <a class="page_nav_prev" href="javascript:void(0);">←</a>
+          <a class="page_nav_number active" href="javascript:void(0);">1</a>
+          <a class="page_nav_number" href="javascript:void(0);">2</a>
+          <a class="page_nav_number" href="javascript:void(0);">3</a>
+          <a class="page_nav_number" href="javascript:void(0);">...</a>
+          <a class="page_nav_number" href="javascript:void(0);">16</a>
+          <a class="page_nav_next" href="javascript:void(0);">→</a>
+        </nav>
+      </div>
+      <div class="stock_wrapper">
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+        <div class="banner_box white">
+          <img class="banner_img" src="./img/banner-2.jpg">
+          <div class="banner_info center">
+            <div class="banner_name white">Скидки</div>
+            <div class="banner_description white">на елочные украшения</div>
+          </div>
+          <a class="banner_link" href="./stock-page.html"></a>
+        </div>
+      </div>
+      <div class="catalog_row">
+        <a class="catalog_more" href="javascript:void(0);">Показать еще</a>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

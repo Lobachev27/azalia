@@ -1,0 +1,1046 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Оформление заказа*/
+
+.order{
+  &_form{
+    position: relative;
+    display: grid;
+    grid-template-columns: 925fr 385fr;
+    grid-column-gap: 70px;
+    margin-left: 220px;
+    margin-top: 40px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 7fr 3fr;
+      grid-column-gap: 20px;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    @media screen and ($tablet2) {
+      grid-column-gap: 15px;
+    }
+    @media screen and ($tablet1) {
+      display: block;
+    }
+    @media screen and ($mobile3) {
+      margin: 15px 0 0;
+    }
+  }
+
+  &_left{
+    @media screen and ($tablet1) {
+      margin-bottom: 15px;
+    }
+  }
+  &_right{
+    @media screen and ($tablet1) {
+      width: 56%;
+    }
+    @media screen and ($mobile4) {
+      width: 100%;
+    }
+  }
+
+  &_user{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 50px 100px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media screen and ($desktop1) {
+      padding: 30px 50px ;
+    }
+    @media screen and ($tablet2) {
+      padding: 20px 30px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px;
+    }
+    @media screen and ($mobile1) {
+      flex-direction: column;
+    }
+
+    &_text{
+      font-size: $text-size-s;
+      @media screen and ($desktop1) {
+        font-size: 15px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 14px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 14px;
+      }
+      @media screen and ($mobile4) {
+        font-size: 13px;
+        width: calc(100% - 120px);
+      }
+      @media screen and ($mobile1) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+    }
+
+    &_link{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      color: $text-color-white;
+      width: 133px;
+      height: 41px;
+      top: 0;
+      right: 0;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      background-color: $yellow-color;
+      transition: background-color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 12px;
+        width: 120px;
+        height: 40px;
+      }
+      @media screen and ($tablet2) {
+        width: 100px;
+        height: 34px;
+      }
+      @media screen and ($mobile1) {
+        width: 100%;
+      }
+
+      &:hover{
+        background-color: $yellow-color-hover;
+        transition: background-color 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_recipient{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 50px 100px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media screen and ($desktop1) {
+      padding: 30px 50px;
+    }
+    @media screen and ($tablet2) {
+      padding: 20px 30px;
+      margin: 15px 0;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px;
+    }
+
+    &_row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      @media screen and ($desktop1) {
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet2) {
+        margin-bottom: 10px;
+      }
+      @media screen and ($tablet1) {
+        margin: 5px 0 0 ;
+      }
+      @media screen and ($mobile2) {
+        flex-wrap: wrap;
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+  &_caption{
+    font-family: 'ProximaNova-Bold';
+    font-size: 20px;
+    margin-right: 5px;
+    @media screen and ($desktop1) {
+      font-size: 18px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 16px;
+    }
+  }
+
+  &_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    @media screen and ($mobile2) {
+      justify-content: flex-start;
+      order: -1;
+      width: 100%;
+      margin: 0 0 15px;
+    }
+  }
+
+  &_link{
+    display: block;
+    font-size: $text-size-s;
+    color: #BCBCBC;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 10px 20px;
+    transition: color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      padding: 7px 15px;
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s, border 0.3s;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    &.active{
+      font-family: 'ProximaNova-Bold';
+      color: $text-color-main;
+      border-bottom: 2px solid $red-color;
+      padding-bottom: 9px;
+      @media screen and ($tablet2) {
+        padding-bottom: 6px;
+      }
+
+      &:hover{
+        color: initial;
+      }
+    }
+  }
+
+  &_box{
+    margin-top: 40px;
+    @media screen and ($desktop1) {
+      margin-top: 20px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 15px;
+    }
+    @media screen and ($tablet1) {
+      margin: 0;
+    }
+  }
+
+  &_row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    @media screen and ($tablet2) {
+      grid-column-gap: 15px;
+    }
+    @media screen and ($mobile2) {
+      display: block;
+    }
+
+    &.three{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &_item{
+    margin-top: 20px;
+    @media screen and ($desktop1) {
+      margin-top: 15px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 10px;
+    }
+  }
+
+  &_text{
+    font-size: 15px;
+    color: $text-color-main;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+    }
+
+    & span{
+      color: $red-color;
+    }
+  }
+
+  &_input{
+    font-size: 14px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 15px;
+    /*margin-bottom: 20px;*/
+    transition: border 0.3s;
+    @media screen and ($desktop1) {
+      height: 40px;
+    }
+
+    &:focus{
+      border: 1px solid $red-color-hover;
+      transition: border 0.3s;
+    }
+
+    &::placeholder{
+      color: #BCBCBC;
+    }
+  }
+
+  &_delivery{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 50px 100px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media screen and ($desktop1) {
+      padding: 30px 60px;
+    }
+    @media screen and ($tablet2) {
+      padding: 20px 30px;
+      margin: 15px 0;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px;
+    }
+
+    &_row{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 30px;
+      @media screen and ($tablet2) {
+        margin-bottom: 15px;
+      }
+      @media screen and ($mobile1) {
+        display: block;
+      }
+    }
+
+    &_box{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      margin-top: 30px;
+      @media screen and ($tablet2) {
+        grid-column-gap: 15px;
+        margin-top: 20px;
+      }
+      @media screen and ($mobile5) {
+        grid-template-columns: 48.5% 48.5%;
+      }
+      @media screen and ($mobile3) {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 15px;
+      }
+      @media screen and ($mobile2) {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 15px;
+      }
+    }
+
+    &_radio{
+      position: relative;
+      display: block;
+      max-width: 352px;
+      @media screen and ($desktop1) {
+        max-width: 334px;
+      }
+      @media screen and ($tablet2) {
+        max-width: 293px;
+      }
+      @media screen and ($tablet1) {
+        max-width: 332px;
+      }
+      @media screen and ($mobile5) {
+        max-width: 332px;
+      }
+      @media screen and ($mobile3) {
+        max-width: initial;
+        width: 100%;
+      }
+      @media screen and ($mobile2) {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      & input {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+
+        &:hover + .order_delivery_radio_box:after{
+          background: url("../img/tick-hover.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          transition: all 0.3s;
+        }
+
+        &:checked + .order_delivery_radio_box:after{
+          background: url("./img/tick-checked.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          transition: all 0.3s;
+        }
+      }
+
+      &_box{
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        outline: none;
+        height: 128px;
+        padding: 20px 25px;
+        cursor: pointer;
+        @media screen and ($desktop1) {
+          height: 120px;
+          padding: 20px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          background: url("../img/tick.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 32px;
+          height: 32px;
+          top: 15px;
+          right: 20px;
+          transition: all 0.3s;
+          @media screen and ($desktop1) {
+            width: 28px;
+            height: 28px;
+            top: 10px;
+            right: 10px;
+          }
+        }
+      }
+
+      &_caption{
+        font-family: 'ProximaNova-Bold';
+        font-size: 16px;
+        margin-bottom: 7px;
+        @media screen and ($desktop1) {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+      }
+
+      &_description{
+        font-size: 13px;
+        color: #BCBCBC;
+        margin-bottom: 10px;
+        @media screen and ($desktop1) {
+          font-size: 12px;
+          margin-bottom: 7px;
+        }
+      }
+
+      &_address{
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 16px;
+        text-overflow: ellipsis;
+        margin-bottom: 5px;
+        @media screen and ($desktop1) {
+          font-size: 13px;
+          height: 14px;
+        }
+      }
+
+      &_link{
+        display: block;
+        font-size: 13px;
+        color: $red-color;
+        width: max-content;
+        border-bottom: 1px solid $red-color;
+        transition: color 0.3s, border 0.3s;
+        @media screen and ($desktop1) {
+          font-size: 12px;
+        }
+
+        &:hover{
+          color: $red-color-hover;
+          border-bottom: 1px solid white;
+          transition: color 0.3s, border 0.3s;
+        }
+      }
+    }
+  }
+
+  &_city{
+    font-size: 16px;
+    color: #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    margin-left: 15px;
+    transition: color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      position: relative;
+      font-size: 15px;
+      top: 2px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 13px;
+    }
+    @media screen and ($mobile1) {
+      display: block;
+      width: fit-content;
+      margin: 5px 0 0;
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      border-bottom: 1px solid white;
+      transition: color 0.3s, border 0.3s;
+    }
+  }
+
+  &_express{
+    position: relative;
+    display: none;
+    margin-top: 30px;
+    @media screen and ($desktop1) {
+      margin-top: 25px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 15px;
+    }
+    @media screen and ($tablet1) {
+      margin-top: 15px;
+    }
+
+    &.show{
+      display: block;
+    }
+
+    &_row{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-column-gap: 20px;
+      @media screen and ($tablet2) {
+        grid-column-gap: 15px;
+      }
+      @media screen and ($tablet1) {
+        grid-column-gap: 15px;
+      }
+      @media screen and ($mobile2) {
+        display: block;
+      }
+    }
+
+    &_text{
+      font-size: 15px;
+      color: $text-color-main;
+      margin-left: 15px;
+      margin-bottom: 10px;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+        margin-bottom: 7px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 13px;
+      }
+
+      & span{
+        color: $red-color;
+      }
+    }
+
+    &_input{
+      font-size: 14px;
+      width: 100%;
+      height: 45px;
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      outline: none;
+      padding: 0 15px;
+      margin-bottom: 20px;
+      transition: border 0.3s;
+      @media screen and ($desktop1) {
+        height: 40px;
+        margin-bottom: 15px;
+      }
+      @media screen and ($mobile2) {
+        margin-bottom: 10px;
+      }
+
+      &:focus{
+        border: 1px solid $red-color;
+        transition: border 0.3s;
+      }
+
+      &::placeholder{
+        color: #BCBCBC;
+      }
+    }
+
+    &_comment{
+      font-size: 14px;
+      width: 100%;
+      height: 100px;
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      outline: none;
+      padding: 15px;
+      transition: border 0.3s;
+      @media screen and ($desktop1) {
+        height: 80px;
+      }
+
+      &:focus{
+        border: 1px solid $red-color-hover;
+        transition: border 0.3s;
+      }
+
+      &::placeholder{
+        color: #BCBCBC;
+      }
+    }
+  }
+
+  &_pickup{
+    position: relative;
+    display: none;
+    margin-top: 30px;
+    @media screen and ($desktop1) {
+      margin-top: 25px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 15px;
+    }
+
+    &.show{
+      display: block;
+    }
+
+    &_box{
+      display: grid;
+      grid-template-columns: 390fr 180fr;
+      grid-column-gap: 90px;
+      background-color: #ffffff;
+      border: 1px solid #EBEBEB;
+      border-top: 1px solid #ffffff;
+      height: 144px;
+      padding: 30px;
+      cursor: pointer;
+      transition: border 0.3s;
+      @media screen and ($desktop1) {
+        grid-template-columns: 5fr 2fr;
+        grid-column-gap: 60px;
+        height: 112px;
+        padding: 20px;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 40px;
+        height: 130px;
+        padding: 20px;
+      }
+      @media screen and ($tablet1) {
+        grid-column-gap: 30px;
+        height: 110px;
+      }
+      @media screen and ($mobile5) {
+        display: block;
+        height: 90px;
+      }
+      @media screen and ($mobile4) {
+        height: max-content;
+      }
+      @media screen and ($mobile2) {
+        padding: 15px;
+      }
+
+      &:first-child{
+        border-radius: 4px 4px 0 0;
+        border-top: 1px solid #EBEBEB;
+      }
+
+      &:last-child{
+        border-radius: 0 0 4px 4px;
+      }
+
+      &.active{
+        border: 1px solid $red-color-hover;
+        border-top: 1px solid $red-color-hover;
+        transition: border 0.3s;
+      }
+    }
+
+    &_left{}
+
+    &_right{
+      @media screen and ($mobile5) {
+        display: none;
+      }
+    }
+
+    &_caption{
+      font-family: 'ProximaNova-Bold';
+      font-size: 14px;
+      margin-bottom: 15px;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+      }
+    }
+
+    &_underground{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 14px;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+      }
+
+      & span{
+        position: relative;
+        display: block;
+        width: fit-content;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 25px;
+        @media screen and ($desktop1) {
+          font-size: 13px;
+        }
+
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/mosmetro.svg") no-repeat;
+          background-size: contain;
+          background-position: center;
+          width: 18px;
+          height: 14px;
+          top: 0;
+          left: -22px;
+          @media screen and ($desktop1) {
+            width: 17px;
+            height: 13px;
+          }
+        }
+      }
+    }
+
+    &_info{
+      font-size: 14px;
+      color: #9F9F9F;
+      line-height: 1.5em;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &_payment{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 50px 100px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media screen and ($desktop1) {
+      padding: 30px 60px;
+    }
+    @media screen and ($tablet2) {
+      padding: 20px 30px;
+      margin: 15px 0;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px;
+    }
+
+    &_container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      margin-top: 30px;
+      @media screen and ($tablet2) {
+        margin-top: 15px;
+        grid-column-gap: 15px;
+      }
+      @media screen and ($mobile4) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+      }
+      @media screen and ($mobile3) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+      }
+      @media screen and ($mobile2) {
+        display: block;
+      }
+    }
+
+    &_radio{
+      position: relative;
+      display: block;
+      @media screen and ($mobile2) {
+        margin-bottom: 15px;
+      }
+
+      &:last-child{
+        @media screen and ($mobile2) {
+          margin-bottom: 0;
+        }
+      }
+
+      & input {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+
+        &:checked + .order_payment_radio_box:after {
+          border: 1px solid $red-color-hover;
+        }
+      }
+
+      &_box{
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        outline: none;
+        height: 100px;
+        padding: 20px 25px;
+        cursor: pointer;
+        @media screen and ($desktop1) {
+          height: 90px;
+          padding: 20px;
+        }
+        @media screen and ($tablet2) {
+          height: 80px;
+          padding: 15px;
+        }
+        @media screen and ($mobile2) {
+          height: max-content;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          border: none;
+          border-radius: 4px;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          transition: 0.2s;
+        }
+      }
+
+      &_caption{
+        font-family: 'ProximaNova-Bold';
+        font-size: 16px;
+        margin-bottom: 7px;
+        @media screen and ($desktop1) {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+      }
+
+      &_description{
+        font-size: 13px;
+        color: #BCBCBC;
+        @media screen and ($desktop1) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &_comment{
+    position: relative;
+    display: grid;
+    grid-template-columns: 190fr 475fr;
+    grid-column-gap: 60px;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 50px 100px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media screen and ($desktop1) {
+      grid-column-gap: 40px;
+      padding: 30px 60px;
+    }
+    @media screen and ($tablet2) {
+      grid-column-gap: 40px;
+      padding: 20px 30px;
+      margin-top: 15px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 160px auto;
+      grid-column-gap: 40px;
+      padding: 20px 30px;
+      margin-top: 15px;
+    }
+    @media screen and ($mobile5) {
+      grid-column-gap: 20px;
+      padding: 20px;
+    }
+    @media screen and ($mobile3) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_input{
+      font-size: 14px;
+      width: 100%;
+      height: 100px;
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      outline: none;
+      padding: 15px;
+      transition: border 0.3s;
+      @media screen and ($desktop1) {
+        height: 80px;
+      }
+
+      &:focus{
+        border: 1px solid $red-color-hover;
+        transition: border 0.3s;
+      }
+
+      &::placeholder{
+        color: #BCBCBC;
+      }
+    }
+  }
+
+  &_back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: $grey-color;
+    color: $text-color-white;
+    border-radius: 4px;
+    height: 34px;
+    width: 190px;
+    top: -70px;
+    right: 0;
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      width: 180px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      height: 30px;
+      width: 160px;
+    }
+    @media screen and ($mobile3) {
+      order: 2;
+      align-self: flex-start;
+      margin-top: 15px;
+    }
+
+    &:before{
+      content: "\f177";
+      font-family: 'FontAwesome';
+      margin-right: 15px;
+      @media screen and ($desktop1) {
+        margin-right: 15px;
+      }
+      @media screen and ($tablet2) {
+        margin-right: 10px;
+      }
+    }
+
+    &:hover{
+      background-color: $grey-color-hover;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &_right{
+    & .basket-page_top{
+      border: none !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    }
+  }
+
+  &_submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ProximaNova-Semibold';
+    color: $text-color-white;
+    background-color: $red-color;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    height: 55px;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      height: 50px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      height: 45px;
+    }
+
+    &:hover{
+      background-color: $red-color-hover;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+  }
+
+  &_label{
+    margin-top: 20px;
+    margin-left: 12px;
+    @media screen and ($desktop1) {
+      margin-left: 0;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 15px;
+    }
+  }
+}

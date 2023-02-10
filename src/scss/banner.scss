@@ -1,0 +1,629 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блок с двумя банероми*/
+
+.banner{
+  &_wrapper{
+    position: relative;
+    display: grid;
+    grid-template-rows: 330px 330px;
+    grid-row-gap: 22px;
+    width: 510px;
+    margin-top: 65px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 20px;
+      width: 100%;
+      margin-top: 0;
+    }
+    @media screen and ($tablet1) {
+      grid-gap: 20px;
+    }
+    @media screen and ($mobile5) {
+      isplay: none;
+    }
+  }
+
+  &_box{
+    position: relative;
+    width: 100%;
+    height: 330px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.8s;
+    @media screen and ($desktop1) {
+      height: 270px;
+    }
+    @media screen and ($tablet2) {
+      height: 250px;
+    }
+    @media screen and ($tablet1) {
+      height: 220px;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: linear-gradient(to top, #ffffff 0%, transparent 50%);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 2;
+      opacity: 0.6;
+      transition: background 0.8s;
+    }
+
+    &.white{
+      &:before{
+        background: linear-gradient(to top, #000000 0%, transparent 50%);
+        transition: background 0.8s;
+      }
+    }
+
+    &:hover{
+      & .banner_img{
+        transform: scale(1.15);
+        transition: transform 0.8s;
+      }
+    }
+  }
+
+  &_img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    @media screen and ($tablet2) {
+      height: 250px;
+    }
+    @media screen and ($tablet1) {
+      height: 220px;
+    }
+  }
+
+  &_info{
+    position: absolute;
+    bottom: 23px;
+    left: 26px;
+    width: calc(100% - 50px);
+    z-index: 3;
+    @media screen and ($desktop1) {
+      width: 300px;
+    }
+    @media screen and ($tablet2) {
+      width: 300px;
+    }
+    @media screen and ($tablet1) {
+      width: 300px;
+    }
+
+    &.center{
+      width: calc(100% - 70px);
+      left: 35px;
+      bottom: 50%;
+      transform: translateY(50%);
+      @media screen and ($desktop1) {
+        left: 25px;
+      }
+    }
+  }
+
+  &_name {
+    font-family: 'ProximaNova-Bold';
+    font-size: 26px;
+    @media screen and ($desktop1) {
+      font-size: 26px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 24px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 20px;
+    }
+
+    &.white{
+      font-size: 48px;
+      color: $text-color-white;
+      @media screen and ($desktop1) {
+        font-size: 36px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 34px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &_description{
+    font-size: 23px;
+    margin-top: 5px;
+    @media screen and ($desktop1) {
+      font-size: 22px;
+      margin-top: 2px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 20px;
+      margin-top: 2px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 18px;
+    }
+
+    &.white{
+      color: $text-color-white;
+    }
+  }
+
+  &_link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+/*Каталог акций*/
+
+.stock{
+  & .page_nav{
+    @media screen and ($mobile4) {
+      align-self: center;
+    }
+    @media screen and ($mobile3) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 40px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 15px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile4) {
+      display: block;
+    }
+
+    & .banner_info{
+      @media screen and ($mobile1) {
+        width: calc(100% - 40px);
+        left: 20px;
+      }
+    }
+
+    & .banner_name {
+      @media screen and ($mobile1) {
+        font-size: 18px;
+      }
+
+      &.white{
+        @media screen and ($mobile1) {
+          font-size: 26px;
+        }
+      }
+    }
+
+    & .banner_description{
+      @media screen and ($mobile1) {
+        font-size: 16px;
+      }
+    }
+
+    & .banner_box{
+      height: 270px;
+      @media screen and ($desktop1) {
+        height: 220px;
+      }
+      @media screen and ($tablet1) {
+        height: 200px;
+      }
+      @media screen and ($mobile4) {
+        margin-bottom: 15px;
+      }
+
+      &:before{
+        background: linear-gradient(to top, #ffffff 0%, transparent 100%);
+        opacity: 0.5;
+      }
+
+      &.white{
+        &:before{
+          background: linear-gradient(to top, #000000 0%, transparent 100%);
+        }
+      }
+    }
+  }
+}
+
+/*Внутренняя страница акций*/
+
+.stock-page{
+  position: relative;
+  background-color: #F6F6F6;
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 1330fr 210fr;
+    grid-column-gap: 60px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 960fr 200fr;
+      grid-column-gap: 40px;
+    }
+    @media screen and ($tablet2) {
+      display: block;
+    }
+    @media screen and ($tablet1) {
+      height: 350px;
+    }
+  }
+
+  &_right{
+    @media screen and ($tablet2) {
+      display: none;
+    }
+  }
+
+  &_left{
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+  &_img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+
+    &_wrapper{
+      position: relative;
+      width: 100%;
+      height: 450px;
+      @media screen and ($desktop1) {
+        height: 420px;
+      }
+      @media screen and ($tablet2) {
+        height: 400px;
+      }
+      @media screen and ($mobile5) {
+        height: 300px;
+      }
+      @media screen and ($mobile4) {
+        height: 270px;
+      }
+      @media screen and ($mobile2) {
+        height: 240px;
+      }
+      @media screen and ($mobile1) {
+        height: 220px;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, #ffffff 0%, transparent 60%);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 2;
+        opacity: 0.7;
+
+        &.white{
+          &:before{
+            background: linear-gradient(to top, #000000 0%, transparent 60%);
+          }
+        }
+      }
+    }
+
+    &_info{
+      position: absolute;
+      bottom: 130px;
+      left: 80px;
+      @media screen and ($desktop1) {
+        bottom: 100px;
+        left: 40px;
+      }
+      @media screen and ($mobile5) {
+        bottom: 70px;
+        left: 30px;
+      }
+      @media screen and ($mobile2) {
+        bottom: 50px;
+        left: 20px;
+      }
+    }
+
+    &_caption{
+      font-family: 'ProximaNova-Bold';
+      font-size: 52px;
+      @media screen and ($desktop1) {
+        font-size: 38px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 32px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 28px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 24px;
+      }
+      @media screen and ($mobile4) {
+        font-size: 24px;
+      }
+      @media screen and ($mobile2) {
+        font-size: 22px;
+      }
+      @media screen and ($mobile1) {
+        font-size: 20px;
+      }
+
+      &.white{
+        color: $text-color-white;
+      }
+    }
+
+    &_text{
+      font-size: 40px;
+      @media screen and ($desktop1) {
+        font-size: 30px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 26px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 24px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 22px;
+      }
+      @media screen and ($mobile4) {
+        font-size: 22px;
+      }
+      @media screen and ($mobile2) {
+        font-size: 20px;
+      }
+      @media screen and ($mobile1) {
+        font-size: 18px;
+      }
+
+      &.white{
+        color: $text-color-white;
+      }
+
+      & span{
+        font-family: 'ProximaNova-Bold';
+        color: $red-color;
+        margin-left: 7px;
+      }
+    }
+  }
+
+  &_info{
+    padding: 25px 60px 50px;
+    @media screen and ($desktop1) {
+      padding: 20px 40px 30px;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px 30px 30px;
+    }
+    @media screen and ($mobile2) {
+      padding: 20px;
+    }
+  }
+
+  &_date{
+    font-size: $text-size-xs;
+    color: #BCBCBC;
+    margin-bottom: 10px;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 12px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 12px;
+    }
+  }
+
+  &_name{
+    font-family: 'ProximaNova-Bold';
+    font-size: 24px;
+    margin-bottom: 15px;
+    @media screen and ($desktop1) {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 20px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 20px;
+    }
+    @media screen and ($mobile2) {
+      font-size: 20px;
+    }
+    @media screen and ($mobile1) {
+      font-size: 18px;
+    }
+  }
+
+  &_description{
+    font-size: 16px;
+    line-height: 1.5em;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      line-height: 1.5em;
+    }
+    @media screen and ($tablet1) {
+      font-size: 14px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 14px;
+    }
+    @media screen and ($mobile4) {
+      text-align: justify;
+    }
+  }
+
+  &_caption{
+    font-family: 'ProximaNova-Bold';
+    font-size: 20px;
+    margin-bottom: 35px;
+    @media screen and ($desktop1) {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &_phone{
+    display: block;
+    font-size: 22px;
+    width: fit-content;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s;
+    }
+  }
+
+  &_call{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ProximaNova-Semibold';
+    color: $text-color-white;
+    background-color: $red-color;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      height: 40px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:hover{
+      background-color: $red-color-hover;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+  }
+
+  &_mail{
+    display: block;
+    width: fit-content;
+    font-family: 'ProximaNova-Light';
+    font-size: 16px;
+    transition: color 0.3s;
+    margin-top: 25px;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s;
+    }
+  }
+}
+
+/*Товары участвующие в акции*/
+
+.promotion{
+  position: relative;
+  background-color: #F6F6F6;
+  padding: 75px 0 105px;
+  @media screen and ($desktop1) {
+    padding: 50px 0 70px;
+  }
+  @media screen and ($tablet2) {
+    padding: 50px 0 70px;
+  }
+  @media screen and ($tablet1) {
+    padding: 40px 0 60px;
+  }
+
+  &_wrapper{
+    position: relative;
+    display: grid;
+    background-color: #ffffff;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    width: 1330px;
+    margin: 30px 0 50px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 940px;
+      margin: 20px 0 40px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      margin: 20px 0 40px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      margin: 20px 0 30px;
+    }
+    @media screen and ($mobile5) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 20px 0 30px;
+    }
+    @media screen and ($mobile4) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and ($mobile1) {
+      display: block;
+    }
+
+    & .box{
+      border: 1px solid #EBEBEB !important;
+      width: 100%;
+      min-height: 342px;
+      @media screen and ($tablet2) {
+        min-height: 330px;
+      }
+      @media screen and ($tablet1) {
+        min-height: 330px;
+      }
+      @media screen and ($mobile5) {
+        min-height: initial;
+      }
+    }
+  }
+}

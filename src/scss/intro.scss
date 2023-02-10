@@ -1,0 +1,1840 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Слайдер под меню с двумя товарами*/
+
+.intro{
+  position: relative;
+  margin: 25px 0 60px;
+  z-index: 2;
+  @media screen and ($desktop1) {
+    margin: 20px 0 40px;
+  }
+  @media screen and ($tablet2) {
+    margin: 20px 0 30px;
+  }
+  @media screen and ($tablet1) {
+    margin: 20px 0 40px;
+  }
+  @media screen and ($mobile4) {
+    margin: 15px 0 40px;
+  }
+  @media screen and ($mobile3) {
+    margin-bottom: 20px;
+  }
+
+  &_wrapper{
+    position: relative;
+  }
+
+  & .swiper-container{
+    @media screen and ($tablet1) {
+      padding: 0px 0px 43px;
+    }
+  }
+
+  & .swiper-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2px;
+    justify-items: center;
+    align-items: center;
+    @media screen and ($tablet1) {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+  }
+
+  & .swiper-container-horizontal>.swiper-pagination-bullets{
+    @media screen and ($tablet1) {
+      position: absolute;
+      bottom: 0;
+      line-height: 1em;
+      text-align: center;
+      height: 13px;
+      padding: 0 15px;
+    }
+  }
+  & .swiper-container-horizontal .swiper-pagination-bullet {
+    @media screen and ($tablet1) {
+      width: 12px;
+      height: 13px;
+      display: inline-block;
+      align-items: center;
+      background-color: #EBEBEB;
+      opacity: 1;
+      outline: none;
+      margin: 0 7px;
+      transition: all 0.2s;
+    }
+  }
+  & .swiper-container-horizontal .swiper-pagination-bullet-active {
+    @media screen and ($tablet1) {
+      width: 74px;
+      background-color: $red-color;
+      border-radius: 12px;
+    }
+  }
+
+  &_box{
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    @media screen and ($desktop1) {
+      height: 350px;
+    }
+    @media screen and ($tablet2) {
+      height: 300px;
+    }
+    @media screen and ($tablet1) {
+      height: 320px;
+    }
+    @media screen and ($mobile4) {
+      height: 300px;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: linear-gradient(to top, #000000 0%, transparent 50%);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.8s;
+    }
+
+    &:hover{
+      &::before{
+        opacity: 1;
+        transition: opacity 0.8s;
+      }
+
+      & .intro_box:before{
+        content: "";
+        position: absolute;
+        background-color: red;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 2;
+        transition: all 0.8s;
+      }
+
+      & .intro_box_img{
+        transform: scale(1.15);
+        transition: transform 0.8s;
+      }
+
+      & .intro_box_info{
+        background-color: transparent;
+        transition: background-color 0.5s;
+      }
+
+      & .intro_box_name{
+        color: $text-color-white;
+        transition: color 0.8s;
+      }
+
+      & .intro_box_description{
+        color: #7C7C7C;
+        transition: color 0.8s;
+      }
+    }
+
+    &_img{
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+    }
+
+    &_info{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      padding: 16px 105px;
+      transition: background-color 0.5s;
+      z-index: 5;
+      @media screen and ($desktop1) {
+        height: 90px;
+        padding: 15px 50px;
+      }
+      @media screen and ($tablet2) {
+        height: 80px;
+        padding: 15px 30px;
+      }
+      @media screen and ($tablet1) {
+        height: 80px;
+        padding: 15px 40px;
+      }
+      @media screen and ($mobile4) {
+        height: 80px;
+        padding: 15px 30px;
+      }
+    }
+
+    &_name{
+      font-family: 'ProximaNova-Bold';
+      font-size: 28px;
+      text-align: center;
+      line-height: 1.1em;
+      transition: color 0.8s;
+      @media screen and ($desktop1) {
+        font-size: 22px;
+        margin-bottom: 2px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 20px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 20px;
+      }
+      @media screen and ($mobile4) {
+        font-size: 20px;
+      }
+    }
+
+    &_description{
+      font-size: $text-size-xs;
+      color: #BCBCBC;
+      text-align: center;
+      line-height: 1.5em;
+      transition: color 0.8s;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        line-height: 1.3em;
+      }
+    }
+
+    &_link{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+}
+
+/*Блок с товаром*/
+
+.box{
+  position: relative;
+  display: grid;
+  background-color: #FFFFFF;
+  border-left: 1px solid #EBEBEB;
+  @media screen and ($mobile5) {
+    height: 325px;
+  }
+  @media screen and ($mobile4) {
+    height: 310px;
+  }
+  @media screen and ($mobile2) {
+    height: 325px;
+  }
+  @media screen and ($mobile1) {
+    height: 310px;
+  }
+
+  /*&:nth-child(6n-5){
+    border-left: none;
+  }*/
+
+  &_wrapper{
+    position: relative;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px 12px;
+    transition: all 0.3s;
+    width: 100%;
+    z-index: 2;
+    @media screen and ($tablet2) {
+      padding: 10px 12px;
+    }
+
+    &:hover{
+      position: absolute;
+      width: calc(100% + 15px);
+      height: 390px;
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 18px;
+      transition: all 0.3s;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.16);
+      z-index: 20;
+      @media screen and ($tablet2) {
+        height: 370px;
+        padding: 10px 18px;
+      }
+      @media screen and ($mobile5) {
+        height: initial;
+        position: relative;
+        border: none;
+        width: initial;
+        border-radius: 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 12px;
+        box-shadow: none;
+      }
+
+      & .box_img{
+        opacity: 0.5;
+        transition: all 0.1s;
+        @media screen and ($mobile5) {
+          opacity: 1;
+        }
+      }
+
+      & .box_favorite{
+        display: block;
+        cursor: pointer;
+      }
+
+      & .box_view{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        @media screen and ($mobile5) {
+          display: none;
+        }
+
+        &:hover{
+          background-color: $grey-color-hover;
+          border: 1px solid $grey-color-hover;
+          color: $text-color-white;
+          transition: all 0.3s;
+        }
+      }
+
+      & .box_amount{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 13px;
+        line-height: 1.5em;
+        margin-top: 15px;
+        @media screen and ($tablet2) {
+          font-size: 12px;
+          margin-top: 15px;
+        }
+        @media screen and ($mobile5) {
+          display: none;
+        }
+      }
+    }
+
+    &_row{
+      position: relative;
+      display: grid;
+      grid-template-columns: 220fr 320fr 280fr 280fr 200fr;
+      justify-items: center;
+      align-items: center;
+      background-color: #FFFFFF;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0px 20px;
+      transition: all 0.3s;
+      width: 100%;
+      z-index: 2;
+      @media screen and ($desktop1) {
+        grid-template-columns: 220fr 320fr 180fr 200fr 160fr;
+        padding: 0px 15px;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 220fr 320fr 200fr 160fr;
+        grid-row-gap: 15px;
+        padding: 0px 15px;
+      }
+      @media screen and ($mobile5) {
+        grid-template-columns: 150fr 320fr 170fr;
+        grid-row-gap: 15px;
+        padding: 0px 15px;
+      }
+      @media screen and ($mobile4) {
+        grid-template-columns: 180fr 300fr 160fr;
+        padding: 0 10px;
+      }
+      @media screen and ($mobile3) {
+        grid-template-columns: 180fr 200fr 160fr;
+        grid-row-gap: 5px;
+        padding: 0 10px;
+      }
+      @media screen and ($mobile1) {
+        grid-template-columns: 100fr 170fr;
+        grid-template-rows: auto 30px auto;
+        grid-row-gap: 5px;
+        padding: 0 10px;
+      }
+
+      &:hover{
+        position: absolute;
+        width: calc(100% + 20px);
+        height: 230px;
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px 30px;
+        transition: all 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.16);
+        z-index: 20;
+        @media screen and ($desktop1) {
+          height: 180px;
+          top: -10px;
+          padding: 0px 25px;
+          box-shadow: 0 8px 16px rgba(0,0,0,0.16);
+        }
+        @media screen and ($tablet2) {
+          height: 170px;
+          top: -10px;
+          padding: 0px 25px;
+          box-shadow: 0 8px 16px rgba(0,0,0,0.16);
+        }
+        @media screen and ($mobile5) {
+          height: 100%;
+          width: initial;
+          border: none;
+          border-radius: none;
+          box-shadow: none;
+          top: 0;
+          left: 0;
+          transform: translateX(0);
+          padding: 0px 15px;
+        }
+        @media screen and ($mobile4) {
+          padding: 0 10px;
+        }
+        @media screen and ($mobile3) {
+          padding: 0 10px;
+        }
+        @media screen and ($mobile1) {
+          padding: 0 10px;
+        }
+
+        & .box_view{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          @media screen and ($mobile5) {
+            display: none;
+          }
+
+          &:hover{
+            background-color: $grey-color-hover;
+            border: 1px solid $grey-color-hover;
+            color: $text-color-white;
+            transition: all 0.3s;
+          }
+        }
+
+        & .box_img{
+          opacity: 0.5;
+          transition: all 0.1s;
+          @media screen and ($mobile5) {
+            opacity: 1;
+          }
+        }
+      }
+
+      & .box{
+        &_img{
+          &_wrapper{
+            &_row{
+              @media screen and ($mobile5) {
+                grid-column: 1/2;
+                grid-row: 1/3;
+              }
+              @media screen and ($mobile4) {
+                grid-column: 1/2;
+                grid-row: 1/3;
+              }
+              @media screen and ($mobile1) {
+                grid-column: 1/2;
+                grid-row: 1/4;
+              }
+            }
+          }
+        }
+      }
+
+      & .box_view{
+        width: 148px;
+        height: 40px;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        @media screen and ($desktop1) {
+          width: 148px;
+          height: 40px;
+          bottom: 50%;
+          transform: translate(-50%, 50%);
+        }
+        @media screen and ($tablet2) {
+          font-size: 11px;
+          width: 140px;
+          height: 36px;
+        }
+        @media screen and ($mobile5) {
+          display: none;
+        }
+      }
+
+      & .box_info{
+        justify-self: start;
+        margin-top: 0;
+        margin-left: 30px;
+        @media screen and ($desktop1) {
+          margin-left: 20px;
+        }
+        @media screen and ($tablet2) {
+          grid-column: 2/3;
+          grid-row: 1/3;
+          margin-left: 20px;
+        }
+        @media screen and ($mobile5) {
+          grid-column: 2/3;
+          grid-row: 1/3;
+          margin: 0 10px;
+        }
+        @media screen and ($mobile4) {
+          margin: 0 10px;
+        }
+        @media screen and ($mobile3) {
+          grid-column: 2/4;
+          grid-row: 1/2;
+          align-self: end;
+        }
+        @media screen and ($mobile1) {
+          grid-column: 2/3;
+          grid-row: 1/2;
+        }
+
+        &_item{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 15px;
+          @media screen and ($desktop1) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 15px;
+          }
+          @media screen and ($mobile4) {
+            margin-top: 5px;
+          }
+          @media screen and ($mobile3) {
+            display: none;
+          }
+        }
+
+        &_name{
+          font-size: 13px;
+          color: #9F9F9F;
+          margin-right: 3px;
+          @media screen and ($desktop1) {
+            font-size: 13px;
+            color: #9F9F9F;
+            margin-right: 3px;
+          }
+          @media screen and ($tablet2) {
+            font-size: 13px;
+            margin-right: 3px;
+          }
+          @media screen and ($mobile5) {
+            font-size: 13px;
+            margin-right: 3px;
+          }
+          @media screen and ($mobile4) {
+            font-size: 12px;
+          }
+          @media screen and ($mobile1) {
+            max-height: 42px;
+            overflow: hidden;
+          }
+        }
+
+        &_value{
+          font-size: 13px;
+          color: #4A4A4A;
+          @media screen and ($desktop1) {
+            font-size: 13px;
+            color: #4A4A4A;
+          }
+          @media screen and ($tablet2) {
+            font-size: 13px;
+          }
+          @media screen and ($mobile5) {
+            font-size: 13px;
+          }
+          @media screen and ($mobile4) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      & .box_category{
+        font-size: 14px;
+        @media screen and ($desktop1) {
+          font-size: 13px;
+        }
+        @media screen and ($tablet2) {
+          font-size: 13px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 13px;
+        }
+        @media screen and ($mobile4) {
+          font-size: 12px;
+        }
+      }
+
+      & .box_name{
+        font-size: 16px;
+        @media screen and ($desktop1) {
+          font-size: 13px;
+        }
+        @media screen and ($tablet2) {
+          font-size: 13px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 13px;
+          height: initial;
+          min-height: initial;
+        }
+      }
+
+      & .box_price.old{
+        font-size: 17px;
+        min-height: 19px;
+        @media screen and ($desktop1) {
+          font-size: 16px;
+          min-height: 15px;
+        }
+        @media screen and ($tablet2) {
+          font-size: 14px;
+          min-height: 15px;
+        }
+        @media screen and ($mobile5) {
+          display: none;
+        }
+      }
+
+      & .box_price.new{
+        font-family: 'ProximaNova-Bold';
+        font-size: 38px;
+        margin-top: 5px;
+        @media screen and ($desktop1) {
+          font-size: 32px;
+        }
+        @media screen and ($tablet2) {
+          font-size: 26px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 22px;
+        }
+        @media screen and ($mobile4) {
+          font-size: 20px;
+        }
+        @media screen and ($mobile3) {
+          font-size: 20px;
+        }
+      }
+
+      & .card-product_info_presence{
+        @media screen and ($tablet2) {
+          grid-column: 3/4;
+          grid-row: 1/2;
+          align-self: end;
+        }
+        @media screen and ($mobile5) {
+          display: none;
+        }
+      }
+
+      & .box{
+        &_more{
+          &_wrapper{
+            &_row{
+              @media screen and ($tablet2) {
+                grid-column: 4/5;
+                grid-row: 1/3;
+              }
+              @media screen and ($mobile5) {
+                grid-column: 3/4;
+                grid-row: 2/3;
+                justify-self: end;
+                align-self: start;
+              }
+              @media screen and ($mobile1) {
+                grid-column: 2/3;
+                grid-row: 3/4;
+              }
+            }
+          }
+        }
+
+        &_price{
+          &_wrapper{
+            &_row{
+              @media screen and ($tablet2) {
+                grid-column: 3/4;
+                grid-row: 2/3;
+                align-self: start;
+              }
+              @media screen and ($mobile5) {
+                grid-column: 3/4;
+                grid-row: 1/2;
+                align-self: end;
+                justify-self: end;
+                margin-right: 10px;
+              }
+              @media screen and ($mobile3) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                align-self: start;
+                justify-self: center;
+                margin: 10px 0 0 0;
+              }
+              @media screen and ($mobile1) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                align-self: center;
+                justify-self: end;
+                margin: 0 10px 0 0;
+              }
+            }
+          }
+
+          & .box_price.new{
+            @media screen and ($mobile1) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    &_list{
+      position: relative;
+      display: grid;
+      grid-template-columns: 120fr 300fr 250fr 210fr 230fr 200fr;
+      justify-items: center;
+      align-items: center;
+      background-color: #FFFFFF;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0px 30px;
+      transition: all 0.3s;
+      width: 100%;
+      z-index: 2;
+      @media screen and ($desktop1) {
+        grid-template-columns: 120fr 320fr 280fr 180fr 200fr 160fr;
+        padding: 0px 15px;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 120fr 300fr 280fr 180fr 160fr;
+        grid-row-gap: 10px;
+        padding: 0px 15px;
+      }
+      @media screen and ($mobile5) {
+        grid-template-columns: 120fr 320fr 260fr 160fr;
+        grid-row-gap: 10px;
+        padding: 0px 10px;
+      }
+      @media screen and ($mobile4) {
+        grid-template-columns: 100fr 350fr 160fr;
+      }
+      @media screen and ($mobile3) {
+        grid-template-columns: 100fr 350fr 160fr;
+      }
+      @media screen and ($mobile2) {
+        grid-template-columns: 100fr 200fr 160fr;
+        grid-row-gap: 0;
+      }
+      @media screen and ($mobile1) {
+        grid-template-columns: 120fr 200fr 160fr;
+        padding: 0 5px;
+        grid-row-gap: 0;
+      }
+
+      &:hover{
+        position: absolute;
+        width: calc(100% + 10px);
+        height: 120px;
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px 35px;
+        transition: all 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.16);
+        z-index: 20;
+        @media screen and ($desktop1) {
+          height: 120px;
+          padding: 0px 20px;
+          box-shadow: 0 8px 16px rgba(0,0,0,0.16);
+        }
+        @media screen and ($tablet2) {
+          height: 120px;
+          padding: 0px 20px;
+          box-shadow: 0 8px 16px rgba(0,0,0,0.16);
+        }
+        @media screen and ($mobile5) {
+          height: 100%;
+          width: initial;
+          border: none;
+          border-radius: none;
+          box-shadow: none;
+          top: 0;
+          left: 0;
+          transform: translateX(0);
+          padding: 0px 10px;
+        }
+        @media screen and ($mobile1) {
+          padding: 0 5px;
+        }
+
+        & .box_view{
+          display: none;
+        }
+
+        & .box_img{
+          opacity: 1;
+        }
+      }
+
+      & .box{
+        &_stock{
+          @media screen and ($tablet2) {
+            display: none;
+          }
+          @media screen and ($mobile5) {
+            display: none;
+          }
+        }
+      }
+
+      &_category{
+        @media screen and ($mobile2) {
+          display: none;
+        }
+      }
+
+      & .box_info{
+        justify-self: start;
+        margin-top: 0;
+        margin-left: 15px;
+        @media screen and ($tablet2) {
+          grid-column: 2/3;
+          grid-row: 1/3;
+          margin: 0 7px;
+        }
+        @media screen and ($mobile5) {
+          grid-column: 2/3;
+          grid-row: 1/3;
+          margin: 0 7px;
+        }
+        @media screen and ($mobile2) {
+          grid-column: 2/4;
+          grid-row: 1/2;
+          align-self: end;
+        }
+        @media screen and ($mobile1) {
+          grid-column: 2/4;
+          grid-row: 1/2;
+          align-self: end;
+          margin: 0 5px 5px 15px;
+        }
+
+        &_item{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 0;
+          @media screen and ($tablet2) {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            align-self: start;
+            justify-self: start;
+          }
+          @media screen and ($mobile5) {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            align-self: start;
+            justify-self: start;
+          }
+          @media screen and ($mobile4) {
+            display: none;
+          }
+        }
+
+        &_name{
+          font-size: 13px;
+          color: #9F9F9F;
+          margin-right: 3px;
+          @media screen and ($desktop1) {
+            font-size: 12px;
+          }
+          @media screen and ($tablet2) {
+            font-size: 12px;
+          }
+          @media screen and ($mobile5) {
+            font-size: 12px;
+          }
+          @media screen and ($mobile3) {
+            overflow: visible;
+            height: initial;
+            min-height: initial;
+          }
+          @media screen and ($mobile1) {
+            max-height: 28px;
+            overflow: hidden;
+            margin: 0;
+          }
+        }
+
+        &_value{
+          font-size: 13px;
+          color: #4A4A4A;
+          @media screen and ($desktop1) {
+            font-size: 12px;
+          }
+          @media screen and ($tablet2) {
+            font-size: 12px;
+          }
+          @media screen and ($mobile5) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      & .card-product_info_presence{
+        @media screen and ($tablet2) {
+          grid-column: 3/4;
+          grid-row: 1/2;
+          align-self: end;
+          justify-self: start;
+        }
+        @media screen and ($mobile5) {
+          grid-column: 3/4;
+          grid-row: 1/2;
+          align-self: end;
+          justify-self: start;
+        }
+        @media screen and ($mobile4) {
+          display: none;
+        }
+      }
+
+      & .box{
+        &_img{
+          &_wrapper{
+            &_list{
+              @media screen and ($tablet2) {
+                grid-column: 1/2;
+                grid-row: 1/3;
+              }
+              @media screen and ($mobile5) {
+                grid-column: 1/2;
+                grid-row: 1/3;
+              }
+            }
+          }
+        }
+
+        &_price{
+          &_wrapper{
+            &_row{
+              @media screen and ($tablet2) {
+                grid-column: 4/5;
+                grid-row: 1/3;
+              }
+              @media screen and ($mobile5) {
+                grid-column: 4/5;
+                grid-row: 1/2;
+                justify-self: end;
+                align-self: end;
+                margin-right: 10px;
+              }
+              @media screen and ($mobile4) {
+                grid-column: 3/4;
+              }
+              @media screen and ($mobile2) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                align-self: start;
+                justify-self: center;
+              }
+              @media screen and ($mobile1) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                align-self: start;
+                justify-self: center;
+                margin: 0;
+              }
+            }
+          }
+
+          &.old{
+            @media screen and ($mobile5) {
+              display: none;
+            }
+          }
+
+          &.new{
+            @media screen and ($mobile2) {
+              margin: 14px 0 0 0;
+            }
+            @media screen and ($mobile1) {
+              margin: 15px 0 0 0;
+              font-size: 16px;
+            }
+          }
+        }
+
+        &_more{
+          &_wrapper{
+            &_row{
+              @media screen and ($tablet2) {
+                grid-column: 5/6;
+                grid-row: 1/3;
+              }
+              @media screen and ($mobile5) {
+                grid-column: 4/5;
+                grid-row: 2/3;
+                justify-self: end;
+                align-self: start;
+              }
+              @media screen and ($mobile4) {
+                grid-column: 3/4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_img{
+    position: absolute;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transition: all 0.1s;
+    z-index: 1;
+
+    &_wrapper{
+      position: relative;
+      width: 100%;
+      max-width: 220px;
+      height: 200px;
+      overflow: hidden;
+      margin: 0 auto;
+      @media screen and ($tablet2) {
+        max-width: 190px;
+        height: 190px;
+      }
+      @media screen and ($mobile5) {
+        max-width: 190px;
+        height: 170px;
+      }
+
+      &_row{
+        position: relative;
+        width: 100%;
+        max-width: 220px;
+        height: 198px;
+        overflow: hidden;
+        margin: 0 auto;
+        @media screen and ($desktop1) {
+          max-width: 180px;
+          height: 140px;
+        }
+        @media screen and ($tablet2) {
+          grid-column: 1/2;
+          grid-row: 1/3;
+        }
+        @media screen and ($mobile5) {
+          max-width: 200px;
+          height: 120px;
+        }
+
+        & .box_img{
+          position: absolute;
+          object-fit: contain;
+          object-position: center;
+          width: 90%;
+          height: 90%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.1s;
+          z-index: 1;
+        }
+      }
+
+      &_list{
+        position: relative;
+        width: 100%;
+        max-width: 100px;
+        height: 98px;
+        overflow: hidden;
+        margin: 0 auto;
+
+        & .box_img{
+          position: absolute;
+          object-fit: contain;
+          object-position: center;
+          width: 90%;
+          height: 90%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.1s;
+          z-index: 1;
+        }
+      }
+    }
+
+    &_link{
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+  }
+
+  &_marker{
+    position: absolute;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    @media screen and ($tablet2) {
+      width: 28px;
+      height: 28px;
+    }
+
+    &_row{
+      position: absolute;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      top: 10px;
+      left: 10px;
+      z-index: 20;
+      @media screen and ($desktop1) {
+        width: 28px;
+        height: 28px;
+      }
+      @media screen and ($tablet2) {
+        width: 28px;
+        height: 28px;
+      }
+
+      &.fire{
+        background-color: $red-color;
+
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/fire.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 15px;
+          height: 18px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 100;
+        }
+
+        &:hover{
+          cursor: pointer;
+
+          & .box_marker_tooltips{
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        & .box_marker_tooltips:after{
+          content: "Хит продаж";
+        }
+      }
+
+      &.star{
+        background-color: $grey-color;
+
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/star.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 15px;
+          height: 18px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 100;
+        }
+
+        &:hover{
+          cursor: pointer;
+
+          & .box_marker_tooltips{
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        & .box_marker_tooltips:after{
+          content: "Советуем купить";
+        }
+      }
+
+      &.new{
+        background-color: #2d8541;
+
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/new.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 15px;
+          height: 18px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 100;
+        }
+
+        &:hover{
+          cursor: pointer;
+
+          & .box_marker_tooltips{
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        & .box_marker_tooltips:after{
+          content: "Новинка";
+        }
+      }
+
+      &.sale{
+        background-color: $yellow-color;
+
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/sale.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 15px;
+          height: 18px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 100;
+        }
+
+        &:hover{
+          cursor: pointer;
+
+          & .box_marker_tooltips{
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        & .box_marker_tooltips:after{
+          content: "Товар со скидкой";
+        }
+      }
+    }
+    &_tooltips{
+      transition: opacity 0.3s ease-in;
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+      @media screen and ($mobile5) {
+        display: none;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 13px solid transparent;
+        border-top: 8px solid #1c1c1c;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        @media screen and ($tablet2) {
+          border: 10px solid transparent;
+          border-top: 7px solid #1c1c1c;
+          top: -8px;
+        }
+      }
+
+      &:after{
+        content: "";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        background-color: #1C1C1C;
+        border-radius: 6px;
+        color: $text-color-white;
+        width: max-content;
+        height: 32px;
+        padding: 0 10px;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        @media screen and ($tablet2) {
+          font-size: 12px;
+          width: 110px;
+          height: 28px;
+          top: -36px;
+        }
+      }
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    &.fire{
+       background-color: $red-color;
+
+       &:before{
+         background: url("../img/fire.svg") no-repeat;
+         background-position: center;
+         background-size: contain;
+         width: 15px;
+         height: 18px;
+         @media screen and ($tablet2) {
+           width: 13px;
+           height: 15px;
+         }
+       }
+
+       &:hover{
+         cursor: pointer;
+
+         & .box_marker_tooltips{
+           visibility: visible;
+           opacity: 1;
+           pointer-events: auto;
+         }
+       }
+
+       & .box_marker_tooltips:after{
+         content: "Хит продаж";
+       }
+     }
+
+    &.star{
+      background-color: $grey-color;
+
+      &:before{
+        background: url("../img/star.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 15px;
+        height: 18px;
+        @media screen and ($tablet2) {
+          width: 15px;
+          height: 18px;
+        }
+      }
+
+      &:hover{
+        cursor: pointer;
+
+        & .box_marker_tooltips{
+          visibility: visible;
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      & .box_marker_tooltips:after{
+        content: "Советуем купить";
+      }
+    }
+
+    &.new{
+      background-color: #2d8541;
+
+      &:before{
+        background: url("../img/new.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 14px;
+        height: 18px;
+      }
+
+      &:hover{
+        cursor: pointer;
+
+        & .box_marker_tooltips{
+          visibility: visible;
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      & .box_marker_tooltips:after{
+        content: "Новинка";
+      }
+    }
+
+    &.sale{
+      background-color: $yellow-color;
+
+      &:before{
+        background: url("../img/sale.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 15px;
+        height: 15px;
+      }
+
+      &:hover{
+        cursor: pointer;
+
+        & .box_marker_tooltips{
+          visibility: visible;
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      & .box_marker_tooltips:after{
+        content: "Товар со скидкой";
+      }
+    }
+  }
+  &_favorite{
+    position: absolute;
+    display: none;
+    background: url("../img/heart.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 18px;
+    top: 17px;
+    left: 10px;
+    transition: all 0.3s;
+    opacity: 0.8;
+    z-index: 20;
+    @media screen and ($mobile5) {
+      display: none;
+    }
+
+    &.active{
+      background: url("../img/heart-red.svg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 1;
+      transition: all 0.3s;
+    }
+  }
+
+  &_view{
+    position: absolute;
+    display: none;
+    font-size: $text-size-xxs;
+    background-color: #FFFFFF;
+    color: #4A4A4A;
+    border-radius: 4px;
+    border: 1px solid #EBEBEB;
+    width: 148px;
+    height: 40px;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    z-index: 5;
+    @media screen and ($tablet2) {
+      font-size: 11px;
+      width: 140px;
+      height: 36px;
+      bottom: 40px;
+    }
+    @media screen and ($mobile5) {
+      display: none;
+    }
+
+    &:before{
+      content: "\f06e";
+      position: relative;
+      font-family: 'FontAwesome';
+      font-size: 14px;
+      margin-right: 5px;
+      @media screen and ($tablet2) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &_info{
+    margin-top: 8px;
+  }
+
+  &_category{
+    font-family: 'ProximaNova-Light';
+    font-size: 12px;
+    color: #BCBCBC;
+  }
+
+  &_name{
+    display: block;
+    font-size: 14px;
+    min-height: 32px;
+    max-height: 32px;
+    overflow: hidden;
+    margin-top: 7px;
+    transition: all 0.2s;
+    @media screen and ($tablet2) {
+      font-size: 13px;
+      min-height: 30px;
+      height: 30px;
+      overflow: hidden;
+    }
+    @media screen and ($mobile5) {
+      min-height: 45px;
+      height: 45px;
+    }
+    @media screen and ($mobile4) {
+      min-height: 30px;
+      height: 30px;
+    }
+    @media screen and ($mobile2) {
+      min-height: 45px;
+      height: 45px;
+    }
+    @media screen and ($mobile1) {
+      min-height: 30px;
+      height: 30px;
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: all 0.2s;
+    }
+  }
+
+  &_extra{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 12px;
+    @media screen and ($tablet2) {
+      display: grid;
+      grid-template-columns: 5fr 2fr 2fr;
+      justify-items: center;
+      align-items: center;
+      margin-top: 12px;
+    }
+    @media screen and ($mobile5) {
+      grid-template-columns: auto 45px 48px;
+      margin-top: 8px;
+    }
+    @media screen and ($mobile4) {
+      grid-template-columns: auto 45px 48px;
+      margin-top: 8px;
+    }
+    @media screen and ($mobile2) {
+      grid-template-columns: auto 37px 48px;
+      margin-top: 8px;
+    }
+    @media screen and ($mobile1) {
+      grid-template-columns: auto 60px 48px;
+    }
+  }
+
+  &_price{
+    &_wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-self: start;
+
+      &_row{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+      }
+    }
+
+    &_row{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &.old{
+      font-size: 15px;
+      color: #BCBCBC;
+      text-decoration: line-through;
+      margin-right: 7px;
+      min-height: 17px;
+      @media screen and ($tablet2) {
+        font-size: 14px;
+        min-height: 16px;
+      }
+    }
+
+    &.new{
+      font-family: 'ProximaNova-Semibold';
+      font-size: $text-size-xl;
+      @media screen and ($tablet2) {
+        font-size: $text-size-l;
+      }
+      @media screen and ($mobile2) {
+        font-size: 18px;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &_stock{
+    font-family: 'ProximaNova-Semibold';
+    font-size: 12px;
+    color: $text-color-white;
+    background-color: #415345;
+    width: 40px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    @media screen and ($tablet2) {
+      font-size: 11px;
+      width: 34px;
+      height: 16px;
+    }
+    @media screen and ($mobile5) {
+      display: none;
+    }
+    @media screen and ($mobile4) {
+      display: none;
+    }
+
+    &.none{
+      display: none;
+    }
+  }
+
+  &_compare{
+    position: relative;
+    background: url("../img/poll-2.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 14px;
+    height: 15px;
+    transition: all 0.3s;
+    z-index: 2;
+
+    &.active{
+      background: url("../img/poll-2-hover.svg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.3s;
+    }
+
+    &_icon{
+      &:before{
+        @media screen and ($mobile5) {
+          display: none;
+        }
+      }
+      &:after{
+        @media screen and ($mobile5) {
+          display: none;
+        }
+      }
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 13px solid transparent;
+      border-top: 8px solid #1c1c1c;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      transition: opacity 0.3s ease-in;
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:after{
+      content: "Сравнить";
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      background-color: #1C1C1C;
+      border-radius: 6px;
+      color: $text-color-white;
+      width: 90px;
+      height: 32px;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      transition: opacity 0.3s ease-in;
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:hover{
+      cursor: pointer;
+
+      &:before{
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      &:after{
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &_amount{
+    display: none;
+    @media screen and ($mobile5) {
+      display: none;
+    }
+    @media screen and ($mobile4) {
+      display: none;
+    }
+
+    &_number{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      min-width: 23px;
+      height: 23px;
+      background-color: #EBEBEB;
+      border-radius: 23px;
+      padding: 0 5px;
+      margin: 0 5px;
+      @media screen and ($tablet2) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &_more{
+    &_wrapper{
+      &_row{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        width: 200px;
+        @media screen and ($desktop1) {
+          grid-template-columns: 3fr 3fr 4fr;
+          width: 160px;
+        }
+        @media screen and ($tablet2) {
+          grid-template-columns: 3fr 3fr 4fr;
+          width: 160px;
+        }
+        @media screen and ($mobile5) {
+          grid-template-columns: 3fr 3fr 4fr;
+          width: 160px;
+        }
+        @media screen and ($mobile4) {
+          grid-template-columns: 3fr 3fr 4fr;
+          width: 140px;
+        }
+
+        & .box_favorite_row{
+          position: relative;
+          background: url("../img/heart.svg") no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 20px;
+          height: 18px;
+          transition: all 0.3s;
+          opacity: 0.8;
+          cursor: pointer;
+
+          &.active{
+            background: url("../img/heart-red.svg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

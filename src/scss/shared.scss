@@ -1,0 +1,1812 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Общие стили*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  position: relative;
+  font-family: 'ProximaNova-Regular', sans-serif;
+  font-weight: 400;
+  color: $text-color-main;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+main{
+  position: relative;
+  /*display: flex;
+  flex-direction: column;*/
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  @media screen and ($mobile3) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+  line-height: 1.5em;
+  color: $text-color-main;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'ProximaNova-Bold', sans-serif;
+}
+
+p{
+  font-family: 'ProximaNova-Regular', sans-serif;
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0;
+}
+
+div{
+  font-family: 'ProximaNova-Regular', sans-serif;
+  color: $text-color-main;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: 'ProximaNova-Regular', sans-serif;
+  color: $text-color-main;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mgt-0{
+  margin-top: 0 !important;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1600px;
+  position: relative;
+  z-index: 2;
+  @media screen and ($desktop1) {
+    width: 1175px;
+  }
+  @media screen and ($tablet2) {
+    width: 960px;
+  }
+  @media screen and ($tablet1) {
+    width: 740px;
+  }
+  @media screen and ($mobile5) {
+    width: 100%;
+    max-width: 740px;
+    padding: 0 8px;
+  }
+}
+
+/*Заголовки*/
+
+.title{
+  position: relative;
+  font-family: 'ProximaNova-Bold';
+  font-size: $text-size-xxxl;
+  text-transform: uppercase;
+  @media screen and ($desktop1) {
+    font-size: $text-size-xl;
+  }
+  @media screen and ($tablet2) {
+    font-size: $text-size-l;
+  }
+  @media screen and ($mobile3) {
+    font-size: $text-size-m;
+  }
+  @media screen and ($mobile1) {
+    font-size: 17px;
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    width: 105px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #EBEBEB;
+    bottom: 0;
+    @media screen and ($desktop1) {
+      width: 90px;
+      height: 3px;
+    }
+    @media screen and ($tablet2) {
+      width: 80px;
+      height: 2px;
+    }
+    @media screen and ($mobile3) {
+      width: 70px;
+      height: 2px;
+    }
+  }
+
+  &_main{
+    font-family: 'ProximaNova-Bold';
+    font-size: $text-size-xxxl;
+    padding-left: 15px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xxl;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-xl;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($mobile1) {
+      font-size: $text-size-m;
+    }
+
+    &:before{
+      display: none;
+    }
+  }
+
+  &_center{
+    font-family: 'ProximaNova-Bold';
+    font-size: 28px;
+    text-align: center;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xxl;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-xl;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($mobile1) {
+      font-size: $text-size-m;
+    }
+
+    &:before{
+      display: none;
+    }
+  }
+
+  &.small{
+    font-size: $text-size-xl;
+    text-transform: initial;
+    @media screen and ($desktop1) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-m;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-s;
+      text-transform: initial;
+    }
+
+    &:before{
+      display: none;
+    }
+  }
+}
+
+/*Хлебные крошки*/
+
+.page{
+  &_leader{
+    margin: 22px 0;
+    @media screen and ($desktop1) {
+      margin: 20px 0;
+    }
+    @media screen and ($mobile3) {
+      order: -1;
+    }
+
+    &.grey{
+      background-color: #F6F6F6;
+      padding: 22px 0;
+      margin: 0;
+      @media screen and ($desktop1) {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  &_way{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    height: max-content;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    @media screen and ($desktop1) {
+      margin-bottom: 10px;
+    }
+
+    &_link{
+      display: flex;
+      font-size: 13px;
+      color: $text-color-three;
+      transition: all 0.3s;
+
+      &:last-child{
+        color: $text-color-main;
+      }
+    }
+
+    & a:hover{
+      color: $red-color-hover;
+      transition: color 0.3s;
+    }
+
+    span {
+      position: relative;
+      color: $text-color-three;
+      top: -1px;
+      padding: 0 20px;
+    }
+  }
+}
+
+/*Пагинация страниц*/
+
+.page{
+  &_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-self: end;
+    width: max-content;
+
+    &_prev,
+    &_next{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $text-size-l;
+      color: #9F9F9F;
+      border: 1px solid #BCBCBC;
+      width: 34px;
+      height: 34px;
+      transition: color 0.3s, background-color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: $text-size-m;
+        width: 30px;
+        height: 30px;
+      }
+      @media screen and ($tablet2) {
+        font-size: $text-size-s;
+        width: 26px;
+        height: 26px;
+      }
+
+      &:hover{
+        color: $text-color-main;
+        background-color: rgba(239, 203, 59, 0.2);
+        transition: color 0.3s, background-color 0.3s;
+      }
+    }
+
+    &_prev{
+      border-radius: 4px 0 0 4px;
+    }
+
+    &_next{
+      border-radius: 0 4px 4px 0;
+      border-left: none;
+    }
+
+    &_number{
+      position: relative;
+      font-family: 'ProximaNova-Bold';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      color: #9F9F9F;
+      border: 1px solid #BCBCBC;
+      border-left: none;
+      width: 34px;
+      height: 34px;
+      transition: color 0.3s, background-color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+        width: 30px;
+        height: 30px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        width: 26px;
+        height: 26px;
+      }
+
+      &:first-child{
+        border-left: 1px solid #BCBCBC;
+      }
+
+      &:hover{
+        color: $text-color-main;
+        background-color: rgba(239, 203, 59, 0.2);
+        transition: color 0.3s, background-color 0.3s;
+      }
+
+      &.active{
+        color: $text-color-main;
+        background-color: rgba(239, 203, 59, 0.2);
+      }
+    }
+  }
+}
+
+/*Кнопки*/
+
+.btn{
+  outline: none;
+  cursor: pointer;
+
+  &.basket{
+    position: relative;
+    background-color: transparent;
+    border: 2px solid #EBEBEB;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    transition: background-color 0.3s, border 0.3s;
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: url("../img/shopping-cart-2.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 23px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s;
+    }
+
+    &:hover{
+      background-color: $grey-color-hover;
+      border: 2px solid $grey-color-hover;
+      transition: background-color 0.3s, border 0.3s;
+
+      &:before{
+        background: url("../img/shopping-cart-2-hover.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: all 0.3s;
+      }
+    }
+
+    &.add{
+      background-color: $grey-color;
+      border: 2px solid $grey-color;
+      transition: background-color 0.3s, border 0.3s;
+
+      &:before{
+        background: url("../img/shopping-cart-2-hover.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: all 0.3s;
+      }
+
+      &:after{
+        content: "";
+        position: absolute;
+        background: url("../img/ellipse.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+        top: 13px;
+        right: 1px;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &_yellow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-s;
+    background-color: $yellow-color;
+    border-radius: 6px;
+    height: 48px;
+    width: max-content;
+    padding: 0 40px;
+    transition: background-color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+      height: 45px;
+      padding: 0 30px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+      height: 40px;
+      padding: 0 25px;
+    }
+
+    &:hover{
+      background-color: $yellow-color-hover;
+      transition: background-color 0.3s, border 0.3s;
+    }
+  }
+
+  &_grey{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: $grey-color;
+    color: $text-color-white;
+    border-radius: 4px;
+    width: max-content;
+    height: 34px;
+    padding: 0 15px;
+    top: -70px;
+    right: 0;
+    margin-top: 25px;
+    transition: background-color 0.3s, border 0.3s;
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      height: 30px;
+      margin-top: 20px;
+    }
+
+    &:after{
+      content: "\f178";
+      font-family: 'FontAwesome';
+      margin-left: 30px;
+      @media screen and ($desktop1) {
+        margin-left: 15px;
+      }
+      @media screen and ($tablet2) {
+        margin-left: 10px;
+      }
+    }
+
+    &:hover{
+      background-color: $grey-color-hover;
+      transition: background-color 0.3s, border 0.3s;
+    }
+  }
+
+  &.add-red{
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-white;
+    background-color: $red-color;
+    border: none;
+    border-radius: 4px;
+    height: 55px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      height: 50px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      height: 45px;
+    }
+
+    &:hover{
+      background-color: $red-color-hover;
+      transition: background-color 0.3s, border 0.3s;
+    }
+
+    &:before{
+      content: "";
+      position: relative;
+      width: 30px;
+      height: 26px;
+      background: url("../img/basket-plus.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-right: 12px;
+      @media screen and ($desktop1) {
+        width: 25px;
+        height: 22px;
+      }
+      @media screen and ($tablet2) {
+        width: 23px;
+        height: 20px;
+      }
+      @media screen and ($tablet1) {
+        display: none;
+      }
+    }
+  }
+}
+
+/*Модальные окна*/
+
+.ov-hid{
+  overflow-y: hidden;
+}
+
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(34, 34, 34, 0.4);
+  z-index: 88888888;
+  transition: opacity 0.3s ease-in;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+
+  &#resultModal{
+    z-index: 99999999;
+
+    & .modalDialog_container {
+      padding: 45px;
+      @media screen and ($desktop1) {
+        padding: 35px;
+      }
+      @media screen and ($mobile1) {
+        padding: 30px 25px;
+      }
+    }
+  }
+
+  &#addBasketModal{
+    & .modalDialog_container {
+      padding: 45px;
+      @media screen and ($desktop1) {
+        padding: 35px;
+      }
+      @media screen and ($tablet2) {
+        padding: 35px;
+      }
+      @media screen and ($tablet1) {
+        padding: 30px;
+      }
+      @media screen and ($mobile1) {
+        padding: 30px 25px;
+      }
+    }
+  }
+
+  &#quickViewModal{
+    & .modalDialog_container {
+      padding: 50px;
+      @media screen and ($desktop1) {
+        padding: 40px;
+      }
+      @media screen and ($tablet2) {
+        padding: 40px;
+      }
+      @media screen and ($tablet1) {
+        padding: 30px;
+      }
+      @media screen and ($mobile5) {
+        display: none;
+      }
+    }
+  }
+
+  &#cityChange{
+    @media screen and ($mobile5) {
+      display: none;
+    }
+  }
+
+  &#callMe{
+    & .modalDialog_container{
+      @media screen and ($mobile1) {
+        padding: 30px 25px;
+      }
+    }
+  }
+
+  &#accountModal{
+    & .modalDialog_container{
+      @media screen and ($mobile1) {
+        padding: 30px 25px;
+      }
+    }
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &_container {
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 30px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    @media screen and ($desktop1) {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    &.max{
+      width: 970px;
+      @media screen and ($desktop1) {
+        width: 800px;
+      }
+      @media screen and ($tablet2) {
+        width: 720px;
+      }
+      @media screen and ($tablet1) {
+        width: 640px;
+      }
+    }
+
+    &.mid{
+      width: 750px;
+      @media screen and ($desktop1) {
+        width: 650px;
+      }
+      @media screen and ($tablet2) {
+        width: 600px;
+      }
+      @media screen and ($tablet1) {
+        width: 540px;
+      }
+      @media screen and ($mobile3) {
+        width: 350px;
+      }
+      @media screen and ($mobile1) {
+        width: 300px;
+      }
+    }
+
+    &.min{
+      width: 420px;
+      @media screen and ($desktop1) {
+        width: 380px;
+      }
+      @media screen and ($tablet2) {
+        width: 380px;
+      }
+      @media screen and ($tablet1) {
+        width: 350px;
+      }
+      @media screen and ($mobile3) {
+        width: 350px;
+      }
+      @media screen and ($mobile1) {
+        width: 300px;
+      }
+    }
+  }
+
+  &_caption{
+    font-family: 'ProximaNova-Bold';
+    font-size: 22px;
+    margin-bottom: 20px;
+    @media screen and ($desktop1) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 18px;
+    }
+
+    &.center{
+      text-align: center;
+      margin-bottom: 5px;
+      @media screen and ($desktop1) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &_search{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and ($desktop1) {
+      margin-bottom: 15px;
+    }
+
+    &_input{
+      font-size: 13px;
+      height: 40px;
+      width: 100%;
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      outline: none;
+      padding: 10px 120px 10px 20px;
+      @media screen and ($tablet2) {
+        height: 34px;
+      }
+
+      &::placeholder{
+        color: #9F9F9F;
+      }
+
+      &:focus{
+        border: 1px solid $red-color-hover;
+        border-radius: 4px 4px 0 0;
+      }
+    }
+
+    &_submit{
+      position: absolute;
+      font-size: 13px;
+      color: $text-color-white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      background-color: $red-color;
+      outline: none;
+      width: 100px;
+      height: 40px;
+      right: 0;
+      top: 0;
+      padding: 0 0 0 25px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      @media screen and ($desktop1) {
+        font-size: 12px;
+        width: 90px;
+        padding: 0 0 0 20px;
+      }
+      @media screen and ($tablet2) {
+        height: 34px;
+      }
+
+      &:before{
+        content: "\f002";
+        position: absolute;
+        font-family: 'FontAwesome';
+        font-size: 18px;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-55%);
+      }
+
+      &:hover{
+        background-color: $red-color-hover;
+        transition: background-color 0.3s;
+      }
+    }
+
+    &_result{
+      display: none;
+      position: absolute;
+      max-height: 170px;
+      width: 100%;
+      border-radius: 0 0 4px 4px;
+      background-color: #FFFFFF;
+      box-shadow: 0 10px 20px rgba(53, 53, 53, 0.16);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      top: 40px;
+      @media screen and ($desktop1) {
+        max-height: 170px;
+        box-shadow: 0 8px 16px rgba(53, 53, 53, 0.16);
+      }
+      @media screen and ($tablet2) {
+        top: 34px;
+        max-height: 150px;
+      }
+      @media screen and ($tablet1) {
+        max-height: 120px;
+      }
+
+      &.active{
+        display: block;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        cursor: pointer;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 4px #BCBCBC;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $red-color;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      &_error{
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-family: 'ProximaNova-Semibold';
+        font-size: 15px;
+        height: 80px;
+        padding: 15px 20px 15px 90px;
+        @media screen and ($desktop1) {
+          font-size: 14px;
+          height: 70px;
+          padding: 15px 20px 15px 80px;
+        }
+
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/search-error.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 24px;
+          height: 24px;
+          top: 50%;
+          left: 34px;
+          transform: translateY(-50%);
+          @media screen and ($desktop1) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &:after{
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border: 1px solid #EBEBEB;
+          border-radius: 4px;
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+          @media screen and ($desktop1) {
+            width: 45px;
+            height: 45px;
+          }
+        }
+      }
+    }
+
+    &_line{
+      position: relative;
+      font-size: 14px;
+      padding: 9px 20px;
+      transition: background-color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        padding: 8px 20px;
+      }
+
+      &:hover{
+        background-color: rgba(235, 235, 235, 0.5);
+        transition: background-color 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_city{
+    &_text{
+      font-size: 14px;
+      color: #BCBCBC;
+      margin-bottom: 15px;
+    }
+
+    &_wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 40px;
+      @media screen and ($tablet2) {
+        grid-column-gap: 30px;
+      }
+      @media screen and ($tablet1) {
+        grid-column-gap: 25px;
+      }
+    }
+
+    &_list{
+      list-style: none;
+    }
+
+    &_item{
+      font-size: 14px;
+      margin-bottom: 15px;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+      @media screen and ($tablet2) {
+        margin-bottom: 12px;
+      }
+
+      &:last-child{
+        @media screen and ($desktop1) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:hover{
+        color: $red-color-hover;
+        transition: color 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_description{
+    font-size: 14px;
+    color: #808080;
+    text-align: center;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+    }
+  }
+
+  &_check{
+    position: relative;
+    object-position: center;
+    object-fit: contain;
+    left: 50%;
+    width: 58px;
+    height: 58px;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+    @media screen and ($desktop1) {
+      width: 50px;
+      height: 51px;
+      margin-bottom: 10px;
+    }
+    @media screen and ($tablet2) {
+      width: 50px;
+      height: 51px;
+      margin-bottom: 7px;
+    }
+    @media screen and ($tablet1) {
+      width: 50px;
+      height: 51px;
+      margin-bottom: 7px;
+    }
+    @media screen and ($mobile5) {
+      width: 44px;
+      height: 45px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &_form{
+    margin-top: 35px;
+    @media screen and ($desktop1) {
+      margin-top: 30px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 25px;
+    }
+    @media screen and ($mobile5) {
+      margin-bottom: 15px;
+    }
+
+    &_item{
+      margin-bottom: 20px;
+    }
+
+    &_text{
+      font-size: 15px;
+      color: $text-color-main;
+      margin-left: 15px;
+      margin-bottom: 10px;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        margin-bottom: 7px;
+      }
+    }
+
+    &_input{
+      font-size: 14px;
+      width: 100%;
+      height: 45px;
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      outline: none;
+      padding: 0 15px;
+      transition: border 0.3s;
+      @media screen and ($desktop1) {
+        height: 40px;
+      }
+
+      &:focus{
+        border: 1px solid $red-color-hover;
+        transition: border 0.3s;
+      }
+
+      &::placeholder{
+        color: #BCBCBC;
+      }
+    }
+
+    &_submit{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'ProximaNova-Semibold';
+      color: $text-color-white;
+      background-color: $red-color;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      height: 45px;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      transition: background-color 0.3s;
+      @media screen and ($desktop1) {
+        height: 45px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 15px;
+        height: 40px;
+      }
+
+      &:hover{
+        background-color: $red-color-hover;
+        transition: background-color 0.3s;
+        cursor: pointer;
+      }
+    }
+
+    &_link{
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      color: $red-color;
+      width: fit-content;
+      border-bottom: 1px solid $red-color;
+      transition: color 0.3s, border 0.3s;
+      margin: 0 auto;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+      }
+
+      &:hover{
+        color: $red-color-hover;
+        border-bottom: 1px solid #FFFFFF;
+        transition: color 0.3s, border 0.3s;
+      }
+    }
+
+    &_description{
+      font-size: 14px;
+      color: #BCBCBC;
+      text-align: center;
+      margin: 35px 0 10px;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        margin: 25px 0 10px;
+      }
+      @media screen and ($tablet2) {
+        margin: 25px 0 10px;
+      }
+    }
+  }
+
+  &_basket{
+    &_wrapper{
+      display: grid;
+      grid-template-columns: 270fr 360fr;
+      grid-column-gap: 30px;
+      margin-top: 30px;
+      @media screen and ($desktop1) {
+        grid-template-columns: 200fr 360fr;
+        margin-top: 25px;
+      }
+      @media screen and ($tablet2) {
+        grid-column-gap: 20px;
+      }
+      @media screen and ($tablet1) {
+        grid-template-columns: 1fr 2fr;
+      }
+      @media screen and ($mobile3) {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-row-gap: 20px;
+      }
+      @media screen and ($mobile1) {
+        margin-top: 20px;
+      }
+    }
+
+    &_img{
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      z-index: 1;
+
+      &_wrapper{
+        position: relative;
+        width: 100%;
+        max-width: 270px;
+        height: 200px;
+        overflow: hidden;
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        @media screen and ($desktop1) {
+          height: 165px;
+        }
+        @media screen and ($tablet2) {
+          height: 152px;
+        }
+        @media screen and ($mobile3) {
+          width: 100%;
+          height: 160px;
+          max-width: initial;
+        }
+        @media screen and ($mobile1) {
+          height: 140px;
+        }
+      }
+
+      &_link{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+    }
+
+    &_info{
+      &_item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8px;
+        @media screen and ($tablet2) {
+          margin-bottom: 4px;
+        }
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+
+      &_name{
+        font-size: 13px;
+        color: #9F9F9F;
+        margin-right: 3px;
+      }
+
+      &_value{
+        font-size: 13px;
+        color: #4A4A4A;
+      }
+    }
+
+    &_caption{
+      display: block;
+      font-family: 'ProximaNova-Bold';
+      font-size: 16px;
+      line-height: 1.5em;
+      width: fit-content;
+      margin-bottom: 35px;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+
+      &:hover{
+        color: $red-color-hover;
+        transition: color 0.3s;
+      }
+    }
+
+    &_row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+      @media screen and ($desktop1) {
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet2) {
+        margin-bottom: 20px;
+      }
+      @media screen and ($mobile1) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &_bottom{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        justify-items: center;
+        align-items: center;
+      }
+    }
+
+    &_left{
+      @media screen and ($mobile1) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &_price{
+      font-family: 'ProximaNova-Bold';
+      font-size: 30px;
+      @media screen and ($desktop1) {
+        font-size: 28px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 26px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 24px;
+      }
+    }
+
+    &_btn{
+      &-red{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'ProximaNova-Semibold';
+        font-size: 13px;
+        color: $text-color-white;
+        background-color: $red-color;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        height: 45px;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        transition: background-color 0.3s;
+        @media screen and ($desktop1) {
+          height: 40px;
+        }
+
+        &:hover{
+          background-color: $red-color-hover;
+          transition: background-color 0.3s;
+          cursor: pointer;
+        }
+      }
+
+      &-grey{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'ProximaNova-Semibold';
+        font-size: 13px;
+        background-color: #EBEBEB;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        height: 45px;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        transition: color 0.3s, background-color 0.3s;
+        @media screen and ($desktop1) {
+          height: 40px;
+        }
+
+        &:hover{
+          background-color: $grey-color-hover;
+          color: $text-color-white;
+          transition: color 0.3s, background-color 0.3s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &_view{
+    &_wrapper{
+      display: grid;
+      grid-template-columns: 430fr 410fr;
+      grid-column-gap: 30px;
+      @media screen and ($desktop1) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 3fr 4fr;
+      }
+      @media screen and ($tablet1) {
+        grid-template-columns: 3fr 4fr;
+        grid-column-gap: 20px;
+      }
+    }
+
+    &_img{
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+      width: 80%;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+      &_wrapper{
+        position: relative;
+        width: 100%;
+        max-width: 430px;
+        height: 380px;
+        overflow: hidden;
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        margin: 0 auto;
+        @media screen and ($desktop1) {
+          height: 331px;
+        }
+        @media screen and ($tablet2) {
+          height: 315px;
+        }
+        @media screen and ($tablet1) {
+          height: 310px;
+        }
+      }
+
+      &_link{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+    }
+
+    &_caption{
+      display: block;
+      font-family: 'ProximaNova-Bold';
+      font-size: 22px;
+      line-height: 1.5em;
+      width: fit-content;
+      margin-bottom: 20px;
+      max-height: 66px;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 20px;
+        line-height: 1.3em;
+        margin-bottom: 15px;
+        max-height: 64px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 18px;
+        line-height: 1.3em;
+        margin-bottom: 15px;
+        max-height: 46px;
+      }
+
+      &:hover{
+        color: $red-color-hover;
+        transition: color 0.3s;
+      }
+    }
+
+    &_description{
+      font-size: 14px;
+      line-height: 1.5em;
+      max-height: 85px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        max-height: 76px;
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        max-height: 76px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &_row{
+      &_top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        @media screen and ($desktop1) {
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          margin-bottom: 12px;
+        }
+      }
+
+      &_center{
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-column-gap: 70px;
+        align-items: center;
+        margin-bottom: 25px;
+        @media screen and ($desktop1) {
+          grid-template-columns: 4fr 5fr;
+          grid-column-gap: 50px;
+          margin-bottom: 15px;
+        }
+        @media screen and ($tablet1) {
+          grid-template-columns: 5fr 6fr;
+          grid-column-gap: 40px;
+        }
+      }
+
+      &_bottom{
+        display: grid;
+        grid-template-columns: 240fr 150fr;
+        grid-column-gap: 20px;
+        align-items: center;
+        @media screen and ($desktop1) {
+          display: grid;
+          grid-template-columns: 240fr 130fr;
+          grid-column-gap: 15px;
+        }
+        @media screen and ($tablet2) {
+          grid-template-columns: 220fr 130fr;
+        }
+        @media screen and ($tablet1) {
+          grid-template-columns: 200fr 130fr;
+        }
+        @media screen and ($mobile3) {
+          grid-template-columns: auto;
+          grid-template-rows: 1fr 1fr;
+          grid-row-gap: 12px;
+        }
+      }
+    }
+
+    &_price{
+      &_box{
+        justify-self: center;
+      }
+
+      &.old{
+        font-size: 17px;
+        color: #BCBCBC;
+        text-decoration: line-through;
+        margin-right: 7px;
+        min-height: 17px;
+        @media screen and ($desktop1) {
+          font-size: 15px;
+          margin-right: 5px;
+          min-height: 15px;
+        }
+        @media screen and ($tablet2) {
+          font-size: 15px;
+        }
+        @media screen and ($tablet1) {
+          font-size: 15px;
+        }
+      }
+
+      &.new{
+        font-family: 'ProximaNova-Bold';
+        font-size: 38px;
+        margin-top: 7px;
+        @media screen and ($desktop1) {
+          font-size: 32px;
+          margin-top: 5px;
+        }
+        @media screen and ($tablet2) {
+          font-size: 28px;
+          margin-top: 3px;
+        }
+        @media screen and ($tablet1) {
+          font-size: 28px;
+          margin-top: 3px;
+        }
+      }
+    }
+
+    &_stock{
+      font-family: 'ProximaNova-Semibold';
+      font-size: 11px;
+      color: $text-color-white;
+      background-color: #415345;
+      width: 42px;
+      height: 19px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      margin-left: 8px;
+      @media screen and ($desktop1) {
+        width: 36px;
+        height: 17px;
+        margin-left: 5px;
+      }
+
+      &.none{
+        display: none;
+      }
+    }
+
+    &_info{
+      &_item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @media screen and ($desktop1) {
+          margin-right: 30px;
+          margin-bottom: 5px;
+        }
+      }
+
+      &_name{
+        font-size: 13px;
+        color: #9F9F9F;
+        margin-right: 3px;
+      }
+
+      &_value{
+        font-size: 13px;
+        color: #4A4A4A;
+      }
+    }
+
+    &_extra{
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      height: 20px;
+      margin-left: 15px;
+      @media screen and ($desktop1) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &_attach{
+    display: block;
+    position: relative;
+    font-size: 14px;
+    color: #9F9F9F;
+    width: fit-content;
+    padding-left: 25px;
+    transition: color 0.3s;
+    margin: 0 auto;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      padding-left: 22px;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: url("../img/clip.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 16px;
+      height: 17px;
+      left: 0;
+      @media screen and ($desktop1) {
+        width: 14px;
+        height: 15px;
+      }
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s;
+
+      &:before{
+        background: url("../img/clip-hover.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+  }
+}
+
+.closeModal {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  top: -26px;
+  background: url("../img/banner-closed.svg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 13px;
+  height: 13px;
+  transition: background 0.3s;
+  z-index: 99999999999;
+
+  &:hover{
+    background: url("../img/banner-closed-hover.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+}
+
+/*Эффекты анимации*/
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

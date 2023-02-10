@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Регистрация"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  <section class="registration">
+    <div class="container">
+      <h1 class="title_center">Регистрация</h1>
+      <div class="registration_wrapper">
+        <div class="registration_container">
+          <nav class="registration_nav">
+            <a class="registration_link active" href="#reg_individual">Физическое лицо</a>
+            <a class="registration_link" href="#reg_entity">Юридическое лицо</a>
+          </nav>
+          <form id="reg_individual" class="registration_form">
+            <div class="registration_item">
+              <div class="registration_text">Ваше имя</div>
+              <input class="registration_input" name="name" type="text" placeholder="Например: Анна" autocomplete="off" required>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Ваш e-mail</div>
+              <input class="registration_input" name="email" type="email" placeholder="Введите e-mail" autocomplete="off" required>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Придумайте пароль</div>
+              <input class="registration_input" name="password" type="password" autocomplete="off" required>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Повторите пароль</div>
+              <input class="registration_input" name="password2" type="password" autocomplete="off" required>
+            </div>
+            <button class="registration_submit" type="submit" disabled>Зарегистрироваться</button>
+            <label class="subscription_checkbox red">
+              <input type="checkbox" name="confirm" required>
+              <div class="subscription_checkbox_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+            </label>
+          </form>
+          <form id="reg_entity" class="registration_form">
+            <div class="registration_item">
+              <div class="registration_text">Название организации или ИП <span>*</span></div>
+              <input class="registration_input" name="name" type="text" placeholder="ООО 'Ромашка'" autocomplete="off" required>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">E-mail <span>*</span></div>
+              <input class="registration_input" name="email" type="email" placeholder="Введите e-mail" autocomplete="off" required>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Телефон <span>*</span></div>
+              <input class="registration_input phone" name="phone" type="text" placeholder="+7 946 555 55 55" autocomplete="off" required>
+            </div>
+            <div class="registration_caption">Данные компании</div>
+            <div class="registration_item">
+              <div class="registration_text">Юридический адрес <span>*</span></div>
+              <input class="registration_input" name="address" type="text" placeholder="Ул. Угрешская д.2 с.146" autocomplete="off" required>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Название банка</div>
+              <input class="registration_input" name="bank" type="text" placeholder="Сбербанк России" autocomplete="off">
+            </div>
+            <div class="registration_row">
+              <div class="registration_item">
+                <div class="registration_text">БИК банка</div>
+                <input class="registration_input" name="bic" type="text" autocomplete="off">
+              </div>
+              <div class="registration_item">
+                <div class="registration_text">Кор.счет</div>
+                <input class="registration_input" name="cor" type="text" autocomplete="off">
+              </div>
+            </div>
+            <div class="registration_row">
+              <div class="registration_item">
+                <div class="registration_text">Расчетный счет</div>
+                <input class="registration_input" name="check" type="text" autocomplete="off">
+              </div>
+              <div class="registration_item">
+                <div class="registration_text">ИНН</div>
+                <input class="registration_input" name="inn" type="text" autocomplete="off">
+              </div>
+            </div>
+            <div class="registration_row">
+              <div class="registration_item">
+                <div class="registration_text">КПП</div>
+                <input class="registration_input" name="kpp" type="text" autocomplete="off">
+              </div>
+              <div class="registration_item">
+                <div class="registration_text">ОКВЭД</div>
+                <input class="registration_input" name="okved" type="text" autocomplete="off">
+              </div>
+            </div>
+            <div class="registration_row">
+              <div class="registration_item">
+                <div class="registration_text">ОКДП</div>
+                <input class="registration_input" name="okdp" type="text" autocomplete="off">
+              </div>
+              <div class="registration_item">
+                <div class="registration_text">ОКПО</div>
+                <input class="registration_input" name="okpo" type="text" autocomplete="off">
+              </div>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Сайт компании</div>
+              <input class="registration_input" name="site" type="text" placeholder="www.OpenGroup.com" autocomplete="off">
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Придумайте пароль</div>
+              <input class="registration_input" name="password" type="password" autocomplete="off" required>
+            </div>
+            <div class="registration_item">
+              <div class="registration_text">Повторите пароль</div>
+              <input class="registration_input" name="password2" type="password" autocomplete="off" required>
+            </div>
+            <button class="registration_submit" type="submit" disabled>Зарегистрироваться</button>
+            <label class="subscription_checkbox red">
+              <input type="checkbox" name="confirm" required>
+              <div class="subscription_checkbox_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

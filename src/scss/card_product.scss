@@ -1,0 +1,1367 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Карточка товара*/
+
+.card-product{
+  position: relative;
+  margin: 25px 0 70px;
+  @media screen and ($desktop1) {
+    margin: 20px 0 60px;
+  }
+  @media screen and ($tablet2) {
+    margin: 20px 0 60px;
+  }
+  @media screen and ($tablet1) {
+    margin: 20px 0 50px;
+  }
+  @media screen and ($mobile3) {
+    order: -1;
+    margin: 0 0 10px;
+  }
+
+  &_wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and ($tablet1) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &_slider{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 860px;
+    padding-left: 15px;
+    @media screen and ($desktop1) {
+      width: 600px;
+      padding-left: 0;
+    }
+    @media screen and ($tablet2) {
+      flex-direction: column;
+      width: 470px;
+      height: fit-content;
+    }
+    @media screen and ($tablet1) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &:before{
+      content: "Наведите на изображение, чтобы увеличить его";
+      position: absolute;
+      font-size: 13px;
+      color: #BCBCBC;
+      bottom: -25px;
+      left: 40%;
+      @media screen and ($desktop1) {
+        font-size: 12px;
+        left: 35%;
+      }
+      @media screen and ($tablet2) {
+        display: none;
+      }
+    }
+
+    & img{
+      width: 100%;
+      height: 100%;
+      max-height: 465px;
+      max-width: 465px;
+      object-fit: contain;
+      @media screen and ($desktop1) {
+        max-height: 370px;
+        max-width: 370px;
+      }
+      @media screen and ($tablet2) {
+        max-height: 320px;
+        max-width: 320px;
+      }
+      @media screen and ($tablet1) {
+        max-height: 300px;
+        max-width: 300px;
+      }
+      @media screen and ($mobile3) {
+        max-height: 250px;
+        max-width: 250px;
+      }
+    }
+
+    & .swiper-container {
+      width: 100%;
+      height: 480px;
+      margin: 0;
+      @media screen and ($desktop1) {
+        height: 400px;
+      }
+      @media screen and ($tablet2) {
+        height: 385px;
+      }
+      @media screen and ($tablet1) {
+        width: 100%;
+        height: 335px;
+      }
+      @media screen and ($mobile3) {
+        height: 265px;
+      }
+    }
+
+    & .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .gallery-top {
+      width: 725px;
+      @media screen and ($desktop1) {
+        width: 500px;
+      }
+      @media screen and ($tablet2) {
+        order: -1;
+        width: 470px;
+      }
+      @media screen and ($tablet1) {
+        width: 100%;
+      }
+    }
+
+    & .gallery-top .swiper-slide {
+      width: 100%;
+      height: 480px;
+      background-color: #FFFFFF;
+      border: 1px solid #EBEBEB;
+      border-radius: 6px;
+      @media screen and ($desktop1) {
+        width: 100%;
+        height: 400px;
+      }
+      @media screen and ($tablet2) {
+        height: 370px;
+      }
+      @media screen and ($tablet1) {
+        height: 320px;
+      }
+      @media screen and ($mobile3) {
+        height: 250px;
+      }
+    }
+
+    & .gallery-thumbs {
+      order: -1;
+      width: 80px;
+      height: 290px;
+      box-sizing: border-box;
+      padding: 0;
+      margin-top: 40px;
+      @media screen and ($desktop1) {
+        order: -1;
+        width: 80px;
+        height: 290px;
+        box-sizing: border-box;
+        padding: 0;
+        margin-top: 40px;
+      }
+      @media screen and ($tablet2) {
+        order: -1;
+        width: 280px;
+        height: 80px;
+        box-sizing: border-box;
+        padding: 0 1px;
+        margin: 0 auto;
+      }
+      @media screen and ($tablet1) {
+        width: calc(100% - 80px);
+        height: 80px;
+      }
+      @media screen and ($mobile3) {
+        width: calc(100% - 60px);
+        height: 60px;
+      }
+    }
+
+    & .gallery-thumbs .swiper-slide {
+      width: 80px;
+      height: 80px;
+      background-color: #FFFFFF;
+      border: 1px solid #EBEBEB;
+      border-radius: 6px;
+      opacity: 0.4;
+      cursor: pointer;
+      @media screen and ($desktop1) {
+        width: 80px;
+        height: 80px;
+      }
+      @media screen and ($tablet2) {
+        width: 80px;
+        height: 80px;
+      }
+      @media screen and ($tablet1) {
+        width: 100%;
+        min-width: 80px;
+        height: 80px;
+      }
+      @media screen and ($mobile3) {
+        min-width: 60px;
+        height: 60px;
+      }
+    }
+
+    & .gallery-thumbs .swiper-slide-thumb-active {
+      border: 1px solid $red-color;
+      opacity: 1;
+    }
+
+    & .swiper-button-next,
+    & .swiper-button-prev{
+      display: block;
+      outline: none;
+      left: 46px;
+      @media screen and ($desktop1) {
+        left: 33px;
+      }
+      @media screen and ($tablet2) {
+        top: 435px;
+        width: 15px;
+        height: 24px;
+      }
+      @media screen and ($tablet1) {
+        top: 385px;
+      }
+      @media screen and ($mobile3) {
+        top: 305px;
+      }
+    }
+
+    & .swiper-button-next{
+      background: url("../img/angle-right-black.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 17px;
+      height: 28px;
+      top: 365px;
+      transition: opacity 0.3s;
+      transform: rotate(90deg);
+      opacity: 0.5;
+      @media screen and ($tablet2) {
+        transform: rotate(0deg);
+        left: 415px;
+      }
+      @media screen and ($tablet1) {
+        left: 98%;
+      }
+      @media screen and ($mobile5) {
+        left: 97%;
+      }
+      @media screen and ($mobile4) {
+        left: 97%;
+      }
+      @media screen and ($mobile3) {
+        left: 95%;
+      }
+
+      &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+
+    & .swiper-button-prev{
+      background: url("../img/angle-right-black.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 17px;
+      height: 28px;
+      top: 20px;
+      transform: rotate(270deg);
+      transition: opacity 0.3s;
+      opacity: 0.5;
+      @media screen and ($tablet2) {
+        transform: rotate(180deg);
+        left: 40px;
+      }
+      @media screen and ($tablet1) {
+        left: 0;
+      }
+
+      &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+
+  &_info{
+    display: grid;
+    grid-template-columns: 410fr 250fr;
+    grid-column-gap: 30px;
+    width: 690px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 2fr 1fr;
+      grid-column-gap: 20px;
+      width: 550px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-row-gap: 20px;
+      width: 460px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: auto;
+      grid-row-gap: 20px;
+      width: 100%;
+    }
+    @media screen and ($mobile5) {
+      grid-template-columns: 5fr 2fr;
+      grid-template-rows: auto;
+      grid-row-gap: 20px;
+      width: 100%;
+    }
+    @media screen and ($mobile4) {
+      grid-template-columns: 2fr 1fr;
+    }
+    @media screen and ($mobile3) {
+      display: block;
+    }
+
+    &_left{}
+
+    &_right{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and ($mobile3) {
+        display: none;
+      }
+    }
+
+    &_row{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 25px;
+      @media screen and ($desktop1) {
+        margin-bottom: 20px;
+      }
+      @media screen and ($mobile3) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &_code{
+      font-size: 13px;
+      color: #9F9F9F;
+      margin-right: 30px;
+      @media screen and ($desktop1) {
+        font-size: 12px;
+      }
+    }
+
+    &_presence{
+      position: relative;
+      font-size: 13px;
+      color: #9F9F9F;
+      padding-left: 12px;
+      @media screen and ($desktop1) {
+        font-size: 12px;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: $green-color;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &.grey{
+        &:before{
+          background-color: #9f9f9f;
+        }
+      }
+    }
+  }
+
+  &_title{
+    font-family: 'ProximaNova-Bold';
+    font-size: 28px;
+    line-height: 1.2em;
+    margin-bottom: 8px;
+    @media screen and ($desktop1) {
+      font-size: 22px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 20px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 18px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 18px;
+    }
+    @media screen and ($mobile4) {
+      font-size: 18px;
+    }
+    @media screen and ($mobile3) {
+      font-size: 18px;
+    }
+  }
+
+  &_price{
+    &_row{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @media screen and ($mobile3) {
+        justify-content: flex-end;
+      }
+    }
+
+    &.old{
+      font-size: 22px;
+      color: #BCBCBC;
+      text-decoration: line-through;
+      margin-right: 7px;
+      min-height: 17px;
+      @media screen and ($desktop1) {
+        font-size: 18px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 16px;
+      }
+      @media screen and ($mobile1) {
+        font-size: 15px;
+      }
+    }
+
+    &.new{
+      font-family: 'ProximaNova-Bold';
+      font-size: 48px;
+      margin-bottom: 10px;
+      @media screen and ($desktop1) {
+        font-size: 38px;
+        margin-bottom: 10px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 34px;
+      }
+      @media screen and ($mobile3) {
+        text-align: right;
+      }
+      @media screen and ($mobile1) {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &_stock{
+    font-family: 'ProximaNova-Semibold';
+    font-size: 15px;
+    color: $text-color-white;
+    background-color: #415345;
+    width: 52px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-left: 8px;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      width: 40px;
+      height: 20px;
+      margin-left: 5px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      width: 36px;
+      height: 18px;
+    }
+
+    &.none{
+      display: none;
+    }
+
+    &_text{
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 20px;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+      @media screen and ($tablet2) {
+        display: none;
+      }
+    }
+
+    &_link{
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: $text-size-xs;
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      min-height: 55px;
+      padding: 5px 24px 5px 47px;
+      transition: color 0.3s, border 0.3s;
+      margin-bottom: 20px;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        padding: 5px 15px 5px 15px;
+        margin-bottom: 15px;
+      }
+      @media screen and ($tablet2) {
+        display: none;
+      }
+
+      &:before{
+        content: "\f295";
+        position: absolute;
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        color: #526356;
+        left: 15px;
+        transition: color 0.3s;
+        @media screen and ($desktop1) {
+          display: none;
+        }
+      }
+
+      &:hover{
+        color: $red-color-hover;
+        border: 1px solid $red-color-hover;
+        transition: color 0.3s, border 0.3s;
+
+        &:before{
+          color: $red-color-hover;
+          transition: color 0.3s;
+        }
+      }
+    }
+  }
+
+  &_add{
+    display: grid;
+    grid-template-columns: 130fr 240fr;
+    grid-column-gap: 40px;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 130fr 220fr;
+      grid-column-gap: 25px;
+      margin-bottom: 25px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 130fr 220fr;
+      grid-column-gap: 70px;
+      margin-bottom: 25px;
+    }
+    @media screen and ($mobile4) {
+      grid-column-gap: 30px;
+    }
+    @media screen and ($mobile3) {
+      position: relative;
+      display: block;
+    }
+
+    & .btn{
+      &.add-red{
+        @media screen and ($mobile3) {
+          width: 100%;
+        }
+      }
+    }
+
+    &_extra{
+      display: grid;
+      grid-template-columns: 210fr 160fr;
+      grid-column-gap: 40px;
+      margin-bottom: 30px;
+      @media screen and ($desktop1) {
+        grid-template-columns: 210fr 140fr;
+        grid-column-gap: 25px;
+        margin-bottom: 25px;
+      }
+      @media screen and ($mobile3) {
+        margin-bottom: 15px;
+      }
+      @media screen and ($mobile1) {
+        grid-column-gap: 14px;
+      }
+    }
+  }
+
+  &_count{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and ($mobile3) {
+      position: absolute;
+      width: 140px;
+      top: -48px;
+    }
+    @media screen and ($mobile1) {
+      width: 120px;
+    }
+  }
+
+  &_minus,
+  &_plus{
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #EBEBEB;
+    transition: border 0.3s;
+
+    &:hover{
+      border: 2px solid #9F9F9F;
+      transition: border 0.3s;
+      cursor: pointer;
+    }
+  }
+
+  &_amount{
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-s;
+  }
+
+  &_compare{
+    font-size: 15px;
+    padding-left: 33px;
+    width: fit-content;
+    transition: color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      padding-left: 32px;
+    }
+    @media screen and ($mobile1) {
+      font-size: 13px;
+      padding-left: 28px;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: url("../img/poll-2.svg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      left: 0;
+      transition: background 0.3s;
+      @media screen and ($desktop1) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    &.active{
+      &:before{
+        background: url("../img/poll-2-hover.svg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: background 0.3s;
+      }
+    }
+
+    &_box{
+      position: relative;
+      display: block;
+    }
+  }
+
+  &_favorite{
+    font-size: 15px;
+    padding-left: 36px;
+    width: fit-content;
+    transition: color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      padding-left: 32px;
+    }
+    @media screen and ($mobile1) {
+      font-size: 13px;
+      padding-left: 30px;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      background: url("../img/heart.svg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 23px;
+      height: 20px;
+      top: -2px;
+      left: 0;
+      transition: background 0.3s;
+      @media screen and ($desktop1) {
+        width: 21px;
+        height: 18px;
+      }
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    &.active{
+      &:before{
+        background: url("../img/heart-red.svg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: background 0.3s;
+      }
+    }
+
+    &_box{
+      position: relative;
+      display: block;
+    }
+  }
+
+  &_star{
+    display: flex;
+    justify-content: center;
+    background: url("../img/star-five.svg") no-repeat;
+    background-position: center;
+    background-size:  contain;
+    height: 16px;
+    margin-bottom: 10px;
+    @media screen and ($tablet2) {
+      background-position: left;
+      height: 14px;
+    }
+  }
+
+  &_feedback{
+    display: block;
+    font-size: 13px;
+    color: #BCBCBC;
+    text-align: center;
+    margin-bottom: 25px;
+    transition: color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      text-align: left;
+      margin-left: 0;
+    }
+
+    &:hover{
+      color: $red-color-hover;
+      transition: color 0.3s;
+    }
+  }
+
+  &_delivery{
+    position: relative;
+    display: block;
+    background-color: #F6F6F6;
+    padding: 15px 25px;
+    @media screen and ($desktop1) {
+      padding: 15px;
+    }
+    @media screen and ($tablet2) {
+      padding: 15px;
+    }
+    @media screen and ($mobile3) {
+      display: none;
+    }
+
+    &_row{
+      display: block;
+      font-size: 15px;
+      color: #9F9F9F;
+      margin-bottom: 7px;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+        margin-bottom: 7px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+
+      &:last-child{
+        @media screen and ($desktop1) {
+          margin-bottom: 0;
+        }
+      }
+
+      & span{
+        display: inline-block;
+        color: #4A4A4A;
+      }
+
+      &.address{
+        position: relative;
+        color: #4A4A4A;
+        margin-left: 15px;
+        @media screen and ($desktop1) {
+          margin-left: 14px;
+        }
+        @media screen and ($tablet2) {
+          margin-left: 13px;
+        }
+
+        &:before{
+          content: "\f041";
+          position: absolute;
+          font-family: 'FontAwesome';
+          font-weight: 700;
+          color: #4A4A4A;
+          font-size: 16px;
+          left: -15px;
+          top: 50%;
+          transform: translateY(-60%);
+          @media screen and ($desktop1) {
+            font-size: 15px;
+          }
+          @media screen and ($tablet2) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &_city{
+      display: inline-block;
+      color: #9F9F9F;
+      border-bottom: 1px dashed #9F9F9F;
+      transition: color 0.3s, border 0.3s;
+
+      &:hover{
+        color: $red-color-hover;
+        border-bottom: 1px dashed $red-color-hover;
+        cursor: pointer;
+        transition: color 0.3s, border 0.3s;
+      }
+    }
+  }
+
+  &_options{
+    font-size: 15px;
+    color: #BCBCBC;
+    margin-bottom: 7px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+    }
+
+    & span{
+      display: inline-block;
+      color: #4A4A4A;
+    }
+
+    &_more{
+      display: block;
+      font-family: 'ProximaNova-Bold';
+      font-size: 14px;
+      width: fit-content;
+      margin-top: 10px;
+      margin-bottom: 7px;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+      }
+
+      &:hover{
+        color: $red-color-hover;
+        transition: color 0.3s;
+      }
+    }
+  }
+}
+
+/*Блок с описанием товара и отзывами для карточки товара*/
+
+.options{
+  position: relative;
+  margin: 70px 0 110px;
+  @media screen and ($desktop1) {
+    margin: 50px 0 60px;
+  }
+  @media screen and ($tablet2) {
+    margin: 40px 0 60px;
+  }
+  @media screen and ($tablet1) {
+    margin: 40px 0 60px;
+  }
+  @media screen and ($mobile5) {
+    margin: 40px 0 60px;
+  }
+  @media screen and ($mobile3) {
+    order: -1;
+    margin: 10px 0 20px;
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+    @media screen and ($desktop1) {
+      grid-column-gap: 60px;
+    }
+    @media screen and ($tablet2) {
+      grid-column-gap: 40px;
+    }
+    @media screen and ($tablet1) {
+      display: block;
+    }
+    @media screen and ($mobile5) {
+      display: block;
+    }
+    @media screen and ($mobile3) {
+      display: block;
+    }
+  }
+
+  &_left{
+    @media screen and ($tablet1) {
+      margin-bottom: 20px;
+    }
+    @media screen and ($mobile5) {
+      margin-bottom: 20px;
+    }
+    @media screen and ($mobile3) {
+      margin-bottom: 20px;
+    }
+
+    &-top{
+      border-bottom: 4px solid #EBEBEB;
+      padding-bottom: 30px;
+      @media screen and ($desktop1) {
+        border-bottom: 2px solid #EBEBEB;
+        padding-bottom: 25px;
+      }
+      @media screen and ($mobile3) {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+
+    &-bottom{
+      padding-top: 30px;
+      @media screen and ($desktop1) {
+        padding-top: 25px;
+      }
+    }
+  }
+
+  &_right{
+    position: relative;
+  }
+
+  &_subtitle{
+    font-size: 13px;
+    color: #9F9F9F;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    @media screen and ($desktop1) {
+      font-size: 12px;
+    }
+  }
+
+  &_description{
+    font-size: $text-size-xs;
+    color: #4A4A4A;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    @media screen and ($tablet2) {
+      text-align: justify;
+    }
+    @media screen and ($tablet1) {
+      text-align: justify;
+    }
+    @media screen and ($mobile5) {
+      font-size: 13px;
+      text-align: justify;
+    }
+    @media screen and ($mobile3) {
+      font-size: 13px;
+      text-align: justify;
+    }
+  }
+
+  &_additionally{
+    overflow: hidden;
+    transition: all 0.5s ease-out 0s;
+  }
+
+  &_more{
+    position: relative;
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-s;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+    }
+
+    &:after{
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-weight: 700;
+      font-size: $text-size-xxl;
+      color: #4d4d4d;
+      content: "\f107";
+      top: 50%;
+      right: -25px;
+      transform: translateY(-52%);
+      @media screen and ($desktop1) {
+        font-size: $text-size-l;
+        right: -20px;
+      }
+    }
+
+    &.active{
+      &:after{
+        content: "\f106";
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &_list{
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #EBEBEB;
+    @media screen and ($desktop1) {
+      height: 45px;
+    }
+    @media screen and ($tablet2) {
+      height: 40px;
+    }
+    @media screen and ($tablet1) {
+      height: 40px;
+    }
+    @media screen and ($mobile5) {
+      height: 35px;
+    }
+    @media screen and ($mobile3) {
+      height: 35px;
+    }
+
+    &_name{
+      font-size: 15px;
+      width: 270px;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+        width: 250px;
+      }
+      @media screen and ($tablet2) {
+        width: 240px;
+      }
+      @media screen and ($tablet1) {
+        width: 240px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 13px;
+        width: 50%;
+      }
+      @media screen and ($mobile3) {
+        font-size: 13px;
+        width: 50%;
+      }
+    }
+
+    &_value{
+      font-family: 'ProximaNova-Bold';
+      font-size: 15px;
+      width: fit-content;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 13px;
+      }
+      @media screen and ($mobile3) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $text-size-xs;
+    border: 1px solid #BCBCBC;
+    border-radius: 6px;
+    width: 150px;
+    height: 37px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      width: 140px;
+      height: 34px;
+    }
+
+    &:hover{
+      border: 1px solid $red-color-hover;
+      color: $red-color-hover;
+      transition: color 0.3s, border 0.3s;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &_wrapper{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      @media screen and ($mobile5) {
+        display: none;
+      }
+      @media screen and ($mobile3) {
+        display: none;
+      }
+    }
+  }
+}
+
+.reviews{
+  &_marker{
+    &_box{
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      right: 0;
+      @media screen and ($desktop1) {
+        top: 0;
+        right: 0;
+      }
+      @media screen and ($mobile3) {
+        display: none;
+      }
+    }
+
+    &_text{
+      font-size: 13px;
+      color: #BCBCBC;
+      margin-right: 10px;
+      @media screen and ($desktop1) {
+        font-size: 12px;
+      }
+    }
+
+    &_star{
+      position: relative;
+      background: url("../img/star-main.svg") no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 180px;
+      height: 16px;
+      margin: 8px 24px;
+      @media screen and ($desktop1) {
+        width: 160px;
+        height: 14px;
+        margin: 8px 24px;
+      }
+      @media screen and ($tablet2) {
+        width: 160px;
+        height: 14px;
+        margin: 8px 14px;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        border: 1px solid #EBEBEB;
+        border-radius: 17px;
+        width: 228px;
+        height: 33px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media screen and ($desktop1) {
+          width: 208px;
+          height: 31px;
+        }
+        @media screen and ($tablet2) {
+          width: 188px;
+          height: 31px;
+        }
+      }
+    }
+  }
+
+  &_list{
+    list-style: none;
+    margin-bottom: 10px;
+    @media screen and ($desktop1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &_item{
+    border-top: 1px solid #EBEBEB;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    @media screen and ($desktop1) {
+      padding-top: 12px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_row{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    &.top{
+      align-items: center;
+      margin-bottom: 20px;
+      @media screen and ($desktop1) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &_name{
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-xs;
+    min-width: 100px;
+    margin-right: 10px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+    }
+  }
+
+  &_star{
+    width: 131px;
+    height: 16px;
+    @media screen and ($desktop1) {
+      width: 131px;
+      height: 14px;
+    }
+
+    &.s-5{
+      background: url("../img/star-five.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &.s-4{
+      background: url("../img/star-four.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &_text{
+    font-size: $text-size-xs;
+    color: #EFCB3B;
+    line-height: 1.5em;
+    margin-right: 5px;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+    }
+  }
+
+  &_comment{
+    font-size: $text-size-xs;
+    line-height: 1.5em;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+    }
+  }
+
+  &_additionally{
+    overflow: hidden;
+    transition: all 1s ease-out 0s;
+  }
+
+  &_more{
+    position: relative;
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-s;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+    }
+
+    &:after{
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-weight: 700;
+      font-size: $text-size-xxl;
+      color: #4d4d4d;
+      content: "\f107";
+      top: 50%;
+      right: -25px;
+      transform: translateY(-52%);
+      @media screen and ($desktop1) {
+        font-size: $text-size-l;
+        right: -20px;
+      }
+    }
+
+    &.active{
+      &:after{
+        content: "\f106";
+        transition: all 0.3s;
+      }
+    }
+  }
+}

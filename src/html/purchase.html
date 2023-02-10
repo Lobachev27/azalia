@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "История заказов"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': 'grey',
+      'way': false,
+      'title': 'Личный кабинет',
+      'lastBreadcrumb': '',
+      arr: [
+        {'text': '', 'link': ''},
+      ],
+    }
+  })
+
+  <section class="cabinet">
+    <div class="container">
+      <div class="cabinet_wrapper cab-other">
+        <nav class="cabinet_sidebar">
+          <a class="cabinet_link" href="./cabinet.html">Главная</a>
+          <a class="cabinet_link active" href="./purchase.html">История заказов</a>
+          <a class="cabinet_link" href="./waiting.html">Лист ожидания</a>
+          <a class="cabinet_link" href="./personal.html">Личные данные</a>
+          <a class="cabinet_link" href="./address.html">Адреса доставки</a>
+          <a class="cabinet_exit"  href="javascript:void(0);">Выйти из профиля</a>
+        </nav>
+        <a class="cabinet_back" href="./cabinet.html">Назад</a>
+        <div class="cabinet_title_mobile">История заказов</div>
+        <div class="cabinet_content">
+          <!--<div class="purchase_empty">
+            <h2 class="purchase_empty_caption">Список заказанных товаров пуст</h2>
+            <div class="purchase_empty_description">Перейдите <a class="purchase_empty_link" href="catalog_level_1.html">в каталог</a> и совершите свою первую покупку в интернет-магазине Aзалия</div>
+          </div>-->
+          <div class="purchase_container">
+            <div class="purchase_caption">
+              <div class="purchase_text">Номер заказа</div>
+              <div class="purchase_text">Дата и время</div>
+              <div class="purchase_text">Статус заказа</div>
+              <div class="purchase_text">Сумма</div>
+              <div class="purchase_text">Способ оплаты</div>
+              <div class="purchase_text">Повтор заказа</div>
+            </div>
+            <div class="purchase_item">
+              <div class="purchase_info">
+                <div class="purchase_number">4590914784</div>
+                <div class="purchase_time">21.01.2019  15:00</div>
+                <div class="purchase_status green">Завершен</div>
+                <div class="purchase_price">10 500 ₽</div>
+                <div class="purchase_time">Банковский перевод</div>
+                <a class="purchase_repeat" href="javascript:void(0);">Повторить</a>
+              </div>
+              <div class="purchase_extra">
+                <div class="purchase_extra_row">
+                  <div class="purchase_extra_img_wrapper">
+                    <a class="purchase_extra_img_link" href="./card-product.html">
+                      <img class="purchase_extra_img" src="./img/product-2.jpg">
+                    </a>
+                  </div>
+                  <div class="purchase_extra_info">
+                    <a class="purchase_extra_info_caption" href="./card-product.html">Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Артикул:</div>
+                      <div class="purchase_extra_info_value">TC042432X22-1206</div>
+                    </div>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Вес:</div>
+                      <div class="purchase_extra_info_value">5,75 кг</div>
+                    </div>
+                  </div>
+                  <div class="purchase_extra_amount">2 шт</div>
+                  <div class="purchase_extra_price">500 ₽</div>
+                  <div class="purchase_extra_price-all">1 000 ₽</div>
+                </div>
+              </div>
+              <div class="purchase_extra"></div>
+            </div>
+            <div class="purchase_item">
+              <div class="purchase_info">
+                <div class="purchase_number">4590914784</div>
+                <div class="purchase_time">21.01.2019  15:00</div>
+                <div class="purchase_status grey">В обработке</div>
+                <div class="purchase_price">10 500 ₽</div>
+                <div class="purchase_time">Банковский перевод</div>
+                <a class="purchase_repeat" href="javascript:void(0);">Повторить</a>
+              </div>
+              <div class="purchase_extra">
+                <div class="purchase_extra_row">
+                  <div class="purchase_extra_img_wrapper">
+                    <a class="purchase_extra_img_link" href="./card-product.html">
+                      <img class="purchase_extra_img" src="./img/product-2.jpg">
+                    </a>
+                  </div>
+                  <div class="purchase_extra_info">
+                    <a class="purchase_extra_info_caption" href="./card-product.html">Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Артикул:</div>
+                      <div class="purchase_extra_info_value">TC042432X22-1206</div>
+                    </div>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Вес:</div>
+                      <div class="purchase_extra_info_value">5,75 кг</div>
+                    </div>
+                  </div>
+                  <div class="purchase_extra_amount">2 шт</div>
+                  <div class="purchase_extra_price">500 ₽</div>
+                  <div class="purchase_extra_price-all">1 000 ₽</div>
+                </div>
+              </div>
+              <div class="purchase_extra"></div>
+            </div>
+            <div class="purchase_item">
+              <div class="purchase_info">
+                <div class="purchase_number">4590914784</div>
+                <div class="purchase_time">21.01.2019  15:00</div>
+                <div class="purchase_status green">Завершен</div>
+                <div class="purchase_price">10 500 ₽</div>
+                <div class="purchase_time">Банковский перевод</div>
+                <a class="purchase_repeat" href="javascript:void(0);">Повторить</a>
+              </div>
+              <div class="purchase_extra">
+                <div class="purchase_extra_row">
+                  <div class="purchase_extra_img_wrapper">
+                    <a class="purchase_extra_img_link" href="./card-product.html">
+                      <img class="purchase_extra_img" src="./img/product-2.jpg">
+                    </a>
+                  </div>
+                  <div class="purchase_extra_info">
+                    <a class="purchase_extra_info_caption" href="./card-product.html">Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Артикул:</div>
+                      <div class="purchase_extra_info_value">TC042432X22-1206</div>
+                    </div>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Вес:</div>
+                      <div class="purchase_extra_info_value">5,75 кг</div>
+                    </div>
+                  </div>
+                  <div class="purchase_extra_amount">2 шт</div>
+                  <div class="purchase_extra_price">500 ₽</div>
+                  <div class="purchase_extra_price-all">1 000 ₽</div>
+                </div>
+              </div>
+              <div class="purchase_extra"></div>
+            </div>
+            <div class="purchase_item">
+              <div class="purchase_info">
+                <div class="purchase_number">4590914784</div>
+                <div class="purchase_time">21.01.2019  15:00</div>
+                <div class="purchase_status green">Завершен</div>
+                <div class="purchase_price">10 500 ₽</div>
+                <div class="purchase_time">Банковский перевод</div>
+                <a class="purchase_repeat" href="javascript:void(0);">Повторить</a>
+              </div>
+              <div class="purchase_extra">
+                <div class="purchase_extra_row">
+                  <div class="purchase_extra_img_wrapper">
+                    <a class="purchase_extra_img_link" href="./card-product.html">
+                      <img class="purchase_extra_img" src="./img/product-2.jpg">
+                    </a>
+                  </div>
+                  <div class="purchase_extra_info">
+                    <a class="purchase_extra_info_caption" href="./card-product.html">Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Артикул:</div>
+                      <div class="purchase_extra_info_value">TC042432X22-1206</div>
+                    </div>
+                    <div class="purchase_extra_info_item">
+                      <div class="purchase_extra_info_name">Вес:</div>
+                      <div class="purchase_extra_info_value">5,75 кг</div>
+                    </div>
+                  </div>
+                  <div class="purchase_extra_amount">2 шт</div>
+                  <div class="purchase_extra_price">500 ₽</div>
+                  <div class="purchase_extra_price-all">1 000 ₽</div>
+                </div>
+              </div>
+              <div class="purchase_extra"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

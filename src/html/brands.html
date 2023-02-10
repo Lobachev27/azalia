@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Бренды"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Бренды',
+      'lastBreadcrumb': 'Бренды',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  @@include("./components/brands-catalog.html", {
+    context: {
+      arr: [
+        {'image': './img/brand-1.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-2.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-3.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-4.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-5.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-6.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-1.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-2.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-3.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-4.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-5.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-6.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-1.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-2.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-3.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-4.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-5.jpg', 'link': './brand-page.html',},
+        {'image': './img/brand-6.jpg', 'link': './brand-page.html',},
+      ],
+    }
+  })
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

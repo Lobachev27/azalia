@@ -1,0 +1,24 @@
+<section class="intro">
+  <div class="container">
+    <div class="intro_wrapper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          @@for (var i = 0; i < context.arr.length; i++) {
+          <div class="swiper-slide">
+            <div class="intro_box">
+              <img class="intro_box_img" src="`+context.arr[i].image+`">
+              <div class="intro_box_info">
+                <div class="intro_box_name">`+context.arr[i].title+`</div>
+                <div class="intro_box_description">`+context.arr[i].description+`</div>
+              </div>
+              <a class="intro_box_link" href="`+context.arr[i].link+`"></a>
+            </div>
+          </div>
+          }
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

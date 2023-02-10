@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Личный кабинет"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': 'grey',
+      'way': false,
+      'title': 'Личный кабинет',
+      'lastBreadcrumb': '',
+      arr: [
+        {'text': '', 'link': ''},
+      ],
+    }
+  })
+
+  <section class="cabinet">
+    <div class="container">
+      <div class="cabinet_wrapper cab-main">
+        <nav class="cabinet_sidebar">
+          <a class="cabinet_link active" href="./cabinet.html">Главная</a>
+          <a class="cabinet_link" href="./purchase.html">История заказов</a>
+          <a class="cabinet_link" href="./waiting.html">Лист ожидания</a>
+          <a class="cabinet_link" href="./personal.html">Личные данные</a>
+          <a class="cabinet_link" href="./address.html">Адреса доставки</a>
+          <a class="cabinet_exit" href="javascript:void(0);">Выйти из профиля</a>
+        </nav>
+        <div class="cabinet_content">
+          <div class="cabinet_container">
+            <div class="cabinet_item">
+              <img class="cabinet_img" src="./img/box.png">
+              <div class="cabinet_box">
+                <div class="cabinet_item_caption">Нет заказов</div>
+                <div class="cabinet_item_info">
+                  <div class="cabinet_item_text">Вы еще не совершали заказов</div>
+                </div>
+                <a class="cabinet_item_change" href="./catalog-level-1.html">Перейти в каталог</a>
+              </div>
+              <a class="cabinet_item_link" href="./catalog-level-1.html"></a>
+            </div>
+            <!--<div class="cabinet_item">-->
+            <!--<img class="cabinet_img" src="./img/box.png">-->
+            <!--<div class="cabinet_box">-->
+            <!--<div class="cabinet_item_caption">Последние заказ</div>-->
+            <!--<div class="cabinet_item_info">-->
+            <!--<div class="cabinet_item_text">№ 42456234234</div>-->
+            <!--<div class="cabinet_item_status green">Завершен</div>-->
+            <!--</div>-->
+            <!--<div class="cabinet_item_price">-->
+            <!--<div class="cabinet_item_name">Сумма заказа</div>-->
+            <!--<div class="cabinet_item_price_value">10 500 ₽</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<a class="cabinet_item_link" href="./purchase.html"></a>-->
+            <!--</div>-->
+            <div class="cabinet_item">
+              <img class="cabinet_img" src="./img/asset.png">
+              <div class="cabinet_box">
+                <div class="cabinet_item_caption">Лист ожидания</div>
+                <div class="cabinet_item_info">
+                  <div class="cabinet_item_text">50 товаров</div>
+                  <div class="cabinet_item_accessibly">Доступно к заказу:<span class="cabinet_item_count">10</span></div>
+                </div>
+              </div>
+              <a class="cabinet_item_link" href="./waiting.html"></a>
+            </div>
+            <div class="cabinet_item">
+              <img class="cabinet_img" src="./img/lock.png">
+              <div class="cabinet_box">
+                <div class="cabinet_item_caption">Виктор Берендеев</div>
+                <div class="cabinet_item_info">
+                  <div class="cabinet_item_row">
+                    <div class="cabinet_item_name">E-mail:</div>
+                    <div class="cabinet_item_value">Gorvwe@mail.ru</div>
+                  </div>
+                  <div class="cabinet_item_row">
+                    <div class="cabinet_item_name">Телефон:</div>
+                    <div class="cabinet_item_value">+7 945 668 99 99 </div>
+                  </div>
+                  <div class="cabinet_item_row">
+                    <div class="cabinet_item_name">Организация</div>
+                    <div class="cabinet_item_value">ООО "Вестник"</div>
+                  </div>
+                </div>
+                <a class="cabinet_item_change" href="./personal.html">Редактировать профиль</a>
+              </div>
+              <a class="cabinet_item_link" href="./personal.html"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

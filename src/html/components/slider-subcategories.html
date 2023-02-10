@@ -1,0 +1,44 @@
+<div class="subcategories_slider">
+  <h2 class="title small">@@context.title</h2>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      @@for (var j = 0; j < context.arrSlider.iength; j++) {
+      <div class="swiper-slide">
+        <div class="box">
+          <div class="box_wrapper">
+            `+context.arrSlider[j].marker+`
+            <div class="box_favorite"></div>
+            <div class="box_img_wrapper">
+              <a class="box_img_link" href="`+context.arrSlider[j].link+`">
+                <img class="box_img" src="`+context.arrSlider[j].image+`">
+              </a>
+              <a class="box_view js-popup" href="#quickViewModal">Быстрый просмотр</a>
+            </div>
+            <div class="box_info">
+              <div class="box_category">`+context.arrSlider[j].category+`</div>
+              <a class="box_name" href="`+context.arrSlider[j].link+`">`+context.arrSlider[j].name+`</a>
+              <div class="box_extra">
+                <div class="box_price_wrapper">
+                  <div class="box_price_row">
+                    <div class="box_price old">`+context.arrSlider[j].priceOld+`</div>
+                    <div class="box_stock `+context.arrSlider[j]stockClass+`">`+context.arrSlider[j].stock+`</div>
+                  </div>
+                  <div class="box_price new">`+context.arrSlider[j].priceNew+`</div>
+                </div>
+                <div class="box_compare `+context.arrSlider[j].compareClass+`"></div>
+                <a class="btn basket js-popup" href="#addBasketModal"></a>
+              </div>
+            </div>
+            <div class="box_amount">`+context.arrSlider[j].amount+`</div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>

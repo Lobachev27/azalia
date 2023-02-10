@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Сравнение товаров"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Сравнение товаров',
+      'lastBreadcrumb': 'Сравнение товаров',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  @@include("./components/compare-empty.html")
+
+  @@include("./components/compare-filled.html")
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

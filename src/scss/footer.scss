@@ -1,0 +1,660 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Footer*/
+
+.footer{
+  &_top{
+    background-color: #4A4A4A;
+    padding: 45px 0 40px;
+    @media screen and ($desktop1) {
+      padding: 40px 0 35px;
+    }
+    @media screen and ($tablet2) {
+      padding: 35px 0 25px;
+    }
+    @media screen and ($tablet1) {
+      padding: 35px 0 30px;
+    }
+    @media screen and ($mobile3) {
+      padding: 40px 0;
+    }
+    @media screen and ($mobile1) {
+      padding: 30px 0;
+    }
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 190fr 115fr 115fr 400fr 210fr 210fr;
+    grid-column-gap: 74px;
+    min-height: 295px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 210fr 90fr 115fr 400fr 190fr 200fr;
+      grid-column-gap: 36px;
+      min-height: 270px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 200fr 100fr 120fr 170fr 170fr;
+      grid-column-gap: 60px;
+      min-height: 243px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 80px;
+      grid-row-gap: 40px;
+      min-height: initial;
+      height: auto;
+    }
+    @media screen and ($mobile5) {
+      grid-column-gap: 40px;
+    }
+    @media screen and ($mobile3) {
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 0;
+    }
+  }
+
+  &_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and ($tablet1) {
+      grid-column: 1/3;
+      grid-row: 1/3;
+    }
+    @media screen and ($mobile4) {
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+    @media screen and ($mobile3) {
+      padding: 0 10px 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &_logo{
+    @media screen and ($mobile3) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    @media screen and ($mobile1) {
+      flex-direction: column;
+    }
+
+    &_link{
+      display: block;
+      width: max-content;
+    }
+
+    &_img{
+      width: 141px;
+      height: 39px;
+      transition: transform 0.5s;
+      @media screen and ($desktop1) {
+        width: 127px;
+        height: 35px;
+      }
+      @media screen and ($mobile2) {
+        width: 115px;
+        height: 32px;
+      }
+
+      &:hover{
+        transform: scale(0.8);
+        transition: transform 0.5s;
+      }
+    }
+
+    &_description{
+      font-family: 'ProximaNova-Light';
+      font-size: $text-size-xs;
+      color: $text-color-white;
+      line-height: 1.4em;
+      margin-top: 20px;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        margin-top: 15px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        margin-top: 15px;
+      }
+      @media screen and ($mobile3) {
+        font-size: 12px;
+        margin-top: 0;
+        max-width: 300px;
+        margin-left: 30px;
+      }
+      @media screen and ($mobile2) {
+        margin-left: 30px;
+      }
+      @media screen and ($mobile1) {
+        margin: 15px 0 0 5px;
+      }
+    }
+  }
+
+  &_copyright{
+    font-family: 'ProximaNova-Light';
+    font-size: $text-size-xs;
+    color: #BCBCBC;
+    line-height: 1.2em;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+    }
+    @media screen and ($mobile4) {
+      display: none;
+    }
+  }
+
+  &_nav{
+    &_name{
+      font-family: 'ProximaNova-Bold';
+      font-size: $text-size-s;
+      color: $text-color-white;
+      margin-bottom: 25px;
+      @media screen and ($desktop1) {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+      @media screen and ($mobile3) {
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 18px 25px;
+        margin: 0;
+        cursor: pointer;
+      }
+
+      &:before{
+        @media screen and ($mobile3) {
+          content: "\f107";
+          position: absolute;
+          font-family: 'FontAwesome';
+          font-size: 16px;
+          font-weight: bold;
+          right: 20px;
+          top: 47%;
+          transform: translateY(-50%);
+          opacity: 0.7;
+        }
+      }
+      &.active{
+        @media screen and ($mobile3) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        &:before{
+          @media screen and ($mobile3) {
+            content: "\f106";
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &_box{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 60px;
+      @media screen and ($desktop1) {
+        grid-column-gap: 25px;
+      }
+      @media screen and ($tablet2) {
+        grid-column-gap: 25px;
+      }
+    }
+
+    &_item{
+      display: block;
+      font-size: $text-size-xs;
+      color: #BCBCBC;
+      width: fit-content;
+      margin-bottom: 17px;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      @media screen and ($mobile3) {
+        display: none;
+        width: 100%;
+        padding: 10px 25px;
+        margin: 0;
+      }
+
+      &:hover{
+        color: $text-color-white;
+        transition: color 0.3s;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      &.active{
+        @media screen and ($mobile3) {
+          display: block;
+        }
+      }
+    }
+
+    &:nth-child(2){
+      @media screen and ($tablet1) {
+        grid-column: 3/5;
+        grid-row: 1/2;
+      }
+      @media screen and ($mobile4) {
+        grid-column: 3/5;
+        grid-row: 1/2;
+      }
+      @media screen and ($mobile3) {
+        /*padding-top: 15px;*/
+      }
+    }
+    &:nth-child(3){
+      @media screen and ($tablet1) {
+        grid-column: 5/7;
+        grid-row: 1/2;
+      }
+      @media screen and ($mobile4) {
+        grid-column: 5/7;
+        grid-row: 1/2;
+      }
+    }
+
+    &:nth-child(4){
+      @media screen and ($tablet2) {
+        display: none;
+      }
+    }
+
+    &:last-child{
+      @media screen and ($mobile3) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &_text{
+    font-family: 'ProximaNova-Light';
+    font-size: 15px;
+    color: $text-color-white;
+    margin-bottom: 25px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($mobile4) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($mobile3) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_social{
+    @media screen and ($tablet1) {
+      grid-column: 3/5;
+      grid-row: 2/3;
+    }
+    @media screen and ($mobile4) {
+      grid-column: 1/4;
+      grid-row: 2/3;
+    }
+    @media screen and ($mobile3) {
+      padding: 0 10px;
+      order: 2;
+    }
+
+    &_box{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 21px;
+      margin-bottom: 40px;
+      @media screen and ($desktop1) {
+        height: 21px;
+        margin-bottom: 30px;
+      }
+      @media screen and ($tablet2) {
+        height: 21px;
+        margin-bottom: 30px;
+      }
+      @media screen and ($tablet1) {
+        max-width: 174px;
+        margin-bottom: 35px;
+      }
+      @media screen and ($mobile3) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &_payment{
+      background: url("./../img/payment-2-x.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 174px;
+      height: 26px;
+      @media screen and ($desktop1) {
+        width: 154px;
+        height: 22px;
+      }
+      @media screen and ($tablet2) {
+        width: 154px;
+        height: 22px;
+      }
+      @media screen and ($tablet1) {
+        width: 174px;
+        height: 26px;
+      }
+    }
+
+    &_item{
+      display: block;
+      transition: background 0.3s;
+
+      &.vk{
+        background: url("./../img/vk.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 28px;
+        height: 17px;
+
+        &:hover{
+          background: url("./../img/vk-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: background 0.3s;
+        }
+      }
+
+      &.instagram{
+        background: url("./../img/instagram.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 21px;
+        height: 21px;
+
+        &:hover{
+          background: url("./../img/instagram-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: background 0.3s;
+        }
+      }
+
+      &.facebook{
+        background: url("./../img/facebook.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 21px;
+        height: 21px;
+
+        &:hover{
+          background: url("./../img/facebook-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: background 0.3s;
+        }
+      }
+
+      &.youtube{
+        background: url("./../img/youtube.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 24px;
+        height: 17px;
+
+        &:hover{
+          background: url("./../img/youtube-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: background 0.3s;
+        }
+      }
+    }
+  }
+
+  &_right{
+    @media screen and ($tablet1) {
+      grid-column: 5/7;
+      grid-row: 2/3;
+    }
+    @media screen and ($mobile4) {
+      grid-column: 4/7;
+      grid-row: 2/3;
+    }
+    @media screen and ($mobile3) {
+      margin-bottom: 0;
+    }
+
+    & .footer_text{
+      @media screen and ($mobile3) {
+        display: none;
+      }
+    }
+  }
+
+  &_phone{
+    display: block;
+    width: fit-content;
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-l;
+    color: $text-color-white;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: $text-size-m;
+      margin-bottom: 10px;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-m;
+      margin-bottom: 10px;
+    }
+    @media screen and ($tablet1) {
+      font-size: $text-size-m;
+      margin-bottom: 5px;
+    }
+    @media screen and ($mobile3) {
+      display: none;
+    }
+
+    &:nth-child(3){
+      margin-bottom: 20px;
+      @media screen and ($desktop1) {
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet2) {
+        margin-bottom: 20px;
+      }
+      @media screen and ($tablet1) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &:hover{
+      color: $yellow-color;
+      transition: color 0.3s;
+    }
+  }
+
+  &_call{
+    display: block;
+    width: fit-content;
+    font-size: 15px;
+    color: $text-color-white;
+    line-height: 1.5em;
+    border-bottom: 1px dashed #707070;
+    margin-bottom: 25px;
+    transition: color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet1) {
+      margin-bottom: 15px;
+    }
+    @media screen and ($mobile3) {
+      font-family: 'ProximaNova-Semibold';
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% - 20px);
+      height: 45px;
+      color: $text-color-main;
+      background-color: $yellow-color;
+      border-radius: 4px;
+      border: none;
+      margin: 35px 10px;
+    }
+    @media screen and ($mobile1) {
+      margin: 25px 10px;
+    }
+
+    &:hover{
+      color: $yellow-color;
+      border-bottom: 1px dashed #4a4a4a;
+      transition: color 0.3s, border 0.3s;
+      @media screen and ($mobile3) {
+        color: $text-color-main;
+        background-color: $yellow-color-hover;
+        border: none;
+      }
+    }
+  }
+
+  &_mail{
+    display: block;
+    width: fit-content;
+    font-family: 'ProximaNova-Light';
+    font-size: 15px;
+    color: $text-color-white;
+    line-height: 1.5em;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 25px;
+    transition: color 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet1) {
+      margin-bottom: 0;
+    }
+    @media screen and ($mobile3) {
+      display: none;
+    }
+
+    &:hover{
+      color: $yellow-color;
+      border-bottom: 1px dashed #4a4a4a;
+      transition: color 0.3s, border 0.3s;
+    }
+  }
+
+  &_time{
+    & p{
+      font-size: 12px;
+      color: #BCBCBC;
+      margin-bottom: 5px;
+      @media screen and ($desktop1) {
+        font-size: 11px;
+        margin-bottom: 3px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 11px;
+        margin-bottom: 3px;
+      }
+      @media screen and ($tablet1) {
+        display: none;
+      }
+    }
+  }
+
+  &_bottom{
+    background-color: #1C1C1C;
+    padding: 16px 0;
+    @media screen and ($desktop1) {
+      padding: 15px 0;
+    }
+    @media screen and ($tablet2) {
+      padding: 15px 0;
+    }
+  }
+
+  &_develop{
+    font-size: $text-size-xs;
+    color: #BCBCBC;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+    }
+    @media screen and ($mobile3) {
+      margin: 0 10px;
+      line-height: 1.5em;
+    }
+
+    &_link{
+      display: inline-block;
+      font-size: $text-size-xs;
+      color: $text-color-white;
+      width: max-content;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+      }
+
+      &:hover{
+        color: $yellow-color;
+        transition: color 0.3s;
+      }
+    }
+  }
+}

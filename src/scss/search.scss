@@ -1,0 +1,169 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Страница с результатами поиска*/
+
+.search-page{
+  position: relative;
+  margin: 30px 0 70px;
+  @media screen and ($desktop1) {
+    margin: 20px 0 60px;
+  }
+  @media screen and ($tablet2) {
+    margin: 20px 0 50px;
+  }
+  @media screen and ($mobile3) {
+    margin: 0 0 30px;
+  }
+  @media screen and ($mobile2) {
+    margin: 45px 0 30px;
+  }
+
+  &_empty{
+    display: none;
+    position: relative;
+    margin: 120px 0 150px;
+
+    &_bg{
+      position: absolute;
+      background: url("../img/question.png") no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: -110px;
+      right: 20%;
+      width: 333px;
+      height: 345px;
+      z-index: -1;
+    }
+
+    &_caption{
+      font-family: 'ProximaNova-Bold';
+      line-height: 1.2em;
+      font-size: 28px;
+      max-width: 390px;
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+
+    &_description{
+      font-size: $text-size-s;
+      line-height: 1.5em;
+      max-width: 290px;
+      margin-left: 15px;
+      margin-bottom: 35px;
+    }
+
+    &_link{
+      font-size: $text-size-s;
+      display: inline-block;
+      color: $red-color;
+      border-bottom: 1px solid $red-color;
+      padding-top: 1px;
+      transition: color 0.3s, border 0.3s;
+
+      &:hover{
+        color: $red-color-hover;
+        border-bottom: 1px solid white;
+        transition: color 0.3s, border 0.3s;
+      }
+    }
+  }
+
+  &_wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: max-content;
+    margin-bottom: 40px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-bottom: 40px;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 30px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and ($mobile4) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and ($mobile1) {
+      display: block;
+    }
+
+    & .box{
+      border: 1px solid #EBEBEB !important;
+      width: 100%;
+      min-height: 342px;
+      @media screen and ($tablet2) {
+        min-height: 330px;
+      }
+      @media screen and ($mobile5) {
+        min-height: initial;
+      }
+    }
+  }
+
+  & .brands_row{
+    top: -70px !important;
+    @media screen and ($desktop1) {
+      top: -53px !important;
+    }
+    @media screen and ($tablet2) {
+      top: -50px !important;
+    }
+    @media screen and ($mobile5) {
+      right: 10px;
+    }
+    @media screen and ($mobile2) {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}
+
+/*Страница Помощь*/
+
+.help-page{
+  position: relative;
+  margin: 30px 0 100px;
+  @media screen and ($desktop1) {
+    margin: 20px 0 70px;
+  }
+  @media screen and ($tablet1) {
+    margin: 20px 0 60px;
+  }
+  @media screen and ($mobile3) {
+    margin: 0 0 60px;
+  }
+  @media screen and ($mobile1) {
+    margin: 0 0 60px;
+  }
+
+  &_caption{
+    font-family: 'ProximaNova-Bold';
+    font-size: 20px;
+    margin-bottom: 20px;
+    @media screen and ($tablet2) {
+      font-size: 18px;
+    }
+    @media screen and ($mobile1) {
+      font-size: 18px;
+    }
+  }
+
+  &_description{
+    font-size: 16px;
+    line-height: 1.5em;
+    max-width: 1000px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      line-height: 1.4em;
+      max-width: initial;
+    }
+    @media screen and ($tablet1) {
+      text-align: justify;
+    }
+  }
+}

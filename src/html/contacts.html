@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Контакты"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Контакты в Москве и Подмосковье',
+      'lastBreadcrumb': 'Контакты',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="contacts-page">
+    <div class="container">
+      <a class="contacts-page_more" href="./contacts-branch.html">Все филиалы</a>
+    </div>
+    <div id="map_msk" class="contacts-page_maps"></div>
+    <div class="container">
+      <div class="contacts-page_wrapper">
+        <div class="contacts-page_list">
+          <div class="contacts-page_item">
+            <div class="contacts-page_caption">Главный офис</div>
+            <div class="contacts-page_info">
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Адрес:</div>
+                <div class="contacts-page_value">1-й Магистральный пр-д, 12c1</div>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Телефон:</div>
+                <a class="contacts-page_phone" href="tel:+74959332694">8 (495) 933-26-94</a>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Метро:</div>
+                <div class="contacts-page_underground">
+                  <p>Полежаевская</p>
+                  <p>Фили</p>
+                  <p>Улица 1905 года</p>
+                </div>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Режим работы:</div>
+                <div class="contacts-page_time">
+                  <p>Пн,Вт,Чт, Пт: 9:00 - 00:00</p>
+                  <p>Ср,Сб: 8:00 - 00:00</p>
+                  <p>Вс: 9:00 - 20:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts-page_item">
+            <div class="contacts-page_caption">Офис</div>
+            <div class="contacts-page_info">
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Адрес:</div>
+                <div class="contacts-page_value">1-й Вешняковский пр-д, 2А</div>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Телефон:</div>
+                <a class="contacts-page_phone" href="tel:+74957863898">8 (495) 786-38-98</a>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Метро:</div>
+                <div class="contacts-page_underground">
+                  <p>Рязанский проспект</p>
+                </div>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Режим работы:</div>
+                <div class="contacts-page_time">
+                  <p>Пн,Вт,Чт, Пт: 9:00 - 00:00</p>
+                  <p>Ср,Сб: 8:00 - 00:00</p>
+                  <p>Вс: 9:00 - 20:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts-page_item">
+            <div class="contacts-page_caption">Склад/пункт выдачи товара</div>
+            <div class="contacts-page_info">
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Адрес:</div>
+                <div class="contacts-page_value">ул. Азовская, д.28Бc1</div>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Телефон:</div>
+                <a class="contacts-page_phone" href="tel:+78002002056">8 (800) 200-20-56</a>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Метро:</div>
+                <div class="contacts-page_underground">
+                  <p>Севастопольская</p>
+                </div>
+              </div>
+              <div class="contacts-page_row">
+                <div class="contacts-page_name">Режим работы:</div>
+                <div class="contacts-page_time">
+                  <p>Пн,Вт,Чт, Пт: 9:00 - 00:00</p>
+                  <p>Ср,Сб: 8:00 - 00:00</p>
+                  <p>Вс: 9:00 - 20:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contacts-page_form">
+          <div class="contacts-page_caption">Обратная связь</div>
+          <div class="contacts-page_description">Вы можете задать любой вопрос на тему нашей продукции или работы интеренет магазина.</div>
+          <input class="contacts-page_input" name="name" type="text" placeholder="Введите ваше имя" autocomplete="off" required>
+          <input class="contacts-page_input phone" name="phone" type="text" placeholder="Телефон" autocomplete="off" required>
+          <input class="contacts-page_input" name="email" type="email" placeholder="Укажите ваш E-mail" autocomplete="off" required>
+          <textarea class="contacts-page_comment" name="question" placeholder="Напишите вопрос, который вас интересует"></textarea>
+          <button class="contacts-page_submit" type="submit">Отправить вопрос</button>
+          <label class="subscription_checkbox red">
+            <input type="checkbox" name="confirm" required>
+            <div class="subscription_checkbox_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+          </label>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

@@ -1,0 +1,3910 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Корзина</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./css/favicon.ico" />
+  </head>
+
+  <body>
+    <section class="top-banner">
+      <div class="container">
+        <div class="top-banner_wrapper">
+          <a class="top-banner_subscription" href="#subscription"
+            >Подписаться</a
+          >
+          <div class="top-banner_close black"></div>
+        </div>
+      </div>
+    </section>
+    <section class="top-menu">
+      <div class="container">
+        <div class="top-menu_wrapper">
+          <div class="header_logo">
+            <a class="header_logo_link" href="/">
+              <img
+                class="header_logo_img"
+                src="./img/headersvg.svg"
+                alt="Азалия"
+                title="Азалия"
+              />
+            </a>
+          </div>
+          <div class="top-menu_city">
+            <div class="top-menu_city_box">Выберите город:</div>
+            <a
+              id="main_city"
+              class="top-menu_city_name js-popup"
+              href="#cityChange"
+              >Москва и Подмосковье</a
+            >
+          </div>
+          <div class="top-menu_city_confirmation">
+            <div class="top-menu_city_confirmation_title">Ваш город</div>
+            <div class="top-menu_city_confirmation_town" id="city">
+              Москва и Подмосковье
+            </div>
+            <div class="top-menu_city_confirmation_box">
+              <a
+                class="top-menu_city_confirmation_yes"
+                href="javascript:void(0);"
+                >Да, верно</a
+              >
+              <a
+                class="top-menu_city_confirmation_no"
+                href="javascript:void(0);"
+                >Выбрать другой</a
+              >
+            </div>
+          </div>
+          <nav class="top-menu_nav">
+            <a class="top-menu_link" href="./about.html">О компании</a>
+            <a class="top-menu_link" href="./delivery.html"
+              >Доставка и оплата</a
+            >
+            <a class="top-menu_link" href="./brands.html">Бренды</a>
+            <a class="top-menu_link" href="./faq.html">FAQ</a>
+            <a class="top-menu_link" href="./contacts.html">Контакты</a>
+          </nav>
+          <a class="top-menu_call js-popup" href="#callMe">Заказать звонок</a>
+          <a class="top-menu_phone" href="tel:+78001000185"
+            >8 (800) 100-01-85</a
+          >
+          <div class="header_user mobile">
+            <a
+              class="header_user_link mobile js-popup"
+              href="#accountModal"
+            ></a>
+            <a class="header_user_name mobile" href="./cabinet.html"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <header class="header">
+      <div class="container">
+        <div class="header_wrapper">
+          <div class="nav_cat">
+            <div class="nav_cat_text">Все категории</div>
+            <a class="nav_cat_link" href="./catalog-level-1.html"></a>
+          </div>
+          <div class="nav_menu">
+            <ul class="nav_menu_list">
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Аксессуары и элементы декора</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Товары для дома и сада</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Изделия из керамики</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Изделия из пластика</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Изделия из стекла</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Изделия из металла</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Плетеные изделия</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Изделия из дерева</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Товары для праздника</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Искусственные растения</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Игрушки</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Сезонные товары</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Упаковка для цветов и подарков</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Натуральные декоративные материалы</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Книги, журналы</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav_menu_item">
+                <a class="nav_menu_link" href="./catalog-level-2.html"
+                  >Расходные материалы, инструменты и оборудование для
+                  флористов</a
+                >
+                <div class="nav_dropdown">
+                  <div class="nav_dropdown_left">
+                    <div class="nav_dropdown_col">
+                      <a class="nav_dropdown_back" href="javascript:void(0);"
+                        >Назад</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Вставки</a
+                      >
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Наполнители</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Пески</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Грунты, камни</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Гидрогель</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Блестки, глиттер</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Кристаллы, марблс</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Натуральные наполнители</a
+                        >
+                      </div>
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Свадебные аксессуары</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Корзины свадебные</a
+                        >
+                        <a
+                          class="nav_dropdown_link new"
+                          href="./catalog-level-3.html"
+                          >Манжетки для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Чехлы для портбукетниц</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бутоньерки</a
+                        >
+                      </div>
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Декоративные украшения</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Муляжи фруктов, овощей</a
+                      >
+                      <a
+                        class="nav_dropdown_name link"
+                        href="./catalog-level-2.html"
+                        >Бусы, бусинки</a
+                      >
+                    </div>
+                    <div class="nav_dropdown_col">
+                      <div class="nav_dropdown_list">
+                        <a
+                          class="nav_dropdown_name"
+                          href="./catalog-level-2.html"
+                          >Птички, бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Бабочки</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Птички</a
+                        >
+                        <a
+                          class="nav_dropdown_link"
+                          href="./catalog-level-3.html"
+                          >Прочее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_dropdown_right">
+                    <div class="box">
+                      <div class="box_wrapper">
+                        <div class="box_marker fire">
+                          <div class="box_marker_tooltips"></div>
+                        </div>
+
+                        <div class="box_favorite"></div>
+                        <div class="box_img_wrapper">
+                          <a class="box_img_link" href="./card-product.html">
+                            <img class="box_img" src="./img/product-2.jpg" />
+                          </a>
+                          <a class="box_view js-popup" href="#quickViewModal"
+                            >Быстрый просмотр</a
+                          >
+                        </div>
+                        <div class="box_info">
+                          <div class="box_category">Изделия из керамики</div>
+                          <a class="box_name" href="./card-product.html"
+                            >Цветочный горшок вазон №5 (шамот), D41xH40см,
+                            12л</a
+                          >
+                          <div class="box_extra">
+                            <div class="box_price_wrapper">
+                              <div class="box_price_row">
+                                <div class="box_price old">3 210 ₽</div>
+                                <div class="box_stock none"></div>
+                              </div>
+                              <div class="box_price new">2 587 ₽</div>
+                            </div>
+                            <div class="box_compare"></div>
+                            <a
+                              class="btn basket js-popup"
+                              href="#addBasketModal"
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="box_amount">
+                          Осталось <span class="box_amount_number">5</span> шт.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a class="header_search_mobile" href="javascript:void(0);"></a>
+          <form id="search_title" class="header_search">
+            <input
+              class="header_search_input"
+              name="search"
+              type="text"
+              placeholder="Поиск среди тысяч товаров..."
+              autocomplete="off"
+            />
+            <button class="header_search_submit" type="submit">Найти</button>
+            <div class="header_search_result">
+              <div class="header_search_result_error">
+                Товар с таким именем не найден
+              </div>
+              <div class="header_search_line">
+                <div class="header_search_img_wrapper">
+                  <img class="header_search_img" src="./img/product-10.jpg" />
+                </div>
+                <div class="header_search_name">
+                  Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.
+                </div>
+                <div class="header_search_price_wrapper">
+                  <div class="header_search_price_row">
+                    <div class="header_search_price old">2 145 ₽</div>
+                    <div class="header_search_stock">-30%</div>
+                  </div>
+                  <div class="header_search_price new">1 755 ₽</div>
+                </div>
+                <a class="header_search_link" href="./card-product.html"></a>
+              </div>
+              <div class="header_search_line">
+                <div class="header_search_img_wrapper">
+                  <img class="header_search_img" src="./img/product-10.jpg" />
+                </div>
+                <div class="header_search_name">
+                  Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.
+                </div>
+                <div class="header_search_price_wrapper">
+                  <div class="header_search_price_row">
+                    <div class="header_search_price old">2 145 ₽</div>
+                    <div class="header_search_stock">-30%</div>
+                  </div>
+                  <div class="header_search_price new">1 755 ₽</div>
+                </div>
+                <a class="header_search_link" href="./card-product.html"></a>
+              </div>
+              <div class="header_search_line">
+                <div class="header_search_img_wrapper">
+                  <img class="header_search_img" src="./img/product-10.jpg" />
+                </div>
+                <div class="header_search_name">
+                  Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.
+                </div>
+                <div class="header_search_price_wrapper">
+                  <div class="header_search_price_row">
+                    <div class="header_search_price old">2 145 ₽</div>
+                    <div class="header_search_stock">-30%</div>
+                  </div>
+                  <div class="header_search_price new">1 755 ₽</div>
+                </div>
+                <a class="header_search_link" href="./card-product.html"></a>
+              </div>
+              <div class="header_search_line">
+                <div class="header_search_img_wrapper">
+                  <img class="header_search_img" src="./img/product-10.jpg" />
+                </div>
+                <div class="header_search_name">
+                  Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.
+                </div>
+                <div class="header_search_price_wrapper">
+                  <div class="header_search_price_row">
+                    <div class="header_search_price old">2 145 ₽</div>
+                    <div class="header_search_stock">-30%</div>
+                  </div>
+                  <div class="header_search_price new">1 755 ₽</div>
+                </div>
+                <a class="header_search_link" href="./card-product.html"></a>
+              </div>
+              <div class="header_search_line">
+                <div class="header_search_img_wrapper">
+                  <img class="header_search_img" src="./img/product-10.jpg" />
+                </div>
+                <div class="header_search_name">
+                  Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.
+                </div>
+                <div class="header_search_price_wrapper">
+                  <div class="header_search_price_row">
+                    <div class="header_search_price old">2 145 ₽</div>
+                    <div class="header_search_stock">-30%</div>
+                  </div>
+                  <div class="header_search_price new">1 755 ₽</div>
+                </div>
+                <a class="header_search_link" href="./card-product.html"></a>
+              </div>
+              <a class="header_search_more" href="./search.html"
+                >Показать все результаты</a
+              >
+            </div>
+          </form>
+          <div class="header_user">
+            <div class="header_user_icon"></div>
+            <div class="header_user_box">
+              <a class="header_user_link js-popup" href="#accountModal"
+                >Войти</a
+              >
+              <a class="header_user_link" href="./registration.html"
+                >Регистрация</a
+              >
+              <a class="header_user_name" href="./cabinet.html">Имя Фамилия</a>
+            </div>
+          </div>
+          <div class="header_add">
+            <div class="header_compare">
+              <div class="header_compare_count" id="compare_list_count">0</div>
+              <a class="header_add_link com" href="./compare.html"></a>
+            </div>
+            <div class="header_favorite">
+              <div class="header_favorite_count" id="wishcount">0</div>
+              <a class="header_add_link fav" href="./favorite.html"></a>
+            </div>
+          </div>
+          <div class="header_basket">
+            <div class="header_basket_img">
+              <div class="header_basket_count">0</div>
+            </div>
+            <div class="header_basket_price">Нет товаров</div>
+            <a class="header_basket_link" href="./basket.html"></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="page_leader">
+        <div class="container">
+          <div class="page_way">
+            <a class="page_way_link" href="./">Главная</a>
+            <span>→</span>
+
+            <p class="page_way_link">Корзина товаров</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="basket-page_empty">
+        <div class="container">
+          <div class="basket-page_empty_bg"></div>
+          <h1 class="basket-page_empty_caption">
+            В вашей корзине пока ничего нет
+          </h1>
+          <div class="basket-page_empty_description">
+            Корзина ждет, что ее наполнят. Желаем приятных покупок!
+          </div>
+          <a class="basket-page_empty_link" href="./catalog-level-1.html"
+            >Перейти в каталог</a
+          >
+        </div>
+      </section>
+
+      <section class="basket-page">
+        <div class="container">
+          <div class="basket-page_wrapper">
+            <div class="basket-page_left">
+              <div class="basket-page_nav_row">
+                <nav class="basket-page_nav">
+                  <a class="basket-page_nav_link active" href="./basket.html"
+                    >Корзина товаров</a
+                  >
+                  <a class="basket-page_nav_link" href="./favorite.html"
+                    >Избранные товары</a
+                  >
+                </nav>
+                <div class="basket-page_reset">Очистить корзину</div>
+              </div>
+              <ul class="basket-page_list">
+                <li class="basket-page_item">
+                  <div class="basket-page_img_wrapper">
+                    <a class="basket-page_img_link" href="./card-product.html">
+                      <img class="basket-page_img" src="./img/product-2.jpg" />
+                    </a>
+                  </div>
+                  <div class="basket-page_info">
+                    <a
+                      class="basket-page_info_caption"
+                      href="./card-product.html"
+                      >Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a
+                    >
+                    <div class="basket-page_info_item">
+                      <div class="basket-page_info_name">Артикул:</div>
+                      <div class="basket-page_info_value">TC042432X22-1206</div>
+                    </div>
+                    <div class="basket-page_info_item">
+                      <div class="basket-page_info_name">Вес:</div>
+                      <div class="basket-page_info_value">5,75 кг</div>
+                    </div>
+                  </div>
+                  <div class="basket-page_count">
+                    <div class="basket-page_minus">-</div>
+                    <div class="basket-page_amount">1</div>
+                    <div class="basket-page_plus">+</div>
+                  </div>
+                  <div class="basket-page_price_box">
+                    <div class="basket-page_price old">2 415 ₽</div>
+                    <div class="basket-page_price new">1 430 ₽</div>
+                  </div>
+                  <div class="basket-page_close"></div>
+                  <div class="basket-page_favorite"></div>
+                </li>
+                <li class="basket-page_item">
+                  <div class="basket-page_img_wrapper">
+                    <a class="basket-page_img_link" href="./card-product.html">
+                      <img class="basket-page_img" src="./img/product-2.jpg" />
+                    </a>
+                  </div>
+                  <div class="basket-page_info">
+                    <a
+                      class="basket-page_info_caption"
+                      href="./card-product.html"
+                      >Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a
+                    >
+                    <div class="basket-page_info_item">
+                      <div class="basket-page_info_name">Артикул:</div>
+                      <div class="basket-page_info_value">TC042432X22-1206</div>
+                    </div>
+                    <div class="basket-page_info_item">
+                      <div class="basket-page_info_name">Вес:</div>
+                      <div class="basket-page_info_value">5,75 кг</div>
+                    </div>
+                  </div>
+                  <div class="basket-page_count">
+                    <div class="basket-page_minus">-</div>
+                    <div class="basket-page_amount">1</div>
+                    <div class="basket-page_plus">+</div>
+                  </div>
+                  <div class="basket-page_price_box">
+                    <div class="basket-page_price old">2 415 ₽</div>
+                    <div class="basket-page_price new">1 430 ₽</div>
+                  </div>
+                  <div class="basket-page_close"></div>
+                  <div class="basket-page_favorite"></div>
+                </li>
+                <li class="basket-page_item">
+                  <div class="basket-page_img_wrapper">
+                    <a class="basket-page_img_link" href="./card-product.html">
+                      <img class="basket-page_img" src="./img/product-2.jpg" />
+                    </a>
+                  </div>
+                  <div class="basket-page_info">
+                    <a
+                      class="basket-page_info_caption"
+                      href="./card-product.html"
+                      >Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a
+                    >
+                    <div class="basket-page_info_item">
+                      <div class="basket-page_info_name">Артикул:</div>
+                      <div class="basket-page_info_value">TC042432X22-1206</div>
+                    </div>
+                    <div class="basket-page_info_item">
+                      <div class="basket-page_info_name">Вес:</div>
+                      <div class="basket-page_info_value">5,75 кг</div>
+                    </div>
+                  </div>
+                  <div class="basket-page_count">
+                    <div class="basket-page_minus">-</div>
+                    <div class="basket-page_amount">1</div>
+                    <div class="basket-page_plus">+</div>
+                  </div>
+                  <div class="basket-page_price_box">
+                    <div class="basket-page_price old">2 415 ₽</div>
+                    <div class="basket-page_price new">1 430 ₽</div>
+                  </div>
+                  <div class="basket-page_close"></div>
+                  <div class="basket-page_favorite"></div>
+                </li>
+              </ul>
+              <form class="basket-page_promo">
+                <div class="basket-page_promo_text">
+                  Используйте промокоды и купоны, чтобы получить дополнительную
+                  скидку
+                </div>
+                <div class="basket-page_promo_box">
+                  <input
+                    class="basket-page_promo_input"
+                    name="code"
+                    type="text"
+                    placeholder="Введите промокод"
+                    autocomplete="off"
+                    required
+                  />
+                  <button class="basket-page_promo_request" type="submit">
+                    Применить
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="basket-page_right">
+              <div class="basket-page_top">
+                <div class="basket-page_right_box">
+                  <div class="basket-page_right_caption">
+                    Информация о заказе
+                  </div>
+                  <div class="basket-page_right_item">
+                    <div class="basket-page_right_name">Позиции (2)</div>
+                    <div class="basket-page_right_value">2 860 ₽</div>
+                  </div>
+                  <div class="basket-page_right_item">
+                    <div class="basket-page_right_name">Общий вес</div>
+                    <div class="basket-page_right_value">10,53 кг</div>
+                  </div>
+                  <div class="basket-page_right_item">
+                    <div class="basket-page_right_name">
+                      Персональная скидка
+                    </div>
+                    <div class="basket-page_right_value">860 ₽</div>
+                  </div>
+                </div>
+                <div class="basket-page_right_box">
+                  <div class="basket-page_right_caption">Доставка</div>
+                  <div class="basket-page_right_description">
+                    г.Москва, ул.Угрешская д. 2 стр. 146
+                  </div>
+                  <a
+                    class="basket-page_deliveryProfit_change"
+                    href="javascript:void(0);"
+                    >Изменить</a
+                  >
+                </div>
+                <div class="basket-page_right_row">
+                  <div class="basket-page_right_text">Итого к оплате:</div>
+                  <div class="basket-page_right_price">7 500 ₽</div>
+                </div>
+                <div class="basket-page_error">
+                  <div class="basket-page_error_info">
+                    Минимальная сумма заказа 10 000 ₽
+                  </div>
+                  <div class="basket-page_error_text">
+                    Добавьте еще товаров в корзину
+                  </div>
+                </div>
+                <a class="basket-page_order" href="./order.html"
+                  >Оформить заказ</a
+                >
+              </div>
+              <div class="basket-page_bottom">
+                <div class="basket-page_advantage deliveryProfit">
+                  <div class="basket-page_advantage_text">
+                    <a class="advantage_link" href="./delivery.html"
+                      >Доставка</a
+                    >
+                    по всей россии
+                  </div>
+                </div>
+                <div class="basket-page_advantage payment">
+                  <div class="basket-page_advantage_text">
+                    Удобные способы
+                    <a class="advantage_link" href="javascript:void(0);"
+                      >оплаты</a
+                    >
+                    заказа
+                  </div>
+                </div>
+                <div class="basket-page_advantage stock">
+                  <div class="basket-page_advantage_text">
+                    Регулярные
+                    <a class="advantage_link" href="./stock.html">акции</a> и
+                    распродажи
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="may-like" class="may-like">
+        <div class="container">
+          <div class="may-like_slider">
+            <h2 class="title small">Рекомендуем к товарам</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="box">
+                    <div class="box_wrapper">
+                      <div class="box_marker">
+                        <div class="box_marker_tooltips"></div>
+                      </div>
+                      <div class="box_favorite"></div>
+                      <div class="box_img_wrapper">
+                        <a class="box_img_link" href="./card-product.html">
+                          <img class="box_img" src="./img/product-21.jpg" />
+                        </a>
+                        <a class="box_view js-popup" href="#quickViewModal"
+                          >Быстрый просмотр</a
+                        >
+                      </div>
+                      <div class="box_info">
+                        <div class="box_category">Кувшин</div>
+                        <a class="box_name" href="./card-product.html"
+                          >Кувшин (керамика), Н18.5см, 2л, зеленый</a
+                        >
+                        <div class="box_extra">
+                          <div class="box_price_wrapper">
+                            <div class="box_price_row">
+                              <div class="box_price old">3 415 ₽</div>
+                              <div class="box_stock">-30%</div>
+                            </div>
+                            <div class="box_price new">793 ₽</div>
+                          </div>
+                          <div class="box_compare"></div>
+                          <a
+                            class="btn basket js-popup"
+                            href="#addBasketModal"
+                          ></a>
+                        </div>
+                      </div>
+                      <div class="box_amount">
+                        Осталось <span class="box_amount_number">5</span> шт.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="box">
+                    <div class="box_wrapper">
+                      <div class="box_marker">
+                        <div class="box_marker_tooltips"></div>
+                      </div>
+                      <div class="box_favorite"></div>
+                      <div class="box_img_wrapper">
+                        <a class="box_img_link" href="./card-product.html">
+                          <img class="box_img" src="./img/product-22.jpg" />
+                        </a>
+                        <a class="box_view js-popup" href="#quickViewModal"
+                          >Быстрый просмотр</a
+                        >
+                      </div>
+                      <div class="box_info">
+                        <div class="box_category">Кувшин</div>
+                        <a class="box_name" href="./card-product.html"
+                          >Кувшин (керамика), Н19см, белый/24шт.</a
+                        >
+                        <div class="box_extra">
+                          <div class="box_price_wrapper">
+                            <div class="box_price_row">
+                              <div class="box_price old">2 640 ₽</div>
+                              <div class="box_stock">-30%</div>
+                            </div>
+                            <div class="box_price new">359 ₽</div>
+                          </div>
+                          <div class="box_compare"></div>
+                          <a
+                            class="btn basket js-popup"
+                            href="#addBasketModal"
+                          ></a>
+                        </div>
+                      </div>
+                      <div class="box_amount">
+                        Осталось <span class="box_amount_number">5</span> шт.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="box">
+                    <div class="box_wrapper">
+                      <div class="box_marker">
+                        <div class="box_marker_tooltips"></div>
+                      </div>
+                      <div class="box_favorite"></div>
+                      <div class="box_img_wrapper">
+                        <a class="box_img_link" href="./card-product.html">
+                          <img class="box_img" src="./img/product-23.jpg" />
+                        </a>
+                        <a class="box_view js-popup" href="#quickViewModal"
+                          >Быстрый просмотр</a
+                        >
+                      </div>
+                      <div class="box_info">
+                        <div class="box_category">Колонна</div>
+                        <a class="box_name" href="./card-product.html"
+                          >Колонна (шамот), H90см</a
+                        >
+                        <div class="box_extra">
+                          <div class="box_price_wrapper">
+                            <div class="box_price_row">
+                              <div class="box_price old">7 415 ₽</div>
+                              <div class="box_stock">-30%</div>
+                            </div>
+                            <div class="box_price new">5 830 ₽</div>
+                          </div>
+                          <div class="box_compare"></div>
+                          <a
+                            class="btn basket js-popup"
+                            href="#addBasketModal"
+                          ></a>
+                        </div>
+                      </div>
+                      <div class="box_amount">
+                        Осталось <span class="box_amount_number">5</span> шт.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="box">
+                    <div class="box_wrapper">
+                      <div class="box_marker">
+                        <div class="box_marker_tooltips"></div>
+                      </div>
+                      <div class="box_favorite"></div>
+                      <div class="box_img_wrapper">
+                        <a class="box_img_link" href="./card-product.html">
+                          <img class="box_img" src="./img/product-24.jpg" />
+                        </a>
+                        <a class="box_view js-popup" href="#quickViewModal"
+                          >Быстрый просмотр</a
+                        >
+                      </div>
+                      <div class="box_info">
+                        <div class="box_category">Другие формы</div>
+                        <a class="box_name" href="./card-product.html"
+                          >Декор. изделие Karo (керамика), 16.5см,
+                          камень/20шт.</a
+                        >
+                        <div class="box_extra">
+                          <div class="box_price_wrapper">
+                            <div class="box_price_row">
+                              <div class="box_price old"></div>
+                              <div class="box_stock none"></div>
+                            </div>
+                            <div class="box_price new">273 ₽</div>
+                          </div>
+                          <div class="box_compare"></div>
+                          <a
+                            class="btn basket js-popup"
+                            href="#addBasketModal"
+                          ></a>
+                        </div>
+                      </div>
+                      <div class="box_amount">
+                        Осталось <span class="box_amount_number">5</span> шт.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="box">
+                    <div class="box_wrapper">
+                      <div class="box_marker">
+                        <div class="box_marker_tooltips"></div>
+                      </div>
+                      <div class="box_favorite"></div>
+                      <div class="box_img_wrapper">
+                        <a class="box_img_link" href="./card-product.html">
+                          <img class="box_img" src="./img/product-25.jpg" />
+                        </a>
+                        <a class="box_view js-popup" href="#quickViewModal"
+                          >Быстрый просмотр</a
+                        >
+                      </div>
+                      <div class="box_info">
+                        <div class="box_category">Кашпо</div>
+                        <a class="box_name" href="./card-product.html"
+                          >Кашпо (керамика) 12,2х12,2х9,8см, коричневый/36шт.</a
+                        >
+                        <div class="box_extra">
+                          <div class="box_price_wrapper">
+                            <div class="box_price_row">
+                              <div class="box_price old">250 ₽</div>
+                              <div class="box_stock">-30%</div>
+                            </div>
+                            <div class="box_price new">158 ₽</div>
+                          </div>
+                          <div class="box_compare"></div>
+                          <a
+                            class="btn basket js-popup"
+                            href="#addBasketModal"
+                          ></a>
+                        </div>
+                      </div>
+                      <div class="box_amount">
+                        Осталось <span class="box_amount_number">5</span> шт.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="box">
+                    <div class="box_wrapper">
+                      <div class="box_marker">
+                        <div class="box_marker_tooltips"></div>
+                      </div>
+                      <div class="box_favorite"></div>
+                      <div class="box_img_wrapper">
+                        <a class="box_img_link" href="./card-product.html">
+                          <img class="box_img" src="./img/product-26.jpg" />
+                        </a>
+                        <a class="box_view js-popup" href="#quickViewModal"
+                          >Быстрый просмотр</a
+                        >
+                      </div>
+                      <div class="box_info">
+                        <div class="box_category">Кашпо</div>
+                        <a class="box_name" href="./card-product.html"
+                          >Кашпо Амфора коринф (шамот), 22*30см</a
+                        >
+                        <div class="box_extra">
+                          <div class="box_price_wrapper">
+                            <div class="box_price_row">
+                              <div class="box_price old"></div>
+                              <div class="box_stock none"></div>
+                            </div>
+                            <div class="box_price new">1 157 ₽</div>
+                          </div>
+                          <div class="box_compare"></div>
+                          <a
+                            class="btn basket js-popup"
+                            href="#addBasketModal"
+                          ></a>
+                        </div>
+                      </div>
+                      <div class="box_amount">
+                        Осталось <span class="box_amount_number">5</span> шт.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="subscription" class="subscription">
+        <div class="container">
+          <form class="subscription_wrapper">
+            <div class="subscription_text">
+              Узнавайте одними из первых о наших выгодных предложениях и
+              распродажах
+            </div>
+            <div class="subscription_box">
+              <input
+                class="subscription_input"
+                name="e-mail"
+                type="email"
+                placeholder="Укажите Ваш e-mail..."
+                autocomplete="off"
+                required
+              />
+              <button class="subscription_request" type="submit">
+                Подписаться
+              </button>
+            </div>
+            <label class="subscription_checkbox">
+              <input type="checkbox" name="confirm" required />
+              <div class="subscription_checkbox_text">
+                Я согласен с политикой конфиденциальности и даю согласие на
+                обработку персональных данных
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer_top">
+        <div class="container">
+          <div class="footer_wrapper">
+            <div class="footer_left">
+              <div class="footer_logo">
+                <a class="footer_logo_link" href="./">
+                  <img
+                    class="footer_logo_img"
+                    src="./img/headersvg-white.svg"
+                    alt="Азалия"
+                    title="Азалия"
+                  />
+                </a>
+                <div class="footer_logo_description">
+                  Интернет-магазин элементов декора, аксессуаров и сувенирных
+                  изделий.
+                </div>
+              </div>
+              <div class="footer_copyright">2018 © ООО «Азалия Декор»</div>
+            </div>
+            <nav class="footer_nav">
+              <div class="footer_nav_name">Компания</div>
+              <a class="footer_nav_item" href="./about.html">О компании</a>
+              <a class="footer_nav_item" href="./article.html">Блог</a>
+              <a class="footer_nav_item" href="./jobs.html">Вакансии</a>
+              <a class="footer_nav_item" href="./contacts-branch.html"
+                >Филиалы</a
+              >
+            </nav>
+            <nav class="footer_nav">
+              <div class="footer_nav_name">Информация</div>
+              <a class="footer_nav_item" href="./delivery.html">Доставка</a>
+              <!--<a class="footer_nav_item" href="javascript:void(0);">Оплата</a>-->
+              <a class="footer_nav_item" href="./help.html">Помощь</a>
+              <a class="footer_nav_item" href="./faq.html">FAQ</a>
+            </nav>
+            <nav class="footer_nav">
+              <div class="footer_nav_name">Каталог товаров</div>
+              <div class="footer_nav_box">
+                <div class="footer_nav_list">
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Аксессуары и декор</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Товары для дома и сада</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Товары для праздника</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Изделия из керамики</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Изделия из пластика</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Изделия из металла</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Плетеные изделия</a
+                  >
+                </div>
+                <div class="footer_nav_list">
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Искусственные растения</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Игрушки</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Сезонные товары</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Книги, журналы</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Все для флористов</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Упаковка для цветов</a
+                  >
+                  <a class="footer_nav_item" href="./catalog-level-2.html"
+                    >Натуральные декоративные материалы</a
+                  >
+                </div>
+              </div>
+            </nav>
+            <div class="footer_social">
+              <div class="footer_text">Подписывайтесь на нас:</div>
+              <div class="footer_social_box">
+                <a class="footer_social_item vk" href="javascript:void(0);"></a>
+                <a
+                  class="footer_social_item instagram"
+                  href="javascript:void(0);"
+                ></a>
+                <a
+                  class="footer_social_item facebook"
+                  href="javascript:void(0);"
+                ></a>
+                <a
+                  class="footer_social_item youtube"
+                  href="javascript:void(0);"
+                ></a>
+              </div>
+              <div class="footer_text">Мы принимаем к оплате:</div>
+              <div class="footer_social_payment"></div>
+            </div>
+            <div class="footer_right">
+              <div class="footer_text">Контакты:</div>
+              <a class="footer_phone" href="tel:+78001000185"
+                >8 (800) 100-01-85</a
+              >
+              <a class="footer_phone" href="tel:+74959332694"
+                >8 (495) 933-26-94</a
+              >
+              <a class="footer_call js-popup" href="#callMe"
+                >Заказать обратный звонок</a
+              >
+              <a class="footer_mail" href="mailto:info@azaliadecor.ru"
+                >info@azaliadecor.ru</a
+              >
+              <div class="footer_time">
+                <p>Пн,Вт,Чт, Пт: 9:00 - 00:00</p>
+                <p>Ср,Сб: 8:00 - 00:00</p>
+                <p>Вс: 9:00 - 20:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="footer_develop">
+            Разработка интернет-магазина —
+            <a
+              class="footer_develop_link"
+              href="http://champer.ru/"
+              target="_blank"
+              >Digital agency Champer</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="cityChange" class="modalDialog">
+      <div class="modalDialog_container mid">
+        <div title="Закрыть" class="closeModal"></div>
+        <div class="modalDialog_caption">Выберите ваш регион доставки</div>
+        <form id="search_city" class="modalDialog_search">
+          <input
+            class="modalDialog_search_input"
+            name="search"
+            type="text"
+            autocomplete="off"
+          />
+          <button class="modalDialog_search_submit" type="submit">Найти</button>
+          <div class="modalDialog_search_result">
+            <div class="modalDialog_search_result_error">
+              Такой город не найден
+            </div>
+            <div class="modalDialog_search_line">Санкт-Петербург</div>
+            <div class="modalDialog_search_line">Самара</div>
+            <div class="modalDialog_search_line">Саранск</div>
+            <div class="modalDialog_search_line">Саратов</div>
+            <div class="modalDialog_search_line">Сарапул</div>
+          </div>
+        </form>
+        <div class="modalDialog_city_text">Популярные города</div>
+        <div class="modalDialog_city_wrapper">
+          <ul class="modalDialog_city_list">
+            <li class="modalDialog_city_item">Москва и Подмосковье</li>
+            <li class="modalDialog_city_item">Санкт-Петербург</li>
+            <li class="modalDialog_city_item">Екатеринбург</li>
+            <li class="modalDialog_city_item">Новосибирск</li>
+            <li class="modalDialog_city_item">Ростов-на-Дону</li>
+          </ul>
+          <ul class="modalDialog_city_list">
+            <li class="modalDialog_city_item">Сочи</li>
+            <li class="modalDialog_city_item">Нижний Новгород</li>
+            <li class="modalDialog_city_item">Ярославль</li>
+            <li class="modalDialog_city_item">Калининград</li>
+            <li class="modalDialog_city_item">Владимир</li>
+          </ul>
+          <ul class="modalDialog_city_list">
+            <li class="modalDialog_city_item">Уфа</li>
+            <li class="modalDialog_city_item">Челябинск</li>
+            <li class="modalDialog_city_item">Тюмень</li>
+            <li class="modalDialog_city_item">Воронеж</li>
+            <li class="modalDialog_city_item">Волгоград</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="callMe" class="modalDialog">
+      <div class="modalDialog_container min">
+        <div title="Закрыть" class="closeModal"></div>
+        <div class="modalDialog_caption">Обратный звонок</div>
+        <form class="modalDialog_form">
+          <div class="modalDialog_form_item">
+            <div class="modalDialog_form_text">Имя</div>
+            <input
+              class="modalDialog_form_input"
+              name="name"
+              type="text"
+              placeholder="Введите ваше имя"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="modalDialog_form_item">
+            <div class="modalDialog_form_text">Телефон</div>
+            <input
+              class="modalDialog_form_input phone"
+              name="phone"
+              type="text"
+              placeholder="Введите телефон"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button class="modalDialog_form_submit" type="submit">
+            Заказать звонок
+          </button>
+          <label class="subscription_checkbox red">
+            <input type="checkbox" name="confirm" required />
+            <div class="subscription_checkbox_text">
+              Я согласен с политикой конфиденциальности и даю согласие на
+              обработку персональных данных
+            </div>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div id="accountModal" class="modalDialog">
+      <div class="modalDialog_container min">
+        <div title="Закрыть" class="closeModal"></div>
+        <div class="modalDialog_caption">Войти в личный кабинет</div>
+        <form class="modalDialog_form">
+          <div class="modalDialog_form_item">
+            <div class="modalDialog_form_text">E-mail</div>
+            <input
+              class="modalDialog_form_input"
+              name="email"
+              type="email"
+              placeholder="Введите e-mail"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="modalDialog_form_item">
+            <div class="modalDialog_form_text">Пароль</div>
+            <input
+              class="modalDialog_form_input"
+              name="password"
+              type="password"
+              placeholder="Введите пароль"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button class="modalDialog_form_submit" type="submit">Войти</button>
+          <a class="modalDialog_form_link" href="./password.html"
+            >Забыли пароль?</a
+          >
+          <div class="modalDialog_form_description">
+            Если у вас еще нет аккаунта, зарегестрируйтесь
+          </div>
+          <a class="modalDialog_form_link" href="./registration.html"
+            >Зарегистрироваться</a
+          >
+        </form>
+      </div>
+    </div>
+
+    <div id="jobsModal" class="modalDialog">
+      <div class="modalDialog_container min">
+        <div title="Закрыть" class="closeModal"></div>
+        <div class="modalDialog_caption">Ваше резюме</div>
+        <form class="modalDialog_form">
+          <div class="modalDialog_form_item">
+            <div class="modalDialog_form_text">Имя</div>
+            <input
+              class="modalDialog_form_input"
+              name="name"
+              type="text"
+              placeholder="Введите ваше имя"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="modalDialog_form_item">
+            <div class="modalDialog_form_text">Телефон</div>
+            <input
+              class="modalDialog_form_input phone"
+              name="phone"
+              type="text"
+              placeholder="Введите телефон"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="modalDialog_form_item">
+            <div class="modalDialog_form_text">Email</div>
+            <input
+              class="modalDialog_form_input"
+              name="email"
+              type="email"
+              placeholder="Введите ваш e-mail"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <a class="modalDialog_attach" href="javascript:void(0);"
+            >Прикрепить резюме</a
+          >
+          <button class="modalDialog_form_submit" type="submit">
+            Отправить
+          </button>
+          <label class="subscription_checkbox red">
+            <input type="checkbox" name="confirm" required />
+            <div class="subscription_checkbox_text">
+              Я согласен с политикой конфиденциальности и даю согласие на
+              обработку персональных данных
+            </div>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div id="quickViewModal" class="modalDialog">
+      <div class="modalDialog_container max">
+        <div title="Закрыть" class="closeModal"></div>
+        <div class="modalDialog_view_wrapper">
+          <div class="modalDialog_view_img_wrapper">
+            <a class="modalDialog_view_img_link" href="./card-product.html">
+              <img class="modalDialog_view_img" src="./img/product-2.jpg" />
+            </a>
+          </div>
+          <div class="modalDialog_view_info">
+            <a class="modalDialog_view_caption" href="./card-product.html"
+              >Цветочный горшок вазон № (шамот), D41xH40см, 12л</a
+            >
+            <div class="modalDialog_view_row_top">
+              <div class="modalDialog_view_info_item">
+                <div class="modalDialog_view_info_name">Артикул:</div>
+                <div class="modalDialog_view_info_value">TC042432X22-1206</div>
+              </div>
+              <div class="modalDialog_view_info_item">
+                <div class="modalDialog_view_info_name">Вес:</div>
+                <div class="modalDialog_view_info_value">5,75 кг</div>
+              </div>
+              <div class="card-product_info_presence">Есть в наличии</div>
+            </div>
+            <div class="modalDialog_view_description">
+              Кашпо для цветов представляет собой декоративную вазу, выполненную
+              в виде двух лягушек на стволе березы. Ваза предназначена для
+              установки внутрь цветочных горшков с растениями. Кашпо часто
+              становятся последним штрихом, который совершенно изменяет интерьер
+              помещения или ландшафтный дизайн сада. Благодаря такому кашпо вы
+              сможете украсить вашу комнату, офис, сад и другие места.
+            </div>
+            <div class="modalDialog_view_row_center">
+              <div class="card-product_count">
+                <div class="card-product_minus">-</div>
+                <div class="card-product_amount">1</div>
+                <div class="card-product_plus">+</div>
+              </div>
+              <div class="modalDialog_view_price_box">
+                <div class="card-product_price_row">
+                  <div class="modalDialog_view_price old">3 124 ₽</div>
+                  <div class="modalDialog_view_stock">-20%</div>
+                </div>
+                <div class="modalDialog_view_price new">2 587 ₽</div>
+              </div>
+            </div>
+            <div class="modalDialog_view_row_bottom">
+              <button class="btn add-red">Добавить в корзину</button>
+              <div class="modalDialog_view_extra">
+                <div class="card-product_compare_box">
+                  <div class="card-product_compare"></div>
+                </div>
+                <div class="card-product_favorite_box">
+                  <div class="card-product_favorite"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="addBasketModal" class="modalDialog">
+      <div class="modalDialog_container mid">
+        <div title="Закрыть" class="closeModal"></div>
+        <div class="modalDialog_caption">Товар добавлен в корзину</div>
+        <div class="modalDialog_basket_wrapper">
+          <div class="modalDialog_basket_img_wrapper">
+            <a class="modalDialog_basket_img_link" href="./card-product.html">
+              <img class="modalDialog_basket_img" src="./img/product-2.jpg" />
+            </a>
+          </div>
+          <div class="modalDialog_basket_info">
+            <a class="modalDialog_basket_caption" href="./card-product.html"
+              >Цветочный горшок вазон № (шамот), D41xH40см, 12л</a
+            >
+            <div class="modalDialog_basket_row">
+              <div class="modalDialog_basket_left">
+                <div class="modalDialog_basket_info_item">
+                  <div class="modalDialog_basket_info_name">Артикул:</div>
+                  <div class="modalDialog_basket_info_value">
+                    TC042432X22-1206
+                  </div>
+                </div>
+                <div class="modalDialog_basket_info_item">
+                  <div class="modalDialog_basket_info_name">Вес:</div>
+                  <div class="modalDialog_basket_info_value">5,75 кг</div>
+                </div>
+              </div>
+              <div class="modalDialog_basket_price">2 587 ₽</div>
+            </div>
+            <div class="modalDialog_basket_row_bottom">
+              <a class="modalDialog_basket_btn-red" href="./basket.html"
+                >Перейти в корзину</a
+              >
+              <a class="modalDialog_basket_btn-grey" href="javascript:void(0);"
+                >Продолжить покупки</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="resultModal" class="modalDialog">
+      <div class="modalDialog_container min">
+        <div title="Закрыть" class="closeModal"></div>
+        <img class="modalDialog_check" src="./img/check.svg" />
+        <div class="modalDialog_caption center">Ваша заявка принята</div>
+        <div class="modalDialog_description">
+          Наши менеджеры скоро свяжутся с вами
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx5dDXcu4v27Wepf3CQUYJsTqqRfeNsIY"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/select.js"></script>
+  </body>
+</html>

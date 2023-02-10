@@ -1,0 +1,26 @@
+<section class="brands mobile">
+  <div class="container">
+    <div class="brands_row">
+      <nav class="page_nav">
+        <a class="page_nav_prev" href="javascript:void(0);">←</a>
+        <a class="page_nav_number active" href="javascript:void(0);">1</a>
+        <a class="page_nav_number" href="javascript:void(0);">2</a>
+        <a class="page_nav_number" href="javascript:void(0);">3</a>
+        <a class="page_nav_number" href="javascript:void(0);">...</a>
+        <a class="page_nav_number" href="javascript:void(0);">16</a>
+        <a class="page_nav_next" href="javascript:void(0);">→</a>
+      </nav>
+    </div>
+    <div class="brands_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="brands_item">
+        <img class="brands_item_img" src="`+context.arr[i].image+`">
+        <a class="brands_item_link" href="`+context.arr[i].link+`"></a>
+      </div>
+      }
+    </div>
+    <div class="catalog_row">
+      <a class="catalog_more" href="javascript:void(0);">Показать еще</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Категории товаров Florio"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': '',
+      'lastBreadcrumb': 'Florio',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Бренды', 'link': './brands.html'},
+      ],
+    }
+  })
+
+  @@include("./components/brand-detail.html", {
+    context: {
+      'title': 'Florio',
+      'description': 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.<br><br>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?',
+      'image': './img/brand-1.jpg',
+      arr: [
+        {'image': './img/category_1.jpg', 'category': 'Аксессуары и элементы декора', 'amount': '1258 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_2.jpg', 'category': 'Товары для дома и сада', 'amount': '2140 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_3.jpg', 'category': 'Товары для праздника', 'amount': '2140 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_4.jpg', 'category': 'Изделия из металла', 'amount': '1440 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_5.jpg', 'category': 'Изделия из керамики', 'amount': '1258 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_6.jpg', 'category': 'Плетенные изделия', 'amount': '450 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_7.jpg', 'category': 'Изделия из пластика', 'amount': '1017 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_8.jpg', 'category': 'Изделия из стекла', 'amount': '874 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_9.jpg', 'category': 'Игрушки', 'amount': '630 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_10.jpg', 'category': 'Деревянные изделия', 'amount': '747 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_11.jpg', 'category': 'Искусственные растения', 'amount': '210 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_12.jpg', 'category': 'Книги и журналы', 'amount': '450 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_13.jpg', 'category': 'Натуральные декоративные материалы', 'amount': '630 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_14.jpg', 'category': 'Расходные материалы', 'amount': '1258 товаров', 'link': './catalog-level-2.html',},
+        {'image': './img/category_15.jpg', 'category': 'Упаковка для цветов и подарков', 'amount': '1258 товаров', 'link': './catalog-level-2.html',},
+      ],
+    }
+  })
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

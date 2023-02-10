@@ -1,0 +1,141 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Страница с доставкой*/
+
+.delivery{
+  position: relative;
+  margin: 75px 0 105px;
+  @media screen and ($desktop1) {
+    margin: 40px 0 70px;
+  }
+  @media screen and ($tablet1) {
+    margin: 30px 0 50px;
+  }
+  @media screen and ($mobile3) {
+    margin: 0 0 20px;
+  }
+
+  &_bg{
+    position: absolute;
+    background: url("../img/map.png") no-repeat;
+    background-size: contain;
+    background-position: center top;
+    width: 100%;
+    min-width: 1650px;
+    height: 512px;
+    @media screen and ($desktop1) {
+      background-position: center top;
+      background-size: cover;
+      width: 100%;
+      min-width: initial;
+      height: 480px;
+    }
+    @media screen and ($tablet2) {
+      height: 400px;
+    }
+    @media screen and ($tablet1) {
+      display: none;
+    }
+  }
+
+  &_info{}
+
+  &_caption{
+    font-family: 'ProximaNova-Bold';
+    font-size: $text-size-l;
+    margin-bottom: 20px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-m;
+      margin-bottom: 15px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &_description{
+    font-size: 16px;
+    line-height: 1.5em;
+    border-left: 1px solid $red-color;
+    width: 520px;
+    padding-left: 40px;
+    margin-bottom: 75px;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      width: 470px;
+      padding-left: 30px;
+      margin-bottom: 75px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 15px;
+      width: 370px;
+      text-align: justify;
+      margin-bottom: 50px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 15px;
+      width: 100%;
+      padding: 0;
+      border: none;
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    @media screen and ($tablet1) {
+      display: block;
+    }
+  }
+
+  &_box{
+    @media screen and ($tablet1) {
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile5) {
+      margin-bottom: 20px;
+    }
+
+    &:last-child{
+      @media screen and ($tablet1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &_list{
+    list-style: none;
+  }
+
+  &_item{
+    font-size: 16px;
+    line-height: 2em;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      line-height: 1.7em;
+    }
+    @media screen and ($tablet2) {
+      font-size: 15px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 15px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 14px;
+      text-align: justify;
+      line-height: 1.5em;
+    }
+
+    &.grey{
+      color: #9F9F9F;
+    }
+  }
+}

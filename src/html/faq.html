@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "FAQ"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'FAQ',
+      'lastBreadcrumb': 'FAQ',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="faq">
+    <div class="container">
+      <div class="faq_wrapper">
+        <div class="faq_left">
+          <div class="faq_caption">Вопросы о доставке</div>
+          <div class="faq_list">
+            <div class="faq_item">
+              <div class="faq_question">Сколько времени занимает оформление и отправка заказа?</div>
+              <div class="faq_answer">Схема формирования и отправки заказа:
+                - наш менеджер выставляет вам первоначальный счет;
+                - вы его утверждаете;
+                - после утверждения счета начинается оформление и сборка вашего заказа, занимает в среднем два дня;
+                - после окончания формирования вашего заказа, вам выставляется окончательный счет;
+                - после оплаты счета и на следующий день после поступления денег на наш расчетный счет, ваш заказ отправляется к вам.
+                <br><br>
+                Стоимость доставки фиксированная и составляет 1200 руб., по Москве, в том числе и до любой транспортной компании в Москве.
+                <br><br>
+                * стоимость услуг транспортной компании рассчитывается отдельно. Клиент самостоятельно должен обратиться в транспортную компанию, с которой ему будет удобно работать.
+              </div>
+            </div>
+            <div class="faq_item">
+              <div class="faq_question">Как осуществляется доставка в регионы?</div>
+              <div class="faq_answer">Товары нашего магазина доставляют покупателям транспортные компании</div>
+            </div>
+            <div class="faq_item">
+              <div class="faq_question">Возможен ли самовывоз заказанного товара?</div>
+              <div class="faq_answer">Вы можете самостоятельно забрать заказанные товары в наших магазинах.</div>
+            </div>
+          </div>
+          <div class="faq_caption">Прочие вопросы</div>
+          <div class="faq_list">
+            <div class="faq_item">
+              <div class="faq_question">Подскажите какой режим работы телефонного консультанта?</div>
+              <div class="faq_answer">Наши операторы работают с 9:00 до 18:00, ежедневно, без выходных.</div>
+            </div>
+          </div>
+        </div>
+        <div class="faq_right">
+          <form class="faq_form">
+            <div class="faq_title">Не нашли ответ на интересующий вопрос?</div>
+            <div class="faq_description">Вы можете задать любой вопрос на тему нашей продукции или работы интеренет магазина.</div>
+            <input class="faq_input" name="name" type="text" placeholder="Введите ваше имя" autocomplete="off" required>
+            <input class="faq_input" name="email" type="email" placeholder="Укажите ваш E-mail" autocomplete="off" required>
+            <textarea class="faq_comment" name="question" placeholder="Напишите вопрос, который вас интересует"></textarea>
+            <button class="faq_submit" type="submit">Отправить вопрос</button>
+            <label class="subscription_checkbox red">
+              <input type="checkbox" name="confirm" required>
+              <div class="subscription_checkbox_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<section class="brands">
+  <div class="container">
+    <h2 class="title">Бренды</h2>
+    <div class="brands_slider">
+      <a class="brands_more" href="./brands.html">Все бренды</a>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          @@for (var i = 0; i < context.arr.length; i++) {
+          <div class="swiper-slide">
+            <a class="brands_link" href="`+context.arr[i].link+`">
+              <img class="brands_img" src="`+context.arr[i].image+`">
+            </a>
+          </div>
+          }
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>

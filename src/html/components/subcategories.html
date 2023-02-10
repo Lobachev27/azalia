@@ -1,0 +1,136 @@
+<section class="subcategories">
+  <div class="container">
+    <div class="subcategories_wrapper">
+      <div class="subcategories_left">
+        <div class="subcategories_sidebar">
+          <div class="subcategories_sidebar_view">Категории</div>
+          <nav class="subcategories_sidebar_list">
+            @@for (var i = 0; i < context.arr.length; i++) {
+            <a class="subcategories_sidebar_item" href="`+context.arr[i].link+`">`+context.arr[i].title+`</a>
+            }
+          </nav>
+        </div>
+      </div>
+      <div class="subcategories_right">
+        <div class="subcategories_list">
+          @@for (var i = 0; i < context.arr.length; i++) {
+          <div class="subcategories_item">
+            <img class="subcategories_img" src="`+context.arr[i].image+`">
+            <div class="subcategories_info">
+              <div class="subcategories_name">`+context.arr[i].title+`</div>
+              <div class="subcategories_amount">`+context.arr[i].amount+`</div>
+            </div>
+            <a class="subcategories_link" href="`+context.arr[i].link+`"></a>
+          </div>
+          }
+        </div>
+        <div class="subcategories_bottom">
+          <div class="subcategories_slider">
+            <h2 class="title small">Хит продаж</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker star"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-10.jpg',
+                      category: 'Кашпо',
+                      name: 'Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.',
+                      stock: '-15%',
+                      priceOld: '745 ₽',
+                      priceNew: '676 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                    }
+                  })
+
+                </div>
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-27.jpg',
+                      category: 'Кашпо',
+                      name: 'Кашпо (керамика), D16, белый/4шт',
+                      stock: '',
+                      priceOld: '',
+                      priceNew: '299 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                    }
+                  })
+
+                </div>
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-28.jpg',
+                      category: 'Кашпо',
+                      name: 'Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.',
+                      stock: '-17%',
+                      priceOld: '1 245 ₽',
+                      priceNew: '1 157 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                    }
+                  })
+
+                </div>
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker fire"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-29.jpg',
+                      category: 'Кашпо',
+                      name: 'Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.',
+                      stock: '-15%',
+                      priceOld: '745 ₽',
+                      priceNew: '676 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                    }
+                  })
+
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="subcategories_extra">
+            <div class="subcategories_info">
+              <div class="subcategories_description">
+                <p>Вазы, кашпо, горшки, вазоны, кувшины — аксессуары номер один для фитодизайна. Интернет-магазин флористики «Азалия Декор» предоставляет возможность <b>купить изделия из керамики</b> разных форм и размеров, чтобы максимально подчеркнуть красоту цветов и расставить акценты.</p>
+                <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+              </div>
+              <div class="subcategories_additionally">
+                <div class="subcategories_description">
+                  <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+                  <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+                  <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+                </div>
+              </div>
+              <a class="subcategories_more" href="javascript:void(0);">Полное описание</a>
+            </div>
+            <div class="subcategories_extra_img_wrapper">
+              <img class="subcategories_extra_img" src="./img/banner-category.jpg">
+              <a class="subcategories_extra_img_link" href="javascript:void(0);"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

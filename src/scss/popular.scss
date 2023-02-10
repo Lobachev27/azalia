@@ -1,0 +1,266 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Популярные категории*/
+
+.popular{
+  position: relative;
+  margin: 50px 0 75px;
+  @media screen and ($desktop1) {
+    margin: 40px 0 60px;
+  }
+  @media screen and ($tablet2) {
+    margin: 40px 0 50px;
+  }
+  @media screen and ($tablet1) {
+    margin: 40px 0 60px;
+  }
+  @media screen and ($mobile5) {
+    margin: 40px 0 50px;
+  }
+  @media screen and ($mobile3) {
+    margin: 20px 0 25px;
+  }
+
+  &_wrapper{
+    position: relative;
+  }
+
+  &_slider{
+    margin-top: 40px;
+    @media screen and ($desktop1) {
+      margin-top: 40px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 40px;
+    }
+
+    & .swiper-container{
+      margin-top: -64px;
+      padding: 52px 0px 0px;
+      @media screen and ($desktop1) {
+        margin-top: -60px;
+        padding: 52px 0px 0px;
+      }
+      @media screen and ($tablet2) {
+        margin-top: -60px;
+        padding: 42px 0px 0px;
+      }
+      @media screen and ($mobile5) {
+        margin-top: -60px;
+        padding: 42px 0px 43px;
+      }
+    }
+
+    & .swiper-container-horizontal>.swiper-pagination-bullets{
+      position: absolute;
+      line-height: 1em;
+      text-align: right;
+      height: 12px;
+      top: 0px;
+      padding: 0 15px;
+      @media screen and ($mobile5) {
+        top: 281px;
+        text-align: center;
+        height: 13px;
+      }
+      @media screen and ($mobile1) {
+        top: 262px;
+      }
+    }
+
+    & .swiper-container-horizontal .swiper-pagination-bullet {
+      width: 12px;
+      height: 13px;
+      display: inline-block;
+      background-color: #EBEBEB;
+      opacity: 1;
+      outline: none;
+      margin: 0 7px;
+      transition: all 0.2s;
+    }
+
+    & .swiper-container-horizontal .swiper-pagination-bullet-active {
+      width: 74px;
+      background-color: $red-color;
+      border-radius: 12px;
+    }
+
+    & .swiper-button-next,
+    & .swiper-button-prev{
+      display: block;
+      outline: none;
+      top: 60%;
+      @media screen and ($tablet2) {
+        top: 62%;
+      }
+      @media screen and ($mobile5) {
+        display: none;
+      }
+    }
+
+    & .swiper-button-next{
+      background: url("../img/angle-right-black.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 17px;
+      height: 28px;
+      transition: opacity 0.3s;
+      right: 20px;
+      opacity: 0.5;
+      @media screen and ($tablet2) {
+        width: 15px;
+        height: 24px;
+        right: 12px;
+      }
+
+      &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+
+    & .swiper-button-prev{
+      background: url("../img/angle-right-black.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 17px;
+      height: 28px;
+      left: 20px;
+      transform: rotate(180deg);
+      transition: opacity 0.3s;
+      opacity: 0.5;
+      @media screen and ($tablet2) {
+        width: 15px;
+        height: 24px;
+        left: 12px;
+      }
+
+      &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+
+  &_box{
+    position: relative;
+    border: 3px solid #EBEBEB;
+    border-radius: 6px;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    transition: border 0.3s;
+    @media screen and ($desktop1) {
+      width: 278px;
+      height: 250px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media screen and ($tablet2) {
+      width: 228px;
+      height: 225px;
+    }
+    @media screen and ($tablet1) {
+      width: 236px;
+      height: 225px;
+    }
+    @media screen and ($mobile5) {
+      width: 100%;
+      height: 210px;
+    }
+    @media screen and ($mobile1) {
+      height: 190px;
+    }
+
+    &:hover{
+      border: 3px solid $yellow-color;
+      transition: border 0.3s;
+
+      & .popular_box_name{
+        color: $red-color;
+        transition: color 0.3s;
+      }
+    }
+
+    &_marker{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      color: $text-color-white;
+      border-radius: 4px;
+      height: 27px;
+      padding: 0 15px;
+      left: 8px;
+      top: 8px;
+      z-index: 2;
+      @media screen and ($desktop1) {
+        font-size: 12px;
+        height: 24px;
+        padding: 0 12px;
+      }
+
+      &.new{
+        background-color: $red-color;
+      }
+
+      &.col-2019{
+        background-color: $grey-color;
+      }
+    }
+
+    &_img{
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+      width: 65%;
+      height: 65%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &_name{
+      position: absolute;
+      font-family: 'ProximaNova-Bold';
+      font-size: $text-size-m;
+      text-align: center;
+      width: 204px;
+      min-height: 40px;
+      bottom: 20px;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 17px;
+        width: 232px;
+        min-height: 40px;
+        bottom: 20px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 16px;
+        width: 179px;
+        min-height: 36px;
+        bottom: 20px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 15px;
+        width: calc(100% - 40px);
+        min-height: 36px;
+        bottom: 15px;
+      }
+      @media screen and ($mobile1) {
+        font-size: 15px;
+        bottom: 10px;
+      }
+    }
+
+    &_link{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+}

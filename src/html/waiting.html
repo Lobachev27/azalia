@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Лист ожидания"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': 'grey',
+      'way': false,
+      'title': 'Личный кабинет',
+      'lastBreadcrumb': '',
+      arr: [
+        {'text': '', 'link': ''},
+      ],
+    }
+  })
+
+  <section class="cabinet">
+    <div class="container">
+      <div class="cabinet_wrapper cab-other">
+        <nav class="cabinet_sidebar">
+          <a class="cabinet_link" href="./cabinet.html">Главная</a>
+          <a class="cabinet_link" href="./purchase.html">История заказов</a>
+          <a class="cabinet_link active" href="./waiting.html">Лист ожидания</a>
+          <a class="cabinet_link" href="./personal.html">Личные данные</a>
+          <a class="cabinet_link" href="./address.html">Адреса доставки</a>
+          <a class="cabinet_exit"  href="javascript:void(0);">Выйти из профиля</a>
+        </nav>
+        <a class="cabinet_back" href="cabinet.html">Назад</a>
+        <div class="cabinet_title_mobile">Лист ожидания</div>
+        <div class="cabinet_content">
+          <div class="waiting_sorting">
+            <div class="waiting_sorting_main">Все</div>
+            <div class="waiting_sorting_list">
+              <div class="waiting_sorting_item">Все</div>
+              <div class="waiting_sorting_item">В наличии</div>
+              <div class="waiting_sorting_item">Нет в наличии</div>
+              <div class="waiting_sorting_item">Со скидкой</div>
+            </div>
+          </div>
+          <div class="waiting_container">
+            <div class="waiting_item">
+              <div class="waiting_img_wrapper">
+                <a class="waiting_img_link" href="./card-product.html">
+                  <img class="waiting_img" src="./img/product-2.jpg">
+                </a>
+              </div>
+              <div class="waiting_info">
+                <a class="waiting_info_caption" href="./card-product.html">Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a>
+                <div class="waiting_info_item">
+                  <div class="waiting_info_name">Артикул:</div>
+                  <div class="waiting_info_value">TC042432X22-1206</div>
+                </div>
+                <div class="waiting_info_item">
+                  <div class="waiting_info_name">Вес:</div>
+                  <div class="waiting_info_value">5,75 кг</div>
+                </div>
+              </div>
+              <div class="waiting_add">
+                <div class="basket-page_count">
+                  <div class="basket-page_minus">-</div>
+                  <div class="basket-page_amount">1</div>
+                  <div class="basket-page_plus">+</div>
+                </div>
+                <div class="basket-page_price_box">
+                  <div class="basket-page_price old">2 415 ₽</div>
+                  <div class="basket-page_price new">1 430 ₽</div>
+                </div>
+              </div>
+              <button class="favorite_basket-add">Добавить в корзину</button>
+              <div class="basket-page_close"></div>
+            </div>
+            <div class="waiting_item">
+              <div class="waiting_img_wrapper">
+                <a class="waiting_img_link" href="./card-product.html">
+                  <img class="waiting_img" src="./img/product-2.jpg">
+                </a>
+              </div>
+              <div class="waiting_info">
+                <a class="waiting_info_caption" href="./card-product.html">Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a>
+                <div class="waiting_info_item">
+                  <div class="waiting_info_name">Артикул:</div>
+                  <div class="waiting_info_value">TC042432X22-1206</div>
+                </div>
+                <div class="waiting_info_item">
+                  <div class="waiting_info_name">Вес:</div>
+                  <div class="waiting_info_value">5,75 кг</div>
+                </div>
+              </div>
+              <div class="waiting_unobtainable">Товара нет в наличии</div>
+              <div class="basket-page_price_box">
+                <div class="basket-page_price old">2 415 ₽</div>
+                <div class="basket-page_price new">1 430 ₽</div>
+              </div>
+              <div class="basket-page_close"></div>
+            </div>
+            <div class="waiting_item">
+              <div class="waiting_img_wrapper">
+                <a class="waiting_img_link" href="./card-product.html">
+                  <img class="waiting_img" src="./img/product-2.jpg">
+                </a>
+              </div>
+              <div class="waiting_info">
+                <a class="waiting_info_caption" href="./card-product.html">Цветочный горшок вазон №5 (шамот), D41xH40см, 12л</a>
+                <div class="waiting_info_item">
+                  <div class="waiting_info_name">Артикул:</div>
+                  <div class="waiting_info_value">TC042432X22-1206</div>
+                </div>
+                <div class="waiting_info_item">
+                  <div class="waiting_info_name">Вес:</div>
+                  <div class="waiting_info_value">5,75 кг</div>
+                </div>
+              </div>
+              <div class="waiting_unobtainable">Товара нет в наличии</div>
+              <div class="basket-page_price_box">
+                <div class="basket-page_price old">2 415 ₽</div>
+                <div class="basket-page_price new">1 430 ₽</div>
+              </div>
+              <div class="basket-page_close"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

@@ -1,0 +1,1238 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блок как мы работаем*/
+
+.about{
+  position: relative;
+  margin: 90px 0 70px;
+  @media screen and ($desktop1) {
+    margin: 60px 0 50px;
+  }
+  @media screen and ($tablet2) {
+    margin: 50px 0 50px;
+  }
+  @media screen and ($tablet1) {
+    margin: 40px 0 50px;
+  }
+  @media screen and ($mobile5) {
+    margin: 40px 0 50px;
+  }
+  @media screen and ($mobile3) {
+    margin: 40px 0 40px;
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 655fr 490fr 315fr;
+    grid-column-gap: 70px;
+    height: max-content;
+    @media screen and ($desktop1) {
+      grid-template-columns: 655fr 490fr;
+      grid-column-gap: 50px;
+      grid-row-gap: 30px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 3fr 2fr;
+    }
+    @media screen and ($tablet1) {
+      grid-row-gap: 20px;
+    }
+    @media screen and ($mobile5) {
+      display: block;
+    }
+  }
+
+  &_video{
+    @media screen and ($mobile5) {
+      margin-bottom: 20px;
+    }
+    @media screen and ($mobile2) {
+      display: none;
+    }
+
+    & iframe{
+      width: 655px;
+      height: 372px;
+      @media screen and ($tablet2) {
+        width: 550px;
+        height: 309px;
+      }
+      @media screen and ($tablet1) {
+        width: 450px;
+        height: 254px;
+      }
+      @media screen and ($mobile5) {
+        width: 100%;
+        height: 53vw;
+      }
+      @media screen and ($mobile2) {
+        width: 100%;
+        height: 53vw;
+      }
+    }
+  }
+
+  &_info{
+    @media screen and ($tablet1) {
+      grid-column: 1/3;
+      order: 2;
+    }
+  }
+
+  &_description{
+    font-size: $text-size-s;
+    line-height: 1.4em;
+    margin-top: 15px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+      text-align: justify;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+      margin-top: 15px;
+    }
+    @media screen and ($tablet1) {
+      grid-column: 2/3;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-row-gap: 45px;
+    }
+
+    & p{
+      font-size: $text-size-s;
+      line-height: 1.4em;
+      margin-bottom: 20px;
+      @media screen and ($desktop1) {
+        font-size: $text-size-xs;
+        text-align: justify;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &_more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: $grey-color;
+    color: $text-color-white;
+    border-radius: 4px;
+    width: max-content;
+    height: 34px;
+    padding: 0 15px;
+    top: -70px;
+    right: 0;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      margin-left: 15px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      height: 30px;
+    }
+
+    &:after{
+      content: "\f178";
+      font-family: 'FontAwesome';
+      margin-left: 30px;
+      @media screen and ($tablet2) {
+        margin-left: 10px;
+      }
+    }
+
+    &:hover{
+      background-color: $grey-color-hover;
+      transition: background-color 0.3s;
+    }
+  }
+  &_advantage{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 45px;
+    height: max-content;
+    @media screen and ($desktop1) {
+      grid-column: 1/3;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 45px;
+    }
+    @media screen and ($mobile5) {
+      display: none;
+    }
+
+    &_item{
+      font-size: $text-size-xs;
+      color: #4A4A4A;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.4em;
+      max-width: 270px;
+      @media screen and ($desktop1) {
+        font-size: $text-size-xs;
+        justify-self: center;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+      }
+
+      &:before{
+        content: "";
+        display: block;
+        position: relative;
+        min-width: 46px;
+        height: 65px;
+        margin-right: 27px;
+        @media screen and ($desktop1) {
+          min-width: 44px;
+          height: 60px;
+          margin-right: 20px;
+        }
+        @media screen and ($tablet2) {
+          min-width: 38px;
+          height: 50px;
+          margin-right: 18px;
+        }
+      }
+
+      &.chess:before{
+        background: url("../img/about-1.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      &.list:before{
+        background: url("../img/about-2.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      &.medal:before{
+        background: url("../img/about-3.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+/*Страница о компании*/
+
+.hide{
+  opacity: 0;
+}
+
+.about-page{
+  &_bg{
+    position: relative;
+    background: url("../img/ellipse.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 480px;
+    height: 480px;
+    margin-right: 120px;
+    z-index: -1;
+    @media screen and ($desktop1) {
+      width: 400px;
+      height: 400px;
+      margin-right: 80px;
+    }
+    @media screen and ($tablet2) {
+      width: 320px;
+      height: 320px;
+      margin-right: 60px;
+    }
+    @media screen and ($tablet1) {
+      width: 270px;
+      height: 270px;
+      margin-right: 20px;
+    }
+    @media screen and ($mobile5) {
+      width: 220px;
+      height: 220px;
+      margin-right: 0;
+    }
+    @media screen and ($mobile4) {
+      width: 220px;
+      height: 220px;
+      margin-right: 0;
+    }
+    @media screen and ($mobile3) {
+      order: -1;
+      margin-bottom: 30px;
+    }
+  }
+
+  &_tape{
+    position: absolute;
+    background: url("../img/tape-2.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1250px;
+    height: 640px;
+    top: -180px;
+    right: -350px;
+    z-index: -1;
+    @media screen and ($desktop1) {
+      width: 1050px;
+      height: 540px;
+      top: -140px;
+      right: -310px;
+    }
+    @media screen and ($tablet2) {
+      width: 850px;
+      height: 440px;
+      top: -110px;
+      right: -260px;
+    }
+    @media screen and ($tablet1) {
+      width: 610px;
+      height: 320px;
+      top: -60px;
+      right: -210px;
+    }
+    @media screen and ($mobile5) {
+      width: 500px;
+      height: 250px;
+      top: -50px;
+      right: -180px;
+    }
+    @media screen and ($mobile4) {
+      width: 500px;
+      height: 250px;
+      top: -50px;
+      right: -180px;
+    }
+    @media screen and ($mobile3) {
+      top: -30px;
+      right: initial;
+      margin: 0 auto;
+    }
+  }
+
+  &_plus{
+    position: absolute;
+    background: url("../img/plus-white.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    @media screen and ($tablet1) {
+      display: none;
+    }
+
+    &.one{
+      width: 100px;
+      height: 100px;
+      top: 150px;
+      right: 550px;
+      @media screen and ($desktop1) {
+        width: 80px;
+        height: 80px;
+        top: 140px;
+        right: 435px;
+      }
+      @media screen and ($tablet2) {
+        width: 60px;
+        height: 60px;
+        top: 115px;
+        right: 345px;
+      }
+    }
+
+    &.two{
+      width: 80px;
+      height: 80px;
+      top: -10px;
+      right: 200px;
+      @media screen and ($desktop1) {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        right: 150px;
+      }
+      @media screen and ($tablet2) {
+        width: 40px;
+        height: 40px;
+        top: 0;
+        right: 120px;
+      }
+    }
+  }
+
+  &_car{
+    position: absolute;
+    background: url("../img/car.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 678px;
+    height: 584px;
+    top: -180px;
+    right: 70px;
+    z-index: -1;
+    @media screen and ($desktop1) {
+      width: 558px;
+      height: 484px;
+      top: -140px;
+      right: 40px;
+    }
+    @media screen and ($tablet2) {
+      width: 458px;
+      height: 395px;
+      top: -115px;
+      right: 30px;
+    }
+    @media screen and ($tablet1) {
+      width: 343px;
+      height: 295px;
+      top: -60px;
+      right: 00px;
+    }
+    @media screen and ($mobile5) {
+      width: 291px;
+      height: 250px;
+      top: -67px;
+      right: -20px;
+    }
+    @media screen and ($mobile4) {
+      width: 291px;
+      height: 250px;
+      top: -67px;
+      right: -20px;
+    }
+    @media screen and ($mobile3) {
+      top: -45px;
+      right: initial;
+    }
+  }
+
+  &_title{
+    font-family: 'ProximaNova-Bold';
+    font-size: 36px;
+    line-height: 1.1em;
+    margin-bottom: 17px;
+    @media screen and ($desktop1) {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 18px;
+    }
+    @media screen and ($mobile4) {
+      font-size: 18px;
+    }
+    @media screen and ($mobile3) {
+      font-size: 18px;
+    }
+
+    &.red{
+      margin-bottom: 0;
+      color: $red-color;
+    }
+
+    & span{
+      color: $red-color;
+    }
+
+    &.center{
+      width: 660px;
+      text-align: center;
+      margin: 0 auto;
+      @media screen and ($desktop1) {
+        width: 520px;
+      }
+      @media screen and ($tablet2) {
+        width: 450px;
+      }
+      @media screen and ($tablet1) {
+        width: 370px;
+      }
+      @media screen and ($mobile5) {
+        width: 330px;
+      }
+      @media screen and ($mobile4) {
+        width: 330px;
+      }
+      @media screen and ($mobile3) {
+        width: 330px;
+      }
+    }
+  }
+
+  &_description{
+    font-size: 14px;
+    color: #BCBCBC;
+    line-height: 1.5em;
+    @media screen and ($tablet2) {
+      font-size: 13px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 13px;
+    }
+
+    &.center{
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  &_intro{
+    position: relative;
+    background-color: #F7F8FA;
+    padding: 150px 0 110px;
+    @media screen and ($desktop1) {
+      padding: 100px 0 80px;
+    }
+    @media screen and ($tablet2) {
+      padding: 70px 0 50px;
+    }
+    @media screen and ($tablet1) {
+      padding: 40px 0;
+    }
+    @media screen and ($mobile5) {
+      padding: 40px 0;
+    }
+    @media screen and ($mobile4) {
+      padding: 40px 0;
+    }
+    @media screen and ($mobile3) {
+      padding: 40px 0;
+    }
+
+    &_top{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and ($mobile3) {
+        flex-direction: column;
+      }
+    }
+
+    &_bottom{
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      margin-top: 80px;
+      @media screen and ($desktop1) {
+        grid-gap: 15px;
+        margin-top: 60px;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: 40px;
+      }
+      @media screen and ($tablet1) {
+        margin-top: 30px;
+      }
+      @media screen and ($mobile5) {
+        margin-top: 30px;
+      }
+      @media screen and ($mobile4) {
+        display: block;
+      }
+      @media screen and ($mobile3) {
+        margin-top: 50px;
+      }
+
+      & .about-page_title{
+        align-self: center;
+        margin-bottom: 0;
+      }
+    }
+
+    &_info{
+      width: 590px;
+      @media screen and ($desktop1) {
+        width: 480px;
+      }
+      @media screen and ($tablet2) {
+        width: 420px;
+      }
+      @media screen and ($tablet1) {
+        width: 340px;
+      }
+      @media screen and ($mobile5) {
+        width: 50%;
+      }
+      @media screen and ($mobile4) {
+        width: 50%;
+      }
+      @media screen and ($mobile3) {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      & .about-page_title{
+        @media screen and ($mobile3) {
+          text-align: center;
+        }
+      }
+      & .about-page_description{
+        @media screen and ($mobile3) {
+          text-align: center;
+        }
+      }
+    }
+
+    & .about-page_description{
+      max-width: 490px;
+      @media screen and ($desktop1) {
+        max-width: 430px;
+      }
+      @media screen and ($tablet2) {
+        max-width: initial;
+      }
+    }
+
+    &_box{
+      position: relative;
+      height: 175px;
+      @media screen and ($desktop1) {
+        height: 152px;
+      }
+      @media screen and ($mobile4) {
+        height: 119px;
+        margin-top: 15px;
+      }
+
+      &_wrapper{
+        position: relative;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        padding: 40px 30px;
+        overflow: hidden;
+        transition: height 0.3s, box-shadow 0.3s;
+        z-index: 1;
+        @media screen and ($desktop1) {
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+          padding: 30px 25px;
+        }
+        @media screen and ($tablet2) {
+          padding: 25px;
+        }
+        @media screen and ($mobile5) {
+          padding: 20px;
+        }
+        @media screen and ($mobile4) {
+          padding: 20px;
+        }
+        @media screen and ($mobile2) {
+          padding: 20px 13px;
+        }
+
+        &:hover{
+          position: absolute;
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+          transition: height 0.3s, box-shadow 0.3s;
+          cursor: default;
+          z-index: 3;
+          @media screen and ($desktop1) {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+          }
+
+          & .about-page_box{
+            z-index: 3;
+          }
+
+          & .about-page_description{
+            max-height: 100vh;
+            overflow: visible;
+            transition: max-height 0.3s;
+          }
+        }
+
+        & .about-page_description{
+          max-height: 65px;
+          overflow: hidden;
+          transition: max-height 0.3s;
+          @media screen and ($desktop1) {
+            max-height: 65px;
+          }
+          @media screen and ($tablet2) {
+            max-height: 56px;
+          }
+        }
+      }
+    }
+
+    &_caption{
+      font-family: 'ProximaNova-Bold';
+      font-size: 16px;
+      margin-bottom: 12px;
+      z-index: 5;
+      @media screen and ($desktop1) {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 14px;
+        margin-bottom: 7px;
+      }
+      @media screen and ($mobile4) {
+        font-size: 14px;
+        margin-bottom: 7px;
+      }
+    }
+
+    &_number{
+      position: absolute;
+      font-size: 150px;
+      color: #F7F8FA;
+      top: 5px;
+      left: -52px;
+      z-index: -1;
+      @media screen and ($desktop1) {
+        font-size: 140px;
+        top: -2px;
+        left: -44px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 130px;
+        top: -5px;
+        left: -40px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 120px;
+        top: -7px;
+      }
+      @media screen and ($mobile4) {
+        font-size: 120px;
+        top: -7px;
+      }
+    }
+  }
+
+  &_advantages{
+    position: relative;
+    margin: 110px 0 120px;
+    @media screen and ($desktop1) {
+      margin: 60px 0 80px;
+    }
+    @media screen and ($tablet2) {
+      margin: 40px 0 60px;
+    }
+    @media screen and ($tablet1) {
+      margin: 40px 0;
+    }
+    @media screen and ($mobile5) {
+      margin: 30px 0;
+    }
+    @media screen and ($mobile4) {
+      margin: 30px 0;
+    }
+
+    &_wrapper{
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      list-style: none;
+      margin-top: 60px;
+      @media screen and ($desktop1) {
+        grid-column-gap: 15px;
+        margin-top: 40px;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 15px;
+        margin-top: 30px;
+      }
+      @media screen and ($tablet1) {
+        margin-top: 20px;
+      }
+      @media screen and ($mobile5) {
+        grid-template-rows: auto auto;
+      }
+      @media screen and ($mobile4) {
+        grid-template-rows: auto auto;
+      }
+      @media screen and ($mobile2) {
+        display: block;
+      }
+    }
+
+    &_item{
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      padding: 40px 30px;
+      @media screen and ($desktop1) {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        padding: 30px 20px;
+      }
+      @media screen and ($tablet2) {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        padding: 25px;
+      }
+      @media screen and ($tablet1) {
+        padding: 20px;
+      }
+      @media screen and ($mobile5) {
+        padding: 15px;
+      }
+      @media screen and ($mobile4) {
+        padding: 15px;
+      }
+      @media screen and ($mobile2) {
+        margin-bottom: 15px;
+      }
+
+      &:last-child{
+        @media screen and ($mobile2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &_caption{
+      position: relative;
+      font-family: 'ProximaNova-Bold';
+      font-size: 16px;
+      text-align: center;
+      margin: 100px auto 15px;
+      @media screen and ($desktop1) {
+        font-size: 15px;
+        margin: 85px auto 10px;
+      }
+      @media screen and ($mobile5) {
+        font-size: 14px;
+        margin: 65px auto 10px;
+      }
+      @media screen and ($mobile4) {
+        font-size: 14px;
+        margin: 65px auto 10px;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 82px;
+        height: 75px;
+        left: 50%;
+        top: -95px;
+        transform: translateX(-50%);
+        @media screen and ($desktop1) {
+          width: 68px;
+          height: 60px;
+          top: -80px;
+        }
+        @media screen and ($mobile5) {
+          width: 58px;
+          height: 50px;
+          top: -60px;
+        }
+        @media screen and ($mobile4) {
+          width: 58px;
+          height: 50px;
+          top: -60px;
+        }
+      }
+
+      &.service{
+        &:before{
+          background: url("../img/wishlist.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+
+      &.approach{
+        &:before{
+          background: url("../img/shopping.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+
+      &.scales{
+        &:before{
+          background: url("../img/libra.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+
+      &.selection{
+        &:before{
+          background: url("../img/search-about.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  &_merits{
+    position: relative;
+    background-color: #F7F8FA;
+
+    &_wrapper{
+      position: relative;
+      display: grid;
+      grid-template-columns: 480fr 1030fr;
+      grid-column-gap: 90px;
+      align-items: center;
+      padding: 110px 0;
+      @media screen and ($desktop1) {
+        grid-template-columns: 1fr 3fr;
+        grid-column-gap: 60px;
+        padding: 90px 0;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 3fr;
+        grid-column-gap: 40px;
+        padding: 60px 0;
+      }
+      @media screen and ($tablet1) {
+        grid-template-columns: 2fr 3fr;
+        grid-column-gap: 30px;
+        padding: 40px 0;
+      }
+      @media screen and ($mobile4) {
+        display: block;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 955px;
+        height: 480px;
+        background: url("../img/tape-1.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        top: 20px;
+        left: -200px;
+        transform: translate(-50%, -50%);
+        filter: blur(4px);
+        @media screen and ($desktop1) {
+          width: 820px;
+          height: 370px;
+          top: 40px;
+          left: -180px;
+        }
+        @media screen and ($tablet2) {
+          display: none;
+        }
+        @media screen and ($tablet1) {
+          display: none;
+        }
+      }
+    }
+
+    &_info{
+      width: 453px;
+      @media screen and ($desktop1) {
+        width: 370px;
+      }
+      @media screen and ($tablet2) {
+        width: 370px;
+      }
+      @media screen and ($tablet1) {
+        width: 100%;
+      }
+    }
+
+    &_list{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 56px;
+      list-style: none;
+      @media screen and ($desktop1) {
+        grid-column-gap: 30px;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      @media screen and ($tablet1) {
+        grid-gap: 15px;
+      }
+      @media screen and ($mobile4) {
+        margin-top: 10px;
+      }
+      @media screen and ($mobile2) {
+        display: block;
+      }
+    }
+
+    &_item{
+      @media screen and ($mobile2) {
+        margin-bottom: 15px;
+      }
+
+      &:last-child{
+        @media screen and ($mobile2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &_caption{
+      position: relative;
+      font-family: 'ProximaNova-Semibold';
+      font-size: 50px;
+      margin-left: 43px;
+      @media screen and ($desktop1) {
+        font-size: 40px;
+        margin-left: 30px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 36px;
+        margin-left: 25px;
+      }
+      @media screen and ($tablet1) {
+        font-size: 28px;
+        margin-left: 20px;
+      }
+
+      & span{
+        font-size: 17px;
+        color: #BCBCBC;
+        margin-left: 7px;
+        @media screen and ($desktop1) {
+          font-size: 15px;
+        }
+        @media screen and ($tablet2) {
+          font-size: 15px;
+        }
+        @media screen and ($tablet1) {
+          font-size: 14px;
+        }
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 30px;
+        background: url("../img/plus-icon.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 52%;
+        left: -43px;
+        transform: translateY(-50%);
+        @media screen and ($desktop1) {
+          width: 22px;
+          height: 24px;
+          left: -30px;
+        }
+        @media screen and ($tablet2) {
+          width: 18px;
+          height: 20px;
+          left: -25px;
+          top: 48%;
+        }
+        @media screen and ($tablet1) {
+          width: 14px;
+          height: 16px;
+          left: -20px;
+        }
+      }
+    }
+
+    &_text{
+      font-size: 20px;
+      color: #BCBCBC;
+      line-height: 1.5em;
+      margin-top: 10px;
+      @media screen and ($desktop1) {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin-top: 5px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 14px;
+        margin-top: 0;
+      }
+      @media screen and ($tablet1) {
+        font-size: 14px;
+        margin-top: 0;
+      }
+    }
+  }
+  &_video{
+    position: relative;
+    background-color: #FFFFFF;
+
+    &_wrapper{
+      position: relative;
+      display: grid;
+      grid-template-columns: 64% 36%;
+      align-items: center;
+      width: 100%;
+      height: 550px;
+      @media screen and ($desktop1) {
+        height: 470px;
+      }
+      @media screen and ($tablet2) {
+        height: 370px;
+      }
+      @media screen and ($tablet1) {
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 15px;
+        padding: 0 8px;
+        height: 320px;
+      }
+      @media screen and ($mobile5) {
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 15px;
+        padding: 0 8px;
+        height: 40vw;
+      }
+      @media screen and ($mobile4) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 8px;
+        height: max-content;
+      }
+    }
+
+    &_left{
+      justify-self: end;
+      width: 100%;
+    }
+
+    &_right{
+      @media screen and ($mobile4) {
+        order: -1;
+        margin: 30px 0;
+      }
+    }
+
+    &_box{
+      position: relative;
+      height: 550px;
+      @media screen and ($desktop1) {
+        height: 470px;
+      }
+      @media screen and ($tablet2) {
+        height: 370px;
+      }
+      @media screen and ($tablet1) {
+        height: 320px;
+      }
+      @media screen and ($mobile5) {
+        height: 40vw;
+      }
+      @media screen and ($mobile4) {
+        height: 50vw;
+      }
+    }
+
+    &_btn{
+      position: absolute;
+      width: 94px;
+      height: 94px;
+      background-color: #FFFFFF;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s;
+      @media screen and ($desktop1) {
+        width: 74px;
+        height: 74px;
+      }
+      @media screen and ($tablet2) {
+        width: 60px;
+        height: 60px;
+      }
+      @media screen and ($tablet1) {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 35px;
+        background: url("../img/ic_play_arrow.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-35%, -50%);
+        transition: all 0.3s;
+        @media screen and ($desktop1) {
+          width: 20px;
+          height: 26px;
+        }
+        @media screen and ($tablet2) {
+          width: 16px;
+          height: 22px;
+        }
+        @media screen and ($tablet1) {
+          width: 14px;
+          height: 18px;
+        }
+      }
+
+      &:hover{
+        transform: translate(-50%, -50%) scale(0.9);
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:before{
+          background: url("../img/ic_play_arrow-hover.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          transition: all 0.3s;
+
+        }
+      }
+    }
+
+    &_info{
+      width: 380px;
+      margin-left: 70px;
+      @media screen and ($desktop1) {
+        width: 300px;
+        margin-left: 50px;
+      }
+      @media screen and ($tablet2) {
+        width: 250px;
+        margin-left: 40px;
+      }
+      @media screen and ($tablet1) {
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto;
+      }
+      @media screen and ($mobile5) {
+        width: 100%;
+        max-width: 190px;
+        margin: 0 auto;
+      }
+      @media screen and ($mobile4) {
+        max-width: initial;
+      }
+    }
+  }
+}

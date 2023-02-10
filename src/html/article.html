@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Новости"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Новости',
+      'lastBreadcrumb': 'Новости',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  @@include("./components/article-catalog.html", {
+    context: {
+      arr: [
+        {'image': './img/news_1.jpg', 'markerClass': '', 'marker': 'Полезное', 'typeClass': 'article', 'type': 'Статьи', 'date': '09 декабря 2018', 'title': 'Как спланировать и установить в доме новогодние гирлянды', 'link': './article-page.html',},
+        {'image': './img/news_2.jpg', 'markerClass': 'none', 'marker': '', 'typeClass': 'news', 'type': 'Новости', 'date': '09 декабря 2018', 'title': 'Елочные украшения 2019', 'link': './article-page.html',},
+        {'image': './img/news_3.jpg', 'markerClass': '', 'marker': 'Полезное', 'typeClass': 'article', 'type': 'Статьи', 'date': '08 декабря 2018', 'title': 'Лучшие сочетания элементов декора для украшения гостиной на Новый Год', 'link': './article-page.html',},
+        {'image': './img/news_4.jpg', 'markerClass': 'none', 'marker': '', 'typeClass': 'news', 'type': 'Новости', 'date': '07 декабря 2018', 'title': 'В нашем Cash&Carry в продаже декор 2019 для новогодних композиций', 'link': './article-page.html',},
+        {'image': './img/news_1.jpg', 'markerClass': '', 'marker': 'Полезное', 'typeClass': 'article', 'type': 'Статьи', 'date': '09 декабря 2018', 'title': 'Как спланировать и установить в доме новогодние гирлянды', 'link': './article-page.html',},
+        {'image': './img/news_2.jpg', 'markerClass': 'none', 'marker': '', 'typeClass': 'news', 'type': 'Новости', 'date': '09 декабря 2018', 'title': 'Елочные украшения 2019', 'link': './article-page.html',},
+        {'image': './img/news_3.jpg', 'markerClass': '', 'marker': 'Полезное', 'typeClass': 'article', 'type': 'Статьи', 'date': '08 декабря 2018', 'title': 'Лучшие сочетания элементов декора для украшения гостиной на Новый Год', 'link': './article-page.html',},
+        {'image': './img/news_4.jpg', 'markerClass': 'none', 'marker': '', 'typeClass': 'news', 'type': 'Новости', 'date': '07 декабря 2018', 'title': 'В нашем Cash&Carry в продаже декор 2019 для новогодних композиций', 'link': './article-page.html',},
+        {'image': './img/news_1.jpg', 'markerClass': '', 'marker': 'Полезное', 'typeClass': 'article', 'type': 'Статьи', 'date': '09 декабря 2018', 'title': 'Как спланировать и установить в доме новогодние гирлянды', 'link': './article-page.html',},
+        {'image': './img/news_2.jpg', 'markerClass': 'none', 'marker': '', 'typeClass': 'news', 'type': 'Новости', 'date': '09 декабря 2018', 'title': 'Елочные украшения 2019', 'link': './article-page.html',},
+        {'image': './img/news_3.jpg', 'markerClass': '', 'marker': 'Полезное', 'typeClass': 'article', 'type': 'Статьи', 'date': '08 декабря 2018', 'title': 'Лучшие сочетания элементов декора для украшения гостиной на Новый Год', 'link': './article-page.html',},
+        {'image': './img/news_4.jpg', 'markerClass': 'none', 'marker': '', 'typeClass': 'news', 'type': 'Новости', 'date': '07 декабря 2018', 'title': 'В нашем Cash&Carry в продаже декор 2019 для новогодних композиций', 'link': './article-page.html',},
+      ],
+    }
+  })
+
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

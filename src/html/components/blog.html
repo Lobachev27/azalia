@@ -1,0 +1,32 @@
+<section class="blog">
+  <div class="container">
+    <h2 class="title">Наш блог</h2>
+    <div class="blog_wrapper">
+      <a class="blog_more" href="./article.html">Все новости</a>
+      <div class="intro_wrapper">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            @@for (var i = 0; i < context.arr.length; i++) {
+            <div class="swiper-slide">
+              <div class="blog_news">
+                <div class="blog_img_wrapper">
+                  <img class="blog_img" src="`+context.arr[i].image+`">
+                  <div class="blog_marker `+context.arr[i].markerClass+`">`+context.arr[i].marker+`</div>
+                  <div class="blog_type `+context.arr[i].typeClass+`">`+context.arr[i].type+`</div>
+                  <a class="blog_img_link" href="`+context.arr[i].link+`"></a>
+                </div>
+                <div class="blog_info">
+                  <div class="blog_date">`+context.arr[i].date+`</div>
+                  <a class="blog_name" href="`+context.arr[i].link+`">`+context.arr[i].title+`</a>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

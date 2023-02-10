@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Данные о доставке"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': 'grey',
+      'way': false,
+      'title': 'Личный кабинет',
+      'lastBreadcrumb': '',
+      arr: [
+        {'text': '', 'link': ''},
+      ],
+    }
+  })
+
+  <section class="cabinet">
+    <div class="container">
+      <div class="cabinet_wrapper cab-other">
+        <nav class="cabinet_sidebar">
+          <a class="cabinet_link" href="./cabinet.html">Главная</a>
+          <a class="cabinet_link" href="./purchase.html">История заказов</a>
+          <a class="cabinet_link" href="./waiting.html">Лист ожидания</a>
+          <a class="cabinet_link" href="./personal.html">Личные данные</a>
+          <a class="cabinet_link active" href="./address.html">Адреса доставки</a>
+          <a class="cabinet_exit"  href="javascript:void(0);">Выйти из профиля</a>
+        </nav>
+        <a class="cabinet_back" href="./address.html">Назад</a>
+        <div class="cabinet_title_mobile">Адрес доставки</div>
+        <div class="cabinet_content">
+          <div class="address-change_wrapper">
+            <form class="address-change_form">
+              <div class="address-change_caption">Данные о доставке</div>
+              <div class="address-change_item">
+                <div class="address-change_text">Название адреса доставки</div>
+                <input class="address-change_input" name="name" type="text" placeholder="Офис на Преображенской" autocomplete="off" required>
+              </div>
+              <div class="address-change_row">
+                <div class="address-change_item">
+                  <div class="address-change_text">Город</div>
+                  <input class="address-change_input" name="city" type="text" placeholder="Москва" autocomplete="off" required>
+                </div>
+                <div class="address-change_item">
+                  <div class="address-change_text">Улица</div>
+                  <input class="address-change_input" name="street" type="text" placeholder="Преображенская" autocomplete="off" required>
+                </div>
+              </div>
+              <div class="address-change_row three">
+                <div class="address-change_item">
+                  <div class="address-change_text">Дом</div>
+                  <input class="address-change_input" name="home" type="text" placeholder="50/1" autocomplete="off" required>
+                </div>
+                <div class="address-change_item">
+                  <div class="address-change_text">Квартира</div>
+                  <input class="address-change_input" name="room" type="text" placeholder="45" autocomplete="off" required>
+                </div>
+                <div class="address-change_item">
+                  <div class="address-change_text">Индекс</div>
+                  <input class="address-change_input" name="index" type="text" placeholder="545456" autocomplete="off" required>
+                </div>
+              </div>
+              <div class="address-change_item">
+                <div class="address-change_text">Комментарий к доставке</div>
+                <textarea class="address-change_comment" name="comment"></textarea>
+              </div>
+            </form>
+            <div class="address-change_stock">
+              <div class="address-change_stock_item">
+                <img class="address-change_stock_img" src="./img/banner-category.jpg">
+                <a class="address-change_stock_link" href="./stock-page.html"></a>
+              </div>
+              <div class="address-change_stock_item">
+                <img class="address-change_stock_img" src="./img/banner-category.jpg">
+                <a class="address-change_stock_link" href="./stock-page.html"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Личные данные"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': 'grey',
+      'way': false,
+      'title': 'Личный кабинет',
+      'lastBreadcrumb': '',
+      arr: [
+        {'text': '', 'link': ''},
+      ],
+    }
+  })
+
+  <section class="cabinet">
+    <div class="container">
+      <div class="cabinet_wrapper cab-other">
+        <nav class="cabinet_sidebar">
+          <a class="cabinet_link" href="./cabinet.html">Главная</a>
+          <a class="cabinet_link" href="./purchase.html">История заказов</a>
+          <a class="cabinet_link" href="./waiting.html">Лист ожидания</a>
+          <a class="cabinet_link active" href="./personal.html">Личные данные</a>
+          <a class="cabinet_link" href="./address.html">Адреса доставки</a>
+          <a class="cabinet_exit"  href="javascript:void(0);">Выйти из профиля</a>
+        </nav>
+        <a class="cabinet_back" href="cabinet.html">Назад</a>
+        <div class="cabinet_title_mobile">Личные данные</div>
+        <div class="cabinet_content">
+          <div class="personal_wrapper">
+            <div class="personal_left">
+              <div class="personal_recipient">
+                <div class="personal_recipient_row">
+                  <div class="personal_caption">Данные получателя</div>
+                  <nav class="personal_nav">
+                    <a class="personal_link active" href="#personal_individual">физ. лицо </a>
+                    <a class="personal_link" href="#personal_entity">юр.лицо</a>
+                  </nav>
+                </div>
+                <div id="personal_individual" class="personal_box">
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Имя <span>*</span></div>
+                      <input class="personal_input" name="name" type="text" placeholder="Введите ваше имя" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">Фамилия <span>*</span></div>
+                      <input class="personal_input" name="surname" type="text" placeholder="Введите вашу фамилию" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Телефон <span>*</span></div>
+                      <input class="personal_input phone" name="phone" type="text" placeholder="+7 352 555 55 55" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">E-mail <span>*</span></div>
+                      <input class="personal_input" name="email" type="email" placeholder="Укажите ваш E-mail" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Пароль</div>
+                      <input class="personal_input" name="password" type="password" autocomplete="off" required>
+                    </div>
+                    <button class="personal_btn">Изменить пароль</button>
+                  </div>
+                  <div class="personal_caption">Расскажите о себе</div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Ваша профессия</div>
+                      <input class="personal_input" name="profession" type="text">
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">Должность в компании</div>
+                      <input class="personal_input" name="position" type="text">
+                    </div>
+                  </div>
+                  <div class="personal_item select">
+                    <div class="personal_text">Какие товары на сайте наиболе интересны вам</div>
+                    <select multiple class="AamSelect" name="test" data-search-min="1">
+                      <option value="Керамические горшки" selected>Керамические горшки</option>
+                      <option value="Цветы" selected>Цветы</option>
+                      <option value="Кувшины">Кувшины</option>
+                      <option value="Вазоны">Вазоны</option>
+                      <option value="Кашпо">Кашпо</option>
+                      <option value="Цветочные горшки">Цветочные горшки</option>
+                    </select>
+                  </div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Ссылка на личный сайт</div>
+                      <input class="personal_input" name="site" type="text">
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">Ссылка на социальные сети</div>
+                      <input class="personal_input" name="social" type="text">
+                    </div>
+                  </div>
+                  <div class="personal_item">
+                    <div class="personal_text">Расскажите немного о себе</div>
+                    <textarea class="personal_comment" name="comment"></textarea>
+                  </div>
+                </div>
+                <div id="personal_entity" class="personal_box">
+                  <div class="personal_row one">
+                    <div class="personal_item">
+                      <div class="personal_text">Название организации или ИП <span>*</span></div>
+                      <input class="personal_input" name="name" type="text" placeholder="Введите название организации" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Телефон <span>*</span></div>
+                      <input class="personal_input phone" name="phone" type="text" placeholder="+7 352 555 55 55" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">E-mail <span>*</span></div>
+                      <input class="personal_input" name="email" type="email" placeholder="Укажите ваш E-mail" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Пароль</div>
+                      <input class="personal_input" name="password" type="password" autocomplete="off" required>
+                    </div>
+                    <button class="personal_btn">Изменить пароль</button>
+                  </div>
+                  <div class="personal_caption">Данные компании</div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Юридический адрес <span>*</span></div>
+                      <input class="personal_input" name="address" type="text" placeholder="г.Москва, ул.Угрешская д. 2 стр. 146" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">Название банка <span>*</span></div>
+                      <input class="personal_input" name="bank" type="text" placeholder="Сбербанк России" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="personal_row four">
+                    <div class="personal_item">
+                      <div class="personal_text">БИК банка <span>*</span></div>
+                      <input class="personal_input" name="bic" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">Кор.счет <span>*</span></div>
+                      <input class="personal_input" name="cor" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">Расчетный счет <span>*</span></div>
+                      <input class="personal_input" name="check" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">ИНН <span>*</span></div>
+                      <input class="personal_input" name="inn" type="text" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="personal_row four">
+                    <div class="personal_item">
+                      <div class="personal_text">КПП <span>*</span></div>
+                      <input class="personal_input" name="kpp" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">ОКВЭД <span>*</span></div>
+                      <input class="personal_input" name="okved" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">ОКДП <span>*</span></div>
+                      <input class="personal_input" name="okdp" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">ОКПО <span>*</span></div>
+                      <input class="personal_input" name="okpo" type="text" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="personal_item select">
+                    <div class="personal_text">Какие товары на сайте наиболе интересны вам</div>
+                    <select multiple class="AamSelect" name="test" data-search-min="1">
+                      <option value="Керамические горшки" selected>Керамические горшки</option>
+                      <option value="Цветы" selected>Цветы</option>
+                      <option value="Кувшины">Кувшины</option>
+                      <option value="Вазоны">Вазоны</option>
+                      <option value="Кашпо">Кашпо</option>
+                      <option value="Цветочные горшки">Цветочные горшки</option>
+                    </select>
+                  </div>
+                  <div class="personal_row">
+                    <div class="personal_item">
+                      <div class="personal_text">Ссылка на сайт</div>
+                      <input class="personal_input" name="site" type="text">
+                    </div>
+                    <div class="personal_item">
+                      <div class="personal_text">Ссылка на социальные сети</div>
+                      <input class="personal_input" name="social" type="text">
+                    </div>
+                  </div>
+                  <div class="personal_item">
+                    <div class="personal_text">Расскажите немного о вашей компании</div>
+                    <textarea class="personal_comment" name="comment"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="personal_right">
+              <div class="personal_caption center">Получайте дополнительную <span>скидку</span> за заполнение профиля</div>
+              <div class="personal_description">Азалия дает дополнительную скидку нашим клиентам за заполнение профилия</div>
+              <div class="personal_filling">
+                <div class="personal_filling_count">5 / 10</div>
+                <div class="personal_filling_scale">
+                  <div class="personal_filling_scale-over"></div>
+                </div>
+                <div class="personal_filling_text">до получения до скидки</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

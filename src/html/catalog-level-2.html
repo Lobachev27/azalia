@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Изделия из керамики"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Изделия из керамики',
+      'lastBreadcrumb': 'Изделия из керамики',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Каталог товаров', 'link': './catalog-level-1.html'},
+      ],
+    }
+  })
+
+  @@include("./components/subcategories.html", {
+    context: {
+      arr: [
+        {'image': './img/subcategories-1.jpg', 'title': 'Цветочные горшки', 'amount': '360 товаров', 'link': './catalog-level-3.html',},
+        {'image': './img/subcategories-2.jpg', 'title': 'Вазы', 'amount': '120 товаров', 'link': './catalog-level-3.html',},
+        {'image': './img/subcategories-3.jpg', 'title': 'Кувшины', 'amount': '24 товара', 'link': './catalog-level-3.html',},
+        {'image': './img/subcategories-4.jpg', 'title': 'Колонны', 'amount': '4 товара', 'link': './catalog-level-3.html',},
+        {'image': './img/subcategories-5.jpg', 'title': 'Вазоны', 'amount': '5 товаров', 'link': './catalog-level-3.html',},
+        {'image': './img/subcategories-6.jpg', 'title': 'Кашпо', 'amount': '341 товаров', 'link': './catalog-level-3.html',},
+        {'image': './img/subcategories-7.jpg', 'title': 'Другие формы', 'amount': '6 товаров', 'link': './catalog-level-3.html',},
+      ],
+    }
+  })
+
+  @@include("./components/slider-may-like.html", {
+    context: {
+      'id': 'view',
+      'title': 'Просмотренные товары',
+      arr: [
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-30.jpg',
+          'category': 'Вазы',
+          'name': 'Ваза Бутылка (керамика), H30x18см, бирюзовый/12шт.',
+          'stockClass': '',
+          'stock': '-14%',
+          'priceOld': '1 245 ₽',
+          'priceNew': '1 164 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+        'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-22.jpg',
+          'category': 'Кувшин',
+          'name': 'Кувшин (керамика), Н19см, белый/24шт.',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '2 640 ₽',
+          'priceNew': '359 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+        'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-31.jpg',
+          'category': 'Кувшин',
+          'name': 'Кувшин Бабочка (керамика), Н21см, зеленый/12шт.',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '1 410 ₽',
+          'priceNew': '1 145 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+        'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-32.jpg',
+          'category': 'Кувшин',
+          'name': 'Кувшин Бабочка (керамика), Н21см, синий/12шт',
+          'stockClass': 'none',
+          'stock': '',
+          'priceOld': '',
+          'priceNew': '978 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+        'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-33.jpg',
+          'category': 'Вазы',
+          'name': 'Ваза (керамика), H20см, зеленый/24шт.',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '1 102 ₽',
+          'priceNew': '793 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+        'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-34.jpg',
+          'category': 'Вазы',
+          'name': 'Ваза (керамика), H18см, белый/36шт.',
+          'stockClass': 'none',
+          'stock': '',
+          'priceOld': '',
+          'priceNew': '208 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+      ],
+    }
+  })
+
+  @@include("./components/slider-may-like.html", {
+    context: {
+      'id': 'may-like',
+      'title': 'Вам может понравится',
+      arr: [
+      {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-21.jpg',
+          'category': 'Кувшин',
+          'name': 'Кувшин (керамика), Н18.5см, 2л, зеленый',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '3 415 ₽',
+          'priceNew': '793 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-22.jpg',
+          'category': 'Кувшин',
+          'name': 'Кувшин (керамика), Н19см, белый/24шт.',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '2 640 ₽',
+          'priceNew': '359 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-23.jpg',
+          'category': 'Колонна',
+          'name': 'Колонна (шамот), H90см',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '7 415 ₽',
+          'priceNew': '5 830 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-24.jpg',
+          'category': 'Другие формы',
+          'name': 'Декор. изделие Karo (керамика), 16.5см, камень/20шт.',
+          'stockClass': 'none',
+          'stock': '',
+          'priceOld': '',
+          'priceNew': '273 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-25.jpg',
+          'category': 'Кашпо',
+          'name': 'Кашпо (керамика) 12,2х12,2х9,8см, коричневый/36шт.',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '250 ₽',
+          'priceNew': '158 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-26.jpg',
+          'category': 'Кашпо',
+          'name': 'Кашпо Амфора коринф (шамот), 22*30см',
+          'stockClass': 'none',
+          'stock': '',
+          'priceOld': '',
+          'priceNew': '1 157 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+      ],
+    }
+  })
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

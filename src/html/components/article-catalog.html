@@ -1,0 +1,39 @@
+<section class="article-catalog">
+  <div class="container">
+    <div class="article-catalog_row">
+      <nav class="article-catalog_nav">
+        <a class="article-catalog_link active" href="javascript:void(0);">Полезное</a>
+        <a class="article-catalog_link" href="javascript:void(0);">Новые поступления</a>
+        <a class="article-catalog_link" href="javascript:void(0);">Декор</a>
+      </nav>
+      <nav class="page_nav">
+        <a class="page_nav_prev" href="javascript:void(0);">←</a>
+        <a class="page_nav_number active" href="javascript:void(0);">1</a>
+        <a class="page_nav_number" href="javascript:void(0);">2</a>
+        <a class="page_nav_number" href="javascript:void(0);">3</a>
+        <a class="page_nav_number" href="javascript:void(0);">...</a>
+        <a class="page_nav_number" href="javascript:void(0);">16</a>
+        <a class="page_nav_next" href="javascript:void(0);">→</a>
+      </nav>
+    </div>
+    <div class="article-catalog_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="blog_news">
+        <div class="blog_img_wrapper">
+          <img class="blog_img" src="`+context.arr[i].image+`">
+          <div class="blog_marker `+context.arr[i].markerClass+`">`+context.arr[i].marker+`</div>
+          <div class="blog_type `+context.arr[i].typeClass+`">`+context.arr[i].type+`</div>
+          <a class="blog_img_link" href="`+context.arr[i].link+`"></a>
+        </div>
+        <div class="blog_info">
+          <div class="blog_date">`+context.arr[i].date+`</div>
+          <a class="blog_name" href="`+context.arr[i].link+`">`+context.arr[i].title+`</a>
+        </div>
+      </div>
+      }
+    </div>
+    <div class="catalog_row">
+      <a class="catalog_more" href="javascript:void(0);">Показать еще</a>
+    </div>
+  </div>
+</section>

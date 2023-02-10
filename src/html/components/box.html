@@ -1,0 +1,30 @@
+<div class="box">
+  <div class="box_wrapper">
+    @@if(context.marker){
+      @@context.marker
+    }
+    <div class="box_favorite"></div>
+    <div class="box_img_wrapper">
+      <a class="box_img_link" href="@@context.link">
+        <img class="box_img" src="@@context.image">
+      </a>
+      <a class="box_view js-popup" href="#quickViewModal">Быстрый просмотр</a>
+    </div>
+    <div class="box_info">
+      <div class="box_category">@@context.category</div>
+      <a class="box_name" href="@@context.link">@@context.name</a>
+      <div class="box_extra">
+        <div class="box_price_wrapper">
+          <div class="box_price_row">
+            <div class="box_price old">@@context.priceOld</div>
+            <div class="box_stock @@if(!context.stock){none}">@@context.stock</div>
+          </div>
+          <div class="box_price new">@@context.priceNew</div>
+        </div>
+        <div class="box_compare @@context.compareClass"></div>
+        <a class="btn basket js-popup" href="#addBasketModal"></a>
+      </div>
+    </div>
+    <div class="box_amount">@@context.amount</div>
+  </div>
+</div>

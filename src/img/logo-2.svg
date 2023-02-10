@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180.47" height="55" viewBox="0 0 180.47 55">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.669" y1="0.192" x2="0.263" y2="0.776" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eacda3"/>
+      <stop offset="1" stop-color="#d6ae7b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.884" y1="0.244" x2="0.365" y2="1.232" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.648" y1="-0.571" x2="0.299" y2="1.135" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="0.832" y1="0.01" x2="-0.098" y2="0.904" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_57" data-name="Group 57" transform="translate(-184 -4297)">
+    <g id="Ресурс_3" data-name="Ресурс 3" transform="translate(184.007 4297)">
+      <g id="Слой_4" data-name="Слой 4" transform="translate(-0.007)">
+        <path id="Path_83" data-name="Path 83" d="M55,27.292v-.3a.536.536,0,0,0,0-.085,27.5,27.5,0,1,0-4.277,15.334h0A27.352,27.352,0,0,0,55,27.5Z" transform="translate(0 -0.004)" fill="#fff"/>
+        <path id="Path_84" data-name="Path 84" d="M92.577,27.068v.3A5.872,5.872,0,0,1,81.6,30.2l-.1-.191L65,0A27.578,27.578,0,0,1,92.577,26.989a.539.539,0,0,1,0,.078Z" transform="translate(-37.582)" fill="url(#linear-gradient)"/>
+        <path id="Path_85" data-name="Path 85" d="M54.992,27.5a27.352,27.352,0,0,1-4.281,14.738h0A27.5,27.5,0,1,1,27.5,0L43.943,29.92l.1.19a5.855,5.855,0,0,0,10.948-2.822Z" transform="translate(0.003)" fill="#fff"/>
+        <path id="Path_86" data-name="Path 86" d="M56.531,42.358v0H10.13L33.328,0,49.766,30.008l.1.191Z" transform="translate(-5.829)" fill="none"/>
+        <path id="Path_87" data-name="Path 87" d="M37.18,54.7l11.8-21.48L60.79,54.7Z" transform="translate(-21.484 -19.194)" fill="url(#linear-gradient-2)"/>
+        <path id="Path_88" data-name="Path 88" d="M130,64.016a.569.569,0,0,1,0,.085c0-.1,0-.2,0-.3Z" transform="translate(-75.005 -36.812)" fill="#861b2e"/>
+        <path id="Path_89" data-name="Path 89" d="M30.192,107.4c-.089-.047-.174-.089-.263-.144a5.872,5.872,0,0,1,2.813-10.98H67.2A27.577,27.577,0,0,1,30.29,107.421.424.424,0,0,1,30.192,107.4Z" transform="translate(-15.676 -55.594)" fill="url(#linear-gradient-3)"/>
+        <path id="Path_90" data-name="Path 90" d="M12.334,9.447c.085-.055.165-.11.255-.161a5.872,5.872,0,0,1,8.282,7.738l-.106.187L4.319,47.265A27.577,27.577,0,0,1,12.262,9.506Z" transform="translate(0.007 -4.84)" fill="url(#linear-gradient-4)"/>
+      </g>
+    </g>
+    <text id="АЗАЛИЯ" transform="translate(257.47 4326)" fill="#fff" font-size="26" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700"><tspan x="0" y="0">АЗАЛИЯ</tspan></text>
+    <text id="цветы_от_А_до_Я" data-name="цветы от А до Я" transform="translate(256.987 4344.162)" fill="#fff" font-size="15" font-family="ProximaNova-Light, Proxima Nova" font-weight="300"><tspan x="0" y="0">цветы от А до Я</tspan></text>
+  </g>
+</svg>

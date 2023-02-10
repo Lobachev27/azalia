@@ -1,0 +1,307 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Страница FAQ*/
+
+.faq{
+  position: relative;
+  margin: 40px 0 100px;
+  @media screen and ($desktop1) {
+    margin: 30px 0 70px;
+  }
+  @media screen and ($tablet2) {
+    margin: 20px 0 60px;
+  }
+  @media screen and ($tablet1) {
+    margin: 20px 0 60px;
+  }
+  @media screen and ($mobile3) {
+    margin: 0 0 30px;
+  }
+
+  &_wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and ($desktop1) {
+      grid-template-columns: 4fr 3fr;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 3fr 2fr;
+      grid-column-gap: 40px;
+    }
+    @media screen and ($tablet1) {
+      display: block;
+    }
+    @media screen and ($mobile3) {
+      display: block;
+    }
+  }
+
+  &_left{
+    @media screen and ($tablet1) {
+      margin-bottom: 40px;
+    }
+    @media screen and ($mobile3) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &_right{}
+
+  &_caption{
+    font-family: 'ProximaNova-Bold';
+    font-size: 22px;
+    @media screen and ($desktop1) {
+      font-size: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 18px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 17px;
+    }
+    @media screen and ($mobile3) {
+      font-size: 17px;
+    }
+  }
+
+  &_list{
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    @media screen and ($desktop1) {
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+
+  &_item{
+    margin-bottom: 20px;
+    @media screen and ($tablet2) {
+      margin-bottom: 15px;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &_question{
+    position: relative;
+    font-family: 'ProximaNova-Bold';
+    font-size: $text-size-s;
+    background-color: #F6F6F6;
+    border-radius: 4px;
+    padding: 20px 30px;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      padding: 15px 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      padding: 15px 30px 15px 20px;
+    }
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &:before{
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-size: $text-size-xl;
+      font-weight: 700;
+      color: #9F9F9F;
+      content: "\f107";
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      @media screen and ($desktop1) {
+        font-size: $text-size-l;
+      }
+      @media screen and ($tablet2) {
+        font-size: $text-size-m;
+      }
+    }
+
+    &.active{
+      &:before{
+        font-size: $text-size-xl;
+        content: "\f106";
+        color: #1C1C1C;
+        @media screen and ($desktop1) {
+          font-size: $text-size-l;
+        }
+        @media screen and ($tablet2) {
+          font-size: $text-size-m;
+        }
+      }
+    }
+  }
+
+  &_answer{
+    /*display: none;*/
+    font-size: 14px;
+    line-height: 1.5em;
+    border: 1px solid transparent;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.3s, border 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      padding: 0 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+    }
+
+    &.active{
+      /*display: block;*/
+      border: 1px solid #EBEBEB;
+      border-top: none;
+      padding: 20px 30px;
+      max-height: 100vh;
+      transition: max-height 0.3s, padding 0.3s, border 0.3s;
+      @media screen and ($desktop1) {
+        padding: 15px 20px;
+      }
+    }
+  }
+
+  &_form{
+    display: flex;
+    flex-direction: column;
+    width: 385px;
+    margin-left: 155px;
+    @media screen and ($desktop1) {
+      width: 385px;
+      margin-left: 115px;
+    }
+    @media screen and ($tablet2) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &_title{
+    font-family: 'ProximaNova-Bold';
+    font-size: $text-size-m;
+    margin-bottom: 20px;
+    @media screen and ($desktop1) {
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_description{
+    font-size: 14px;
+    color: #9F9F9F;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &_input{
+    font-size: 14px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    transition: border 0.3s;
+    @media screen and ($desktop1) {
+      height: 40px;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 15px;
+    }
+
+    &:focus{
+      border: 1px solid $red-color-hover;
+      transition: border 0.3s;
+    }
+
+    &::placeholder{
+      color: #BCBCBC;
+    }
+  }
+
+  &_comment{
+    font-size: 14px;
+    width: 100%;
+    height: 90px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 30px;
+    transition: border 0.3s;
+    @media screen and ($desktop1) {
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 15px;
+    }
+
+    &:focus{
+      border: 1px solid $red-color-hover;
+      transition: border 0.3s;
+    }
+
+    &::placeholder{
+      color: #BCBCBC;
+    }
+  }
+
+  &_submit{
+    font-family: 'ProximaNova-Semibold';
+    color: $text-color-white;
+    background-color: $red-color;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    height: 55px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      height: 45px;
+      margin-bottom: 15px;
+    }
+
+    &:hover{
+      background-color: $red-color-hover;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+  }
+}

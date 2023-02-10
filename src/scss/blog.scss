@@ -1,0 +1,970 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блог*/
+
+.blog{
+  position: relative;
+  background-color: #F6F6F6;
+  padding: 40px 0 65px;
+  margin: 40px 0 0;
+  @media screen and ($desktop1) {
+    padding: 30px 0 55px;
+    margin: 60px 0 0;
+  }
+  @media screen and ($tablet2) {
+    padding: 25px 0 50px;
+    margin: 60px 0 0;
+  }
+  @media screen and ($tablet1) {
+    padding: 25px 0 40px;
+    margin: 60px 0 0;
+  }
+  @media screen and ($mobile3) {
+    padding: 25px 0 40px;
+    margin-top: 20px;
+  }
+
+  &_wrapper{
+    position: relative;
+    margin-top: 35px;
+    @media screen and ($desktop1) {
+      margin-top: 30px;
+    }
+    @media screen and ($tablet2) {
+      margin-top: 25px;
+    }
+    @media screen and ($tablet1) {
+      margin-top: 25px;
+    }
+    @media screen and ($mobile3) {
+      margin-top: 25px;
+    }
+  }
+
+  & .swiper-container{
+    overflow: visible;
+    @media screen and ($tablet1) {
+      overflow: hidden;
+      width: calc(100% - 10px);
+      padding: 0px 5px 43px;
+      margin: 0 auto;
+    }
+  }
+
+  & .swiper-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    @media screen and ($tablet1) {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+  }
+
+  & .swiper-slide {
+    @media screen and ($tablet1) {
+      position: relative;
+      width: 100%;
+      display: grid;
+      justify-items: center;
+      align-items: start;
+    }
+  }
+
+  & .swiper-container-horizontal>.swiper-pagination-bullets{
+    @media screen and ($tablet1) {
+      position: absolute;
+      bottom: 0;
+      line-height: 1em;
+      text-align: center;
+      height: 13px;
+      padding: 0 15px;
+    }
+  }
+
+  & .swiper-container-horizontal .swiper-pagination-bullet {
+    @media screen and ($tablet1) {
+      width: 12px;
+      height: 13px;
+      display: inline-block;
+      align-items: center;
+      background-color: #EBEBEB;
+      opacity: 1;
+      outline: none;
+      margin: 0 7px;
+      transition: all 0.2s;
+    }
+  }
+
+  & .swiper-container-horizontal .swiper-pagination-bullet-active {
+    @media screen and ($tablet1) {
+      width: 74px;
+      background-color: $red-color;
+      border-radius: 12px;
+    }
+  }
+
+  &_more{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: $grey-color;
+    color: $text-color-white;
+    border-radius: 4px;
+    width: max-content;
+    height: 34px;
+    padding: 0 15px;
+    top: -70px;
+    right: 0;
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      top: -65px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      height: 30px;
+      top: -55px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 12px;
+      height: 30px;
+      top: -55px;
+    }
+    @media screen and ($mobile3) {
+      top: -53px;
+    }
+    @media screen and ($mobile1) {
+      top: -52px;
+    }
+
+    &:after{
+      content: "\f178";
+      font-family: 'FontAwesome';
+      margin-left: 30px;
+      @media screen and ($desktop1) {
+        margin-left: 15px;
+      }
+      @media screen and ($tablet2) {
+        margin-left: 10px;
+      }
+      @media screen and ($tablet1) {
+        margin-left: 10px;
+      }
+    }
+
+    &:hover{
+      background-color: $grey-color-hover;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &_news{
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+
+    &:hover{
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      transition: box-shadow 0.3s;
+      @media screen and ($desktop1) {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    &:hover .blog_img{
+      transform: scale(1.15);
+      transition: transform 0.6s;
+    }
+
+    &:hover .blog_name{
+      color: $red-color;
+      transition: color 0.3s;
+    }
+  }
+
+  &_img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    z-index: 1;
+
+    &_wrapper{
+      position: relative;
+      overflow: hidden;
+      height: 242px;
+      @media screen and ($desktop1) {
+        height: 220px;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, #000000 0%, transparent 100%);
+        width: 100%;
+        height: 62px;
+        bottom: 0;
+        opacity: 0.8;
+        z-index: 2;
+        @media screen and ($desktop1) {
+          height: 62px;
+        }
+      }
+    }
+
+    &_link{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+  }
+
+  &_marker{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ProximaNova-Bold';
+    font-size: 13px;
+    color: $text-color-white;
+    background-color: #526356;
+    top: 8px;
+    left: 8px;
+    width: max-content;
+    height: 25px;
+    border-radius: 15px;
+    padding: 0 15px;
+    z-index: 2;
+    pointer-events: none;
+    @media screen and ($desktop1) {
+      font-size: 12px;
+      height: 22px;
+      padding: 0 12px;
+    }
+
+    &.none{
+      display: none;
+    }
+  }
+
+  &_type{
+    position: absolute;
+    display: block;
+    font-size: $text-size-xs;
+    color: $text-color-white;
+    bottom: 14px;
+    left: 60px;
+    z-index: 3;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      bottom: 12px;
+      left: 40px;
+    }
+
+    &.news{
+      &:before{
+        content: "";
+        position: absolute;
+        background: url("../img/newspaper.svg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 23px;
+        height: 15px;
+        left: -35px;
+        @media screen and ($desktop1) {
+          width: 20px;
+          height: 13px;
+          left: -28px;
+        }
+      }
+    }
+
+    &.article{
+      &:before{
+        content: "";
+        position: absolute;
+        background: url("../img/comment-alt-dots.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 23px;
+        height: 18px;
+        left: -35px;
+        @media screen and ($desktop1) {
+          width: 20px;
+          height: 17px;
+          left: -28px;
+        }
+      }
+    }
+  }
+
+  &_info{
+    padding: 15px 25px 35px;
+    @media screen and ($desktop1) {
+      padding: 15px 20px 25px;
+    }
+  }
+
+  &_date{
+    font-size: $text-size-xs;
+    color: #BCBCBC;
+    margin-bottom: 8px;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+    }
+  }
+
+  &_name{
+    display: block;
+    font-family: 'ProximaNova-Semibold';
+    font-size: $text-size-s;
+    line-height: 1.5em;
+    height: 48px;
+    transition: color 0.3s;
+    overflow: hidden;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      line-height: 1.4em;
+      height: 62px;
+    }
+  }
+}
+
+/*Страница новостей*/
+
+.article-catalog{
+  @media screen and ($mobile3) {
+    margin-bottom: 30px;
+  }
+
+  &_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    @media screen and ($desktop1) {
+      margin-bottom: 30px;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile4) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media screen and ($mobile4) {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+  }
+
+  &_link{
+    display: block;
+    font-family: 'ProximaNova-Bold';
+    font-size: 15px;
+    background-color: #EBEBEB;
+    padding: 8px 27px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 20px;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      padding: 6px 22px;
+      margin-right: 15px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 13px;
+      padding: 6px 17px;
+    }
+    @media screen and ($mobile4) {
+      margin-bottom: 15px;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.active{
+      background-color: #526356;
+      color: $text-color-white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    margin-bottom: 40px;
+    @media screen and ($desktop1) {
+      grid-row-gap: 20px;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 30px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile5) {
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile3) {
+      display: block;
+    }
+
+    & .blog_news{
+      @media screen and ($mobile3) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  & .page_nav{
+    @media screen and ($mobile4) {
+      align-self: center;
+    }
+  }
+}
+
+/*Внутренняя страница новости*/
+
+.article-page{
+  position: relative;
+  background-color: #F6F6F6;
+  padding-bottom: 75px;
+  @media screen and ($desktop1) {
+    padding-bottom: 50px;
+  }
+  @media screen and ($tablet2) {
+    padding-bottom: 40px;
+  }
+  @media screen and ($tablet1) {
+    padding-bottom: 30px;
+  }
+  @media screen and ($mobile5) {
+    padding-bottom: 30px;
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 1060fr 520fr;
+    grid-column-gap: 20px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 5fr 3fr;
+    }
+    @media screen and ($tablet2) {
+      display: block;
+    }
+  }
+
+  &_left{
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media screen and ($tablet2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &_img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &_wrapper{
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px 4px 0 0;
+      height: 450px;
+      @media screen and ($desktop1) {
+        height: 400px;
+      }
+      @media screen and ($tablet2) {
+        height: 350px;
+      }
+      @media screen and ($tablet1) {
+        height: 300px;
+      }
+      @media screen and ($mobile5) {
+        height: 300px;
+      }
+      @media screen and ($mobile4) {
+        height: 250px;
+      }
+      @media screen and ($mobile3) {
+        height: 220px;
+      }
+      @media screen and ($mobile1) {
+        height: 200px;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, #000000 0%, transparent 100%);
+        width: 100%;
+        height: 140px;
+        bottom: 0;
+        opacity: 0.8;
+        z-index: 2;
+        @media screen and ($desktop1) {
+          height: 120px;
+        }
+        @media screen and ($tablet2) {
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  &_marker{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ProximaNova-Bold';
+    font-size: 13px;
+    color: $text-color-white;
+    background-color: #526356;
+    top: 20px;
+    left: 30px;
+    width: max-content;
+    height: 25px;
+    border-radius: 15px;
+    padding: 0 15px;
+    z-index: 2;
+    pointer-events: none;
+
+    &.none{
+      display: none;
+    }
+  }
+  &_type{
+    position: absolute;
+    display: block;
+    font-size: $text-size-xs;
+    color: $text-color-white;
+    bottom: 20px;
+    left: 70px;
+    z-index: 3;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+      color: $text-color-white;
+      bottom: 20px;
+      left: 70px;
+    }
+    @media screen and ($tablet2) {
+      left: 60px;
+    }
+    @media screen and ($tablet1) {
+      left: 60px;
+    }
+    @media screen and ($mobile5) {
+      left: 60px;
+    }
+
+    &.news{
+      &:before{
+        content: "";
+        position: absolute;
+        background: url("../img/newspaper.svg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 23px;
+        height: 15px;
+        left: -35px;
+        @media screen and ($desktop1) {
+          width: 23px;
+          height: 15px;
+          left: -35px;
+        }
+      }
+    }
+
+    &.article{
+      &:before{
+        content: "";
+        position: absolute;
+        background: url("../img/comment-alt-dots.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 23px;
+        height: 18px;
+        left: -35px;
+        @media screen and ($desktop1) {
+          width: 23px;
+          height: 18px;
+          left: -35px;
+        }
+      }
+    }
+  }
+
+  &_info{
+    padding: 39px 50px 50px;
+    @media screen and ($desktop1) {
+      padding: 20px 40px 30px;
+    }
+    @media screen and ($tablet2) {
+      padding: 20px 30px 30px;
+    }
+    @media screen and ($tablet1) {
+      padding: 20px 30px 30px;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px 30px 30px;
+    }
+    @media screen and ($mobile4) {
+      padding: 20px;
+    }
+  }
+
+  &_date{
+    font-size: $text-size-s;
+    color: #BCBCBC;
+    margin-bottom: 10px;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &_name{
+    display: block;
+    font-family: 'ProximaNova-Bold';
+    font-size: 24px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    @media screen and ($desktop1) {
+      font-size: 22px;
+      line-height: 1.3em;
+      margin-bottom: 15px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 20px;
+    }
+    @media screen and ($tablet1) {
+      font-size: 20px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 20px;
+    }
+    @media screen and ($mobile4) {
+      font-size: 18px;
+    }
+    @media screen and ($mobile2) {
+      font-size: 16px;
+    }
+  }
+
+  &_description{
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+    }
+    @media screen and ($mobile4) {
+      text-align: justify;
+    }
+
+    & p{
+      font-size: 16px;
+      line-height: 1.5em;
+      @media screen and ($desktop1) {
+        font-size: 15px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 14px;
+      }
+      @media screen and ($mobile4) {
+        text-align: justify;
+      }
+    }
+  }
+
+  &_back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: $grey-color;
+    color: $text-color-white;
+    border-radius: 4px;
+    height: 34px;
+    width: 170px;
+    top: -70px;
+    right: 0;
+    transition: background-color 0.3s;
+    @media screen and ($desktop1) {
+      height: 34px;
+      width: 160px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 12px;
+      height: 30px;
+      width: 140px;
+    }
+
+    &:before{
+      content: "\f177";
+      font-family: 'FontAwesome';
+      margin-right: 15px;
+      @media screen and ($desktop1) {
+        margin-right: 15px;
+      }
+      @media screen and ($tablet2) {
+        margin-right: 10px;
+      }
+    }
+
+    &:hover{
+      background-color: $grey-color-hover;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &_caption{
+    font-family: 'ProximaNova-Bold';
+    font-size: 20px;
+    margin-bottom: 25px;
+    @media screen and ($desktop1) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($tablet2) {
+      grid-column: 1/3;
+      grid-row: 1/2;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+    @media screen and ($mobile5) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    @media screen and ($mobile3) {
+      font-size: 16px;
+    }
+  }
+
+  &_right{
+    @media screen and ($tablet2) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px;
+    }
+    @media screen and ($mobile5) {
+      display: block;
+    }
+
+    &_news{
+      display: grid;
+      grid-template-columns: 250fr 270fr;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+      margin-bottom: 20px;
+      @media screen and ($desktop1) {
+        grid-template-columns: 4fr 5fr;
+      }
+      @media screen and ($tablet2) {
+        margin-bottom: 0;
+      }
+      @media screen and ($mobile5) {
+        margin-bottom: 15px;
+      }
+      @media screen and ($mobile4) {
+        margin-bottom: 15px;
+      }
+      @media screen and ($mobile1) {
+        grid-template-columns: 3fr 5fr;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      &:hover{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        transition: box-shadow 0.3s;
+      }
+
+      &:hover .article-page_right_img{
+        transform: scale(1.15);
+        transition: transform 0.6s;
+      }
+
+      &:hover .article-page_right_name{
+        color: $red-color-hover;
+        transition: color 0.3s;
+      }
+    }
+    &_img{
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      z-index: 1;
+
+      &_wrapper{
+        position: relative;
+        overflow: hidden;
+        height: 132px;
+        @media screen and ($desktop1) {
+          height: 100%;
+          min-height: 120px;
+        }
+        @media screen and ($mobile5) {
+          min-height: 100px;
+          max-height: 150px;
+        }
+        @media screen and ($mobile4) {
+          min-height: 100px;
+          max-height: 150px;
+        }
+
+        &:before{
+          content: "";
+          position: absolute;
+          background: linear-gradient(to top, #000000 0%, transparent 100%);
+          width: 100%;
+          height: 40px;
+          bottom: 0;
+          opacity: 0.8;
+          z-index: 2;
+        }
+      }
+
+      &_link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+    }
+
+    &_marker{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'ProximaNova-Bold';
+      font-size: 12px;
+      color: $text-color-white;
+      background-color: #526356;
+      top: 10px;
+      left: 12px;
+      width: max-content;
+      height: 22px;
+      border-radius: 15px;
+      padding: 0 15px;
+      z-index: 2;
+      pointer-events: none;
+      @media screen and ($desktop1) {
+        font-size: 11px;
+        padding: 0 10px;
+        height: 18px;
+      }
+
+      &.none{
+        display: none;
+      }
+    }
+
+    &_type{
+      position: absolute;
+      display: block;
+      font-size: 13px;
+      color: $text-color-white;
+      bottom: 10px;
+      left: 35px;
+      z-index: 3;
+
+      &.news{
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/newspaper.svg") no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 18px;
+          height: 12px;
+          left: -25px;
+        }
+      }
+
+      &.article{
+        &:before{
+          content: "";
+          position: absolute;
+          background: url("../img/comment-alt-dots.svg") no-repeat;
+          background-size: contain;
+          background-position: center;
+          width: 18px;
+          height: 15px;
+          left: -25px;
+        }
+      }
+    }
+
+    &_info{
+      padding: 20px;
+      @media screen and ($desktop1) {
+        padding: 20px;
+      }
+    }
+
+    &_date{
+      font-size: $text-size-xxs;
+      color: #BCBCBC;
+      margin-bottom: 8px;
+    }
+
+    &_name{
+      display: block;
+      font-family: 'ProximaNova-Semibold';
+      font-size: $text-size-xs;
+      line-height: 1.5em;
+      transition: color 0.3s;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+      }
+    }
+  }
+}

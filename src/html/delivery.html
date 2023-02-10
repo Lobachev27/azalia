@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Доставка"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  <div class="delivery_bg"></div>
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Доставка',
+      'lastBreadcrumb': 'Доставка',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="delivery">
+    <div class="container">
+      <div class="delivery_info">
+        <div class="delivery_caption">Стабильная доставка по всей России</div>
+        <div class="delivery_description">Накопленный за многолетнюю деятельность опыт, позволяет нам обеспечить стабильную доставку продукции всеми видами транспорта в любой регион России. Индивидуальные схемы, разрабатываемые для каждого клиента, позволяют осуществлять доставку в кратчайшие сроки и по оптимальной цене.</div>
+      </div>
+      <div class="delivery_wrapper">
+        <div class="delivery_box">
+          <div class="delivery_caption">Как мы работаем</div>
+          <ul class="delivery_list">
+            <li class="delivery_item">1. Наш менеджер выставляет вам первоначальный счет</li>
+            <li class="delivery_item">2. Вы его утверждаете</li>
+            <li class="delivery_item">3. После утверждения счета начинается оформление и сборка вашего заказа, занимает в среднем два дня </li>
+            <li class="delivery_item">4. После окончания формирования вашего заказа, вам выставляется окончательный счет</li>
+            <li class="delivery_item">5. после оплаты счета и на следующий день после поступления денег на наш расчетный счет, ваш заказ отправляется к вам.</li>
+          </ul>
+        </div>
+        <div class="delivery_box">
+          <div class="delivery_caption">Наш сервис включает в себя</div>
+          <ul class="delivery_list">
+            <li class="delivery_item">1. Качественную упаковку товара </li>
+            <li class="delivery_item">2. Рациональное размещение продукции в упаковочной таре</li>
+            <li class="delivery_item">3. Доставка в аэропорт, ж/д вокзал, транспортную компанию</li>
+            <li class="delivery_item">4. Предоставление полного комплекта документов на груз</li>
+          </ul>
+        </div>
+        <div class="delivery_box">
+          <div class="delivery_caption">Стоимость доставки</div>
+          <ul class="delivery_list">
+            <li class="delivery_item">Стоимость доставки фиксированная и составляет 1200 руб., по Москве, в том числе и до любой транспортной компании в Москве.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

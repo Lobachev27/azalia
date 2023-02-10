@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Избранные товары"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': '',
+      'lastBreadcrumb': 'Избранные товары',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  @@include("./components/basket-empty.html", {
+    context: {
+      'title': 'Список избранных товаров пуст',
+      'description': 'У нас есть на что обратить внимание. Желаем приятных покупок!',
+    }
+  })
+
+  @@include("./components/favorite-filled.html")
+
+  @@include("./components/slider-may-like.html", {
+    context: {
+      'id': 'may-like',
+      'title': 'Рекомендуем к товарам',
+      arr: [
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-21.jpg',
+          'category': 'Кувшин',
+          'name': 'Кувшин (керамика), Н18.5см, 2л, зеленый',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '3 415 ₽',
+          'priceNew': '793 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-22.jpg',
+          'category': 'Кувшин',
+          'name': 'Кувшин (керамика), Н19см, белый/24шт.',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '2 640 ₽',
+          'priceNew': '359 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-23.jpg',
+          'category': 'Колонна',
+          'name': 'Колонна (шамот), H90см',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '7 415 ₽',
+          'priceNew': '5 830 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-24.jpg',
+          'category': 'Другие формы',
+          'name': 'Декор. изделие Karo (керамика), 16.5см, камень/20шт.',
+          'stockClass': 'none',
+          'stock': '',
+          'priceOld': '',
+          'priceNew': '273 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-25.jpg',
+          'category': 'Кашпо',
+          'name': 'Кашпо (керамика) 12,2х12,2х9,8см, коричневый/36шт.',
+          'stockClass': '',
+          'stock': '-30%',
+          'priceOld': '250 ₽',
+          'priceNew': '158 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+        {
+          'marker': '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+          'image': './img/product-26.jpg',
+          'category': 'Кашпо',
+          'name': 'Кашпо Амфора коринф (шамот), 22*30см',
+          'stockClass': 'none',
+          'stock': '',
+          'priceOld': '',
+          'priceNew': '1 157 ₽',
+          'compareClass': '',
+          'link': './card-product.html',
+          'amount': 'Осталось <span class="box_amount_number">5</span> шт.',
+        },
+      ],
+    }
+  })
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

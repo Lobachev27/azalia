@@ -1,0 +1,204 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Слайдер вам может понравиться*/
+
+.may-like{
+  position: relative;
+  margin: 75px 0 100px;
+  @media screen and ($desktop1) {
+    margin: 50px 0 60px;
+  }
+  @media screen and ($tablet2) {
+    margin: 50px 0 40px;
+  }
+  @media screen and ($tablet1) {
+    margin: 50px 0 40px;
+  }
+  @media screen and ($mobile5) {
+    margin: 40px 0 40px;
+  }
+  @media screen and ($mobile4) {
+    margin: 30px 0 20px;
+  }
+
+  &_slider{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    & .box{
+      border: 1px solid #EBEBEB;
+      width: 100%;
+    }
+
+    & .box_name {
+      max-height: 32px;
+      overflow: hidden;
+    }
+
+    & .swiper-container {
+      height: auto;
+      margin: 40px auto 60px;
+      width: calc(100% - 10px);
+      padding: 0 5px;
+      overflow: visible;
+      @media screen and ($desktop1) {
+        margin: 30px auto 60px;
+      }
+      @media screen and ($tablet2) {
+        margin: 30px auto 55px;
+      }
+      @media screen and ($tablet1) {
+        margin: 30px auto 55px;
+      }
+      @media screen and ($mobile5) {
+        margin: 30px auto 55px;
+      }
+      @media screen and ($mobile4) {
+        margin: 30px auto 55px;
+      }
+      @media screen and ($mobile3) {
+        margin: 30px auto 50px;
+      }
+    }
+
+    & .swiper-wrapper{
+      width: 100%;
+    }
+
+    & .swiper-container-horizontal>.swiper-pagination-bullets{
+      display: none;
+      @media screen and ($tablet1) {
+        display: block;
+        position: absolute;
+        bottom: -54px;
+        line-height: 1em;
+        text-align: center;
+        height: 12px;
+        padding: 0 15px;
+      }
+      @media screen and ($mobile3) {
+        bottom: -48px;
+      }
+    }
+
+    & .swiper-container-horizontal .swiper-pagination-bullet {
+      @media screen and ($tablet1) {
+        width: 12px;
+        height: 13px;
+        display: inline-block;
+        align-items: center;
+        background-color: #EBEBEB;
+        opacity: 1;
+        outline: none;
+        margin: 0 7px;
+        transition: all 0.2s;
+      }
+    }
+    & .swiper-container-horizontal .swiper-pagination-bullet-active {
+      @media screen and ($tablet1) {
+        width: 74px;
+        background-color: $red-color;
+        border-radius: 12px;
+      }
+    }
+
+    & .swiper-slide {
+      position: relative;
+      height: 341px;
+      width: 100%;
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      @media screen and ($desktop1) {
+        height: 341px;
+      }
+      @media screen and ($tablet2) {
+        height: 328px;
+      }
+      @media screen and ($tablet1) {
+        height: 328px;
+      }
+      @media screen and ($mobile4) {
+        height: 310px;
+      }
+      @media screen and ($mobile2) {
+        height: 325px;
+      }
+      @media screen and ($mobile1) {
+        height: 310px;
+      }
+    }
+
+    & .swiper-button-next,
+    & .swiper-button-prev{
+      display: block;
+      outline: none;
+      top: 24px;
+    }
+
+    & .swiper-button-next{
+      background: url("../img/angle-right-black.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 17px;
+      height: 28px;
+      transition: opacity 0.3s;
+      right: 20px;
+      opacity: 0.5;
+      @media screen and ($tablet2) {
+        width: 15px;
+        height: 24px;
+      }
+
+      &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+
+    & .swiper-button-prev{
+      background: url("../img/angle-right-black.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 17px;
+      height: 28px;
+      left: 1506px;
+      transform: rotate(180deg);
+      transition: opacity 0.3s;
+      opacity: 0.5;
+      @media screen and ($desktop1) {
+        left: 1070px;
+      }
+      @media screen and ($tablet2) {
+        left: 860px;
+        width: 15px;
+        height: 24px;
+      }
+      @media screen and ($tablet1) {
+        left: 650px;
+      }
+      @media screen and ($mobile5) {
+        left: 86%;
+      }
+      @media screen and ($mobile4) {
+        left: 84%;
+      }
+      @media screen and ($mobile3) {
+        left: 80%;
+      }
+      @media screen and ($mobile2) {
+        left: 75%;
+      }
+      @media screen and ($mobile1) {
+        left: 72%;
+      }
+
+      &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+}

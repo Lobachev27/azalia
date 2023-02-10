@@ -1,0 +1,183 @@
+<section class="catalog">
+  <div class="container">
+    <div class="catalog_wrapper">
+      <div class="catalog_left">
+
+        @@include("./catalog-filter.html")
+
+      </div>
+      <div class="catalog_right">
+        <div class="catalog_top">
+          <div class="catalog_sorting">
+            <div class="catalog_sorting_main">Популярные</div>
+            <div class="catalog_sorting_list">
+              <div class="catalog_sorting_item">Популярные</div>
+              <div class="catalog_sorting_item">Новинки</div>
+              <div class="catalog_sorting_item">Дорогие</div>
+              <div class="catalog_sorting_item">Дешевые</div>
+            </div>
+          </div>
+          <div class="catalog_view">
+            <a class="catalog_view_item block" href="./catalog-level-3.html"></a>
+            <a class="catalog_view_item row" href="./catalog-level-3-row.html"></a>
+            <a class="catalog_view_item list active" href="./catalog-level-3-list.html"></a>
+          </div>
+          <div class="catalog_show">Товары: 1 - 20 из 458</div>
+          <nav class="page_nav">
+            <a class="page_nav_prev" href="javascript:void(0);">←</a>
+            <a class="page_nav_number active" href="javascript:void(0);">1</a>
+            <a class="page_nav_number" href="javascript:void(0);">2</a>
+            <a class="page_nav_number" href="javascript:void(0);">3</a>
+            <a class="page_nav_number" href="javascript:void(0);">...</a>
+            <a class="page_nav_number" href="javascript:void(0);">16</a>
+            <a class="page_nav_next" href="javascript:void(0);">→</a>
+          </nav>
+        </div>
+        <div class="catalog_list_displayList">
+          @@for (var i = 0; i < context.arr.length; i++) {
+          <div class="box">
+            <div class="box_wrapper_list">
+              `+context.arr[i].marker+`
+              <div class="box_img_wrapper_list">
+                <a class="box_img_link" href="`+context.arr[i].link+`">
+                  <img class="box_img" src="`+context.arr[i].image+`">
+                </a>
+              </div>
+              <div class="box_info">
+                <div class="box_category">`+context.arr[i].category+`</div>
+                <a class="box_name" href="`+context.arr[i].link+`">`+context.arr[i].name+`</a>
+              </div>
+              <div class="box_info_item">
+                <div class="box_info_name">Артикул:</div>
+                <div class="box_info_value">`+context.arr[i].code+`</div>
+              </div>
+              <div class="card-product_info_presence">`+context.arr[i].status+`</div>
+              <div class="box_price_wrapper_row">
+                <div class="box_price_row">
+                  <div class="box_price old">`+context.arr[i].priceOld+`</div>
+                  <div class="box_stock `+context.arr[i].stockClass+`">`+context.arr[i].stock+`</div>
+                </div>
+                <div class="box_price new">`+context.arr[i].priceNew+`</div>
+              </div>
+              <div class="box_more_wrapper_row">
+                <div class="box_compare `+context.arr[i].compareClass+`"></div>
+                <div class="box_favorite_row"></div>
+                <a class="btn basket js-popup" href="#quickViewModal"></a>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+        <div class="catalog_row">
+          <a class="catalog_more" href="javascript:void(0);">Показать еще</a>
+        </div>
+        <div class="subcategories_bottom">
+          <div class="subcategories_slider">
+            <h2 class="title small">Хит продаж</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker star"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-10.jpg',
+                      category: 'Кашпо',
+                      name: 'Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.',
+                      stock: '-15%',
+                      priceOld: '745 ₽',
+                      priceNew: '676 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                    }
+                  })
+
+                </div>
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-27.jpg',
+                      category: 'Кашпо',
+                      name: 'Кашпо (керамика), D16, белый/4шт',
+                      stock: '',
+                      priceOld: '',
+                      priceNew: '299 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                    }
+                  })
+
+                </div>
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-28.jpg',
+                      category: 'Кашпо',
+                      name: 'Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.',
+                      stock: '-17%',
+                      priceOld: '1 245 ₽',
+                      priceNew: '1 157 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                      }
+                  })
+
+                </div>
+                <div class="swiper-slide">
+
+                  @@include("./box.html", {
+                    context: {
+                      marker: '<div class="box_marker fire"><div class="box_marker_tooltips"></div></div>',
+                      image: './img/product-29.jpg',
+                      category: 'Кашпо',
+                      name: 'Набор кашпо Сердце 3шт. 9x9см, 12x12см, 17x16см, белый/18шт.',
+                      stock: '-15%',
+                      priceOld: '745 ₽',
+                      priceNew: '676 ₽',
+                      compareClass: '',
+                      amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+                      link: './card-product.html',
+                    }
+                  })
+
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="subcategories_extra">
+            <div class="subcategories_info">
+              <div class="subcategories_description">
+                <p>Вазы, кашпо, горшки, вазоны, кувшины — аксессуары номер один для фитодизайна. Интернет-магазин флористики «Азалия Декор» предоставляет возможность <b>купить изделия из керамики</b> разных форм и размеров, чтобы максимально подчеркнуть красоту цветов и расставить акценты.</p>
+                <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+              </div>
+              <div class="subcategories_additionally">
+                <div class="subcategories_description">
+                  <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+                  <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+                  <p>В этом разделе каталога представлено более 1600 товаров для оформления приусадебного участка, балкона и подоконника цветочными композициями и декоративными растениями. Широкий ассортимент товаров поможет вам найти всё необходимое для создания гармоничного пространства как дома, так и в саду. Цена зависит от размеров и материалов изготовления. В каталоге вы найдёте горшки и вазоны, балконные ящики, арки, шпалеры, опоры для растений, кустодержатели, ограждения для клумб и декоративные фигуры.</p>
+                </div>
+              </div>
+              <a class="subcategories_more" href="javascript:void(0);">Полное описание</a>
+            </div>
+            <div class="subcategories_extra_img_wrapper">
+              <img class="subcategories_extra_img" src="./img/banner-category.jpg">
+              <a class="subcategories_extra_img_link" href="javascript:void(0);"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="18.897" height="18.575" viewBox="0 0 18.897 18.575">
+  <g id="Group_148" data-name="Group 148" transform="translate(-1595.835 -62.212)">
+    <path id="Path_115" data-name="Path 115" d="M5.944,0A5.944,5.944,0,1,1,0,5.944,5.944,5.944,0,0,1,5.944,0Z" transform="translate(1602.844 62.212)" fill="#bcbcbc"/>
+    <path id="shopping-cart" d="M5.833,8.823,4.39,1.765,4.137.529A.662.662,0,0,0,3.489,0H.662A.662.662,0,0,0,0,.662V1.1a.662.662,0,0,0,.662.662H2.589l1.937,9.469a1.544,1.544,0,1,0,1.849.236h5.78a1.544,1.544,0,1,0,1.754-.287l.152-.669a.662.662,0,0,0-.645-.808h-7.4l-.18-.882Z" transform="translate(1595.835 66.67)" fill="#bcbcbc"/>
+    <path id="Closed" d="M2.126,2.126,0,4.252,2.126,2.126,0,0,2.126,2.126,4.252,0,2.126,2.126,4.252,4.252Z" transform="translate(1606.93 66.299)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

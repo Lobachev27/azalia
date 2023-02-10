@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Керамические вазы со скидкой 20%"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/page-leader.html", {
+    context: {
+      'class': '',
+      'way': true,
+      'title': 'Акция на керамические вазы',
+      'lastBreadcrumb': 'Акция на керамические вазы',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Акции', 'link': './stock.html'},
+      ],
+    }
+  })
+
+  <section class="stock-page">
+    <div class="container">
+      <div class="stock-page_wrapper">
+        <div class="stock-page_left">
+          <div class="stock-page_img_wrapper white">
+            <img class="stock-page_img" src="./img/banner-1.jpg">
+            <div class="stock-page_img_info">
+              <div class="stock-page_img_caption">Керамические вазы</div>
+              <div class="stock-page_img_text">со скидкой<span>20%</span></div>
+            </div>
+          </div>
+          <div class="stock-page_info">
+            <div class="stock-page_date">07 декабря 2018</div>
+            <div class="stock-page_name">Керамические вазы со скидкой 20%</div>
+            <div class="stock-page_description">
+              Условия проведения акции:<br>
+              — покупайте товары в магазинах «Домовой»;<br>
+              — получайте на кассе за каждые 300 руб. в чеке 1 наклейку-фишку;<br>
+              — собирайте фишки и наклеивайте их в буклет;<br>
+              — собрав необходимое количество фишек, Вы имеете право приобрести товар, участвующий в акции, со скидкой 50% (на сайте отмечены значком фишки);<br>
+              — чтобы воспользоваться скидкой, возьмите товар в торговом зале и предъявите вместе с буклетом на кассе (в буклете должно быть вклеено столько фишек, сколько необходимо для получения товара со скидкой);<br>
+              — по одному буклету можно приобрести несколько товаров в соответствии с количеством набранных фишек.<br>
+              <br>
+              Период выдачи наклеек: с 2 января по 31 марта 2019 г.<br>
+              Период покупки товара со скидкой: с 2 января по 15 апреля 2019 г.<br>
+              <br>
+              ВНИМАНИЕ!<br>
+              Количество товаров по акции ограничено. Выдача денежной компенсации не производится.<br>
+              Скидка не суммируется с другими скидками, в том числе со скидками по дисконтным картам и купмонам.<br>
+              Cпешите за выгодными покупками!
+            </div>
+          </div>
+        </div>
+        <div class="stock-page_right">
+          <div class="stock-page_caption">Остались вопросы?</div>
+          <a class="stock-page_phone" href="tel:+78001000185">8 (800) 100-01-85</a>
+          <a class="stock-page_phone" href="tel:+74959332694">8 (495) 933-26-94</a>
+          <a class="stock-page_call"  href="#callMe">Заказать звонок</a>
+          <a class="stock-page_mail" href="mailto:info@azaliadecor.ru">info@azaliadecor.ru</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promotion">
+    <div class="container">
+      <h2 class="title small">Товары учавствующие в акции</h2>
+      <div class="promotion_wrapper">
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-30.jpg',
+            category: 'Вазы',
+            name: 'Ваза Бутылка (керамика), H30x18см, бирюзовый/12шт.',
+            stock: '-14%',
+            priceOld: '1 245 ₽',
+            priceNew: '1 164 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-22.jpg',
+            category: 'Кувшин',
+            name: 'Кувшин (керамика), Н19см, белый/24шт.',
+            stock: '-30%',
+            priceOld: '2 640 ₽',
+            priceNew: '359 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-31.jpg',
+            category: 'Кувшин',
+            name: 'Кувшин Бабочка (керамика), Н21см, зеленый/12шт.',
+            stock: '-30%',
+            priceOld: '1 410 ₽',
+            priceNew: '1 145 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-32.jpg',
+            category: 'Кувшин',
+            name: 'Кувшин Бабочка (керамика), Н21см, синий/12шт',
+            stock: '',
+            priceOld: '',
+            priceNew: '978 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-33.jpg',
+            category: 'Вазы',
+            name: 'Ваза (керамика), H20см, зеленый/24шт.',
+            stock: '-30%',
+            priceOld: '1 102 ₽',
+            priceNew: '793 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-30.jpg',
+            category: 'Вазы',
+            name: 'Ваза Бутылка (керамика), H30x18см, бирюзовый/12шт.',
+            stock: '-14%',
+            priceOld: '1 245 ₽',
+            priceNew: '1 164 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-22.jpg',
+            category: 'Кувшин',
+            name: 'Кувшин (керамика), Н19см, белый/24шт.',
+            stock: '-30%',
+            priceOld: '2 640 ₽',
+            priceNew: '359 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-31.jpg',
+            category: 'Кувшин',
+            name: 'Кувшин Бабочка (керамика), Н21см, зеленый/12шт.',
+            stock: '-30%',
+            priceOld: '1 410 ₽',
+            priceNew: '1 145 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-32.jpg',
+            category: 'Кувшин',
+            name: 'Кувшин Бабочка (керамика), Н21см, синий/12шт',
+            stock: '',
+            priceOld: '',
+            priceNew: '978 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+        @@include("./components/box.html", {
+          context: {
+            marker: '<div class="box_marker"><div class="box_marker_tooltips"></div></div>',
+            image: './img/product-33.jpg',
+            category: 'Вазы',
+            name: 'Ваза (керамика), H20см, зеленый/24шт.',
+            stock: '-30%',
+            priceOld: '1 102 ₽',
+            priceNew: '793 ₽',
+            compareClass: '',
+            amount: 'Осталось <span class="box_amount_number">5</span> шт.',
+            link: './card-product.html',
+          }
+        })
+
+      </div>
+      <a class="article-page_back" href="./stock.html">Назад к акциям</a>
+    </div>
+  </section>
+
+  @@include("./components/subscription.html", {
+    context: {
+      'class': 'mgt-0',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./components/modal-list.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>
