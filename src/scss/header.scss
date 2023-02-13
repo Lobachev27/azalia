@@ -573,15 +573,17 @@
   &_search{
     position: relative;
     width: 100%;
+    z-index: 10;
     @media screen and ($mobile4) {
       display: none;
       position: fixed;
       top: 131px;
       left: 8px;
-      width: calc(100% - 16px);
+      width: 100%;
       height: calc(100vh - 134px);
       background-color: #FFFFFF;
-      padding-top: 10px;
+      padding: 10px 8px 0;
+      margin-left: -8px;
     }
 
     &.active{
@@ -683,6 +685,7 @@
       }
       @media screen and ($mobile4) {
         top: 10px;
+        right: 8px;
       }
 
       &:before{

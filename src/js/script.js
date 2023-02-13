@@ -72,11 +72,11 @@ $(document).ready(function() {
         autoHeight: 'true',
         pagination: {
           el: '.intro .swiper-pagination',
-          clickable: true
+          clickable: true,
         },
         breakpoints: {
           650: {
-            slidesPerView: 1
+            slidesPerView: 1,
           }
         }
       });
@@ -1382,11 +1382,17 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.header_search_mobile').click(function(){
     if ($('.header_search').hasClass('active')){
-      $('.header_search').removeClass('active');}
-    else {$('.header_search').addClass('active');}
+      $('.header_search').removeClass('active');
+    } else {
+      $('.header_search').addClass('active');
+    }
     if ($(this).hasClass('active')){
-      $(this).removeClass('active');}
-    else {$(this).addClass('active')}
+      $(this).removeClass('active');
+      $('body').removeClass('ov-hid');
+    } else {
+      $(this).addClass('active');
+      $('body').addClass('ov-hid');
+    }
   });
 });
 

@@ -874,9 +874,8 @@
         width: 100%;
         height: 100px;
         margin-top: -1px;
-
-        @media screen and ($mobile1) {
-          height: 100px;
+        @media screen and ($mobile2) {
+          height: 150px;
         }
       }
     }
